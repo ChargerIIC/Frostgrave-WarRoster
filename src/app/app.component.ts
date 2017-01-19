@@ -7,8 +7,11 @@ import { Mage } from './model/mage.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  userMage: Mage;
+  wizard: Mage;
 
   title = 'Frostgrave WarRoster';
 
+  constructor(){
+    this.wizard = new Mage();
+  }
 }
