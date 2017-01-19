@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Mage } from '../model/mage.model';
 
 @Component({
   selector: 'app-wizard-summary-panel',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wizard-summary-panel.component.css']
 })
 export class WizardSummaryPanelComponent implements OnInit {
+
+  @Input() userMage: Mage;
 
   constructor() { }
 
