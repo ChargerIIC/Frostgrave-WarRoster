@@ -19,7 +19,6 @@
       "mobile": false,
       "styles": [
         "../src/vendors/lumen-theme/bootstrap.css",
-
         "styles.css"
       ],
       "scripts": [],
