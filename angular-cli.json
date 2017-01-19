@@ -21,7 +21,10 @@
         "../src/vendors/lumen-theme/bootstrap.css",
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../src/vendors/jquery/jquery-3.1.1.min.js",
+        "../src/vendors/lumen-theme/bootstrap.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

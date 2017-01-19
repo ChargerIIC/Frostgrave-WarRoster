@@ -1,4 +1,3 @@
-import { SchoolOfMagic } from './school.model';
 
 export class Mage {
 
