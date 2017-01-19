@@ -20,6 +20,12 @@ module.exports = function (config) {
     mime: {
       'text/x-typescript': ['ts','tsx']
     },
+    customLaunchers: {
+      Chrome_travis_ci: {
+        base: 'Chrome',
+        flags: ['--no-sandbox']
+      }
+    },
     remapIstanbulReporter: {
       reports: {
         html: 'coverage',
@@ -40,4 +46,7 @@ module.exports = function (config) {
     browsers: ['Chrome'],
     singleRun: false
   });
+  if(process.env.TRAVIS) {
+    configuration.browsers = ['Chrome_travis_ci'];
+  }
 };
