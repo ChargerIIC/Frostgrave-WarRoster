@@ -135,5 +135,69 @@ export class SpellBook{
     spell.range = "LOS";
     SpellBook.spells[15] = spell;
 
+    spell = new Spell();
+    spell.name = "Animate Construct";
+    spell.description = "It is assumed that the spellcaster has built a construct prior to using this spell to animate it. If the spell is successfully cast, the construct immediately becomes a member of the warband, taking the place of a soldier. A spellcaster may declare that he is attempting to animate a construct of any size (Small, Medium or Large – see Chapter 6: Bestiary), but the larger the construct, the harder it is to animate, so the following modifiers are applied to his roll to cast the spell: Small -0, Medium -3, Large -6.";
+    spell.school = "Enchanter";
+    spell.castingNumber = 8;
+    spell.range = "NA";
+    SpellBook.spells[16] = spell;
+
+    spell = new Spell();
+    spell.name = "Control Construct";
+    spell.description = "If successfully cast, the target construct must make an immediate Will roll versus the casting roll. If the roll fails, the spellcaster gains control of the construct for the rest of the game. A spellcaster may only control one construct at a time.";
+    spell.school = "Enchanter";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells[17] = spell;
+
+    spell = new Spell();
+    spell.name = "Embed Enchantment";
+    spell.description = "This spell causes any Enchant Armour or Enchant Weapon spell that is still active at the end of a game, to become permanent, and the weapon or armour in question to become a magic item. Alternatively, a spellcaster may cast either of those spells after a game (even though neither are usually an Out of Game spell), immediately followed by Embed Enchantment. If both spells are successful, the item becomes permanently enchanted.";
+    spell.school = "Enchanter";
+    spell.castingNumber = 12;
+    spell.range = "NA";
+    SpellBook.spells[18] = spell;
+
+    spell = new Spell();
+    spell.name = "Enchant Armour";
+    spell.description = "The armour worn by the target now counts as magic armour and grants a +1 to Armour for the rest of the game. Multiple castings of this spell on the same target have no effect.";
+    spell.school = "Enchanter";
+    spell.castingNumber = 8;
+    spell.range = "LOS";
+    SpellBook.spells[19] = spell;
+
+    spell = new Spell();
+    spell.name = "Enchant Weapon";
+    spell.description = "A target weapon is given a temporary magic boost by the spellcaster. Melee weapons affected by this spell count as magic weapons and give their users +1 Fight for the rest of the game. Bows and crossbows targeted by the spell give +1 Shoot instead, but do not count as magic weapons. Multiple castings of this spell on the same weapon have no effect. Alternatively, the spell can be used to enchant one arrow or quarrel. This gives +1 Shoot and counts as a magic weapon, but only for the next shot. A bow or crossbow boosted by Enchant Weapon may be used to fire arrows or quarrels similarly enchanted, and the bonuses stack.";
+    spell.school = "Enchanter";
+    spell.castingNumber = 8;
+    spell.range = "LOS";
+    SpellBook.spells[20] = spell;
+
+    spell = new Spell();
+    spell.name = "Grenade";
+    spell.description = "The spellcaster takes an object, commonly a simple rock, imbues it with magic energy and throws it at his target,whereupon it explodes into hundreds of fragments. The caster picks a target point within 12”. Every figure, including allies, within 1.5” of that point immediately suffers a +3 shooting attack.";
+    spell.school = "Enchanter";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells[21] = spell;
+
+    spell = new Spell();
+    spell.name = "Strength";
+    spell.description = "The target receives +2 Fight for the rest of the game. Multiple Strength spells on the same target have no effect.";
+    spell.school = "Enchanter";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells[22] = spell;
+
+    spell = new Spell();
+    spell.name = "Telekinesis";
+    spell.description = "The spellcaster may move any currently unclaimed treasure within 24” by up to 6” in any direction. As long as he can maintain line of sight to the treasure, he can move it over any terrain or obstacle. If the treasure moves out of line of sight, it immediately falls straight to the ground.";
+    spell.school = "Enchanter";
+    spell.castingNumber = 8;
+    spell.range = "LOS";
+    SpellBook.spells[23] = spell;
+
   }
 }
