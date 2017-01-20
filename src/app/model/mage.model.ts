@@ -24,6 +24,8 @@ export class Mage {
     this.shoot = 0;
     this.armor = 10;
     this.health = 14;
+
+    this.spells = new Array<Spell>();
   }
 
 }
