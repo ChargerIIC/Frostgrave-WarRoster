@@ -1,8 +1,23 @@
 <div class="panel-heading">Stats</div>
 <div class="panel-body">
-  Move: {{userMage.move}}<p>
-  Fight: {{userMage.fight}}<p>
-  Shoot: {{userMage.shoot}}<p>
-  Armor: {{userMage.armor}}<p>
-  Health: {{userMage.health}}<p>
+  <div class="input-group">
+    <span class="input-group-addon" id="lblMove">Move:</span>
+    <input type="number" class="form-control" min="1" max="99" aria-describedby="lblMove" [(ngModel)]="userMage.move">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon" id="lblMove">Fight:</span>
+    <input type="number" class="form-control" min="1" max="99" aria-describedby="lblMove" [(ngModel)]="userMage.fight">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon" id="lblMove">Shoot:</span>
+    <input type="number" class="form-control" min="1" max="99" aria-describedby="lblMove" [(ngModel)]="userMage.shoot">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon" id="lblMove">Armor:</span>
+    <input type="number" class="form-control" min="1" max="99" aria-describedby="lblMove" [(ngModel)]="userMage.armor">
+  </div>
+  <div class="input-group">
+    <span class="input-group-addon" id="lblMove">Health:</span>
+    <input type="number" class="form-control" min="1" max="99" aria-describedby="lblMove" [(ngModel)]="userMage.health">
+  </div>
 </div>
