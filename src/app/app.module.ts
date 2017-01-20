@@ -9,6 +9,8 @@ import { WizardStatsPanelComponent } from './wizard-stats-panel/wizard-stats-pan
 import { WizardSpellsPanelComponent } from './wizard-spells-panel/wizard-spells-panel.component';
 import { WizardEquipmentPanelComponent } from './wizard-equipment-panel/wizard-equipment-panel.component';
 
+import { Mage } from './model/mage.model';
+
 @NgModule({
   declarations: [
     AppComponent,
