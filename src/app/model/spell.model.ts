@@ -4,4 +4,5 @@ export class Spell{
   description:string;
   school: string;
   castingNumber: number;
+  range: string;
 }
