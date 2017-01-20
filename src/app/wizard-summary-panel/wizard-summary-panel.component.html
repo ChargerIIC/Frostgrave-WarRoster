@@ -7,15 +7,9 @@
   </div>
 </div>
 <div class="col-lg-3 col-md-3 col-xs-3">
-    <!-- Extra small button group -->
-  <div class="btn-group">
-    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      {{userMage.school}}<span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu">
-      <li *ngFor="let school of schoolsOfMagic"><a href="#">{{school}}</a></li>
-    </ul>
-  </div>
+  <select class="btn btn-default dropdown-toggle">
+    <option *ngFor="let school of schoolsOfMagic" value="{{school}}" >{{school}}</option>
+  </select>
 </div>
 <div class="col-lg-2 col-md-2 col-xs-2">
   Level({{userMage.level}})
