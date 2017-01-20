@@ -1,3 +1,4 @@
+import { Spell } from '../model/spell.model';
 
 export class Mage {
 
@@ -10,6 +11,8 @@ export class Mage {
   shoot: number;
   armor: number;
   health: number;
+
+  spells: Spell[];
 
   constructor(){
     //Defaults
