@@ -1,4 +1,4 @@
-import { Spell } from '../model/spell.model';
+import { Spell } from './spell.model';
 
 export class Mage {
 
