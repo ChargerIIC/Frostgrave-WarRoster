@@ -2,9 +2,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { NgModule } from '@angular/core';
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+
 import { WizardSummaryPanelComponent } from './wizard-summary-panel/wizard-summary-panel.component';
 import { WizardStatsPanelComponent } from './wizard-stats-panel/wizard-stats-panel.component';
 import { WizardSpellsPanelComponent } from './wizard-spells-panel/wizard-spells-panel.component';
