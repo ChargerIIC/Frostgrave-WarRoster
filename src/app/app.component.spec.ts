@@ -2,13 +2,22 @@
 
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { WizardSummaryPanelComponent } from './wizard-summary-panel/wizard-summary-panel.component';
+import { WizardStatsPanelComponent } from './wizard-stats-panel/wizard-stats-panel.component';
+import { WizardSpellsPanelComponent } from './wizard-spells-panel/wizard-spells-panel.component';
+import { WizardEquipmentPanelComponent } from './wizard-equipment-panel/wizard-equipment-panel.component';
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
-      ],
+          AppComponent,
+          WizardSummaryPanelComponent,
+          WizardStatsPanelComponent,
+          WizardSpellsPanelComponent,
+          WizardEquipmentPanelComponent
+        ],
+
     });
     TestBed.compileComponents();
   });
