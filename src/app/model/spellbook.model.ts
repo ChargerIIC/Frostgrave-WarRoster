@@ -199,5 +199,69 @@ export class SpellBook{
     spell.range = "LOS";
     SpellBook.spells[23] = spell;
 
+    spell = new Spell();
+    spell.name = "Beauty";
+    spell.description = "This spell causes all humans (i.e. anything not found in Chapter 6: Bestiary) who look at the spellcaster to see a paragon of beauty. Anyone wishing to attack the spellcaster must first pass a Will roll versus the casting roll. Failing this Will roll does not cause the would-be attacker to lose an action. Any model magically compelled to fight the target must also pass a Will roll or suffer -1 to its Fight stat.";
+    spell.school = "Illusionist";
+    spell.castingNumber = 10;
+    spell.range = "SELF";
+    SpellBook.spells[1] = spell;
+
+    spell = new Spell();
+    spell.name = "Fool's Gold";
+    spell.description = "This spell allows the spellcaster to place one additional treasure token before the start of the game. However, he must also secretly note down which of the treasures he has placed is the Fool’s Gold. When any figure comes into contact with the Fool’s Gold, the treasure token immediately vanishes and is removed from the game.";
+    spell.school = "Illusionist";
+    spell.castingNumber = 8;
+    spell.range = "NA";
+    SpellBook.spells[1] = spell;
+
+    spell = new Spell();
+    spell.name = "Glow";
+    spell.description = "A brightly glowing light surrounds the target figure. For the rest of the game, all shooting attacks against this figure are at +3. Multiple Glow spells on the same target have no effect.";
+    spell.school = "Illusionist";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells[1] = spell;
+
+    spell = new Spell();
+    spell.name = "Illusionary Soldier";
+    spell.description = "Causes an illusionary soldier to join the warband for the next battle. This soldier can be of any type. This soldier cannot pick up treasure, nor can it deal damage. If the soldier ever suffers damage of any type, it is removed. A warband may only have one illusionary soldier at any given time.";
+    spell.school = "Illusionist";
+    spell.castingNumber = 12;
+    spell.range = "NA";
+    SpellBook.spells[1] = spell;
+
+    spell = new Spell();
+    spell.name = "Invisibility";
+    spell.description = "The target figure becomes invisible and may not be attacked or targeted by spells (although he may still be affected by area effects, such as the blast radius of a Grenade spell). The effects of this spell last until the target attacks, casts a spell, or picks up an item of treasure. The spell can be cast on a figure already carrying treasure, rendering both invisible.";
+    spell.school = "Illusionist";
+    spell.castingNumber = 12;
+    spell.range = "TCH";
+    SpellBook.spells[1] = spell;
+
+    spell = new Spell();
+    spell.name = "Monstrous Form";
+    spell.description = "Any figure wishing to move into contact with the spellcaster must make an immediate Will roll versus the casting roll. If failed, the figure sees a hideous creature instead of the spellcaster and is too scared to attack – he may only make a move that takes him further away. A spellcaster may not have Beauty and Monstrous Form cast at the same time. Undead, constructs, and demons are immune to Monstrous Form.";
+    spell.school = "Illusionist";
+    spell.castingNumber = 8;
+    spell.range = "SELF";
+    SpellBook.spells[1] = spell;
+
+    spell = new Spell();
+    spell.name = "Teleport";
+    spell.description = "The spellcaster immediately moves to any location within line of sight, but may take no other action this turn. This spell may not be used to enter combat.";
+    spell.school = "Illusionist";
+    spell.castingNumber = 10;
+    spell.range = "SELF";
+    SpellBook.spells[1] = spell;
+
+    spell = new Spell();
+    spell.name = "Transpose";
+    spell.description = "This spell switches the position of two figures on the board. The two figures being transposed must be within 10” of each other and both must be within line of sight of the spellcaster. The spellcaster may cast Transpose to switch himself with another figure. If he attempts to transpose an enemy figure (either a creature or member of a rival warband), they may each make a Will roll versus the casting roll. If even one succeeds with this Will roll, the spell fails. This spell may target figures in combat.";
+    spell.school = "Illusionist";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells[1] = spell;
+
   }
 }
