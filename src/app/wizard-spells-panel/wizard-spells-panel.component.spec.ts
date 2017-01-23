@@ -2,6 +2,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { NgModule } from '@angular/core';
 
 import { WizardSpellsPanelComponent } from './wizard-spells-panel.component';
 
@@ -20,6 +24,12 @@ describe('WizardSpellsPanelComponent', () => {
         Mage,
         Spell,
         SpellBook
+       ],
+     imports: [
+       Mage,
+       BrowserModule,
+       FormsModule,
+       HttpModule
        ]
     })
     .compileComponents();
