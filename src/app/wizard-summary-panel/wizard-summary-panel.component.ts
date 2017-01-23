@@ -29,6 +29,9 @@ export class WizardSummaryPanelComponent implements OnInit {
   }
 
   ngOnInit() {
+    if(this.userMage== null){
+      this.userMage = new Mage();
+    }
   }
 
 }

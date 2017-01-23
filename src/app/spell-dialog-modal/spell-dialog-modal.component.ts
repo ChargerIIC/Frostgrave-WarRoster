@@ -15,6 +15,10 @@ export class SpellDialogModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if(this.userMage== null){
+      this.userMage = new Mage();
+    }
+
   }
 
   getAvailableSpells(): Array<Spell>{

@@ -13,6 +13,10 @@ export class WizardStatsPanelComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    if(this.userMage== null){
+      this.userMage = new Mage();
+    }
+
   }
 
 }
