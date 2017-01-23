@@ -5,13 +5,25 @@ import { DebugElement } from '@angular/core';
 
 import { SpellDialogModalComponent } from './spell-dialog-modal.component';
 
+import { Mage } from '../model/mage.model';
+import { Spell } from '../model/spell.model';
+import { SpellBook } from '../model/spellbook.model';
+
 describe('SpellDialogModalComponent', () => {
   let component: SpellDialogModalComponent;
   let fixture: ComponentFixture<SpellDialogModalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SpellDialogModalComponent ]
+      declarations: [
+        SpellDialogModalComponent,
+        Mage,
+        Spell,
+        SpellBook
+       ],
+     imports: [
+       Mage,
+       ]
     })
     .compileComponents();
   }));
