@@ -22,7 +22,6 @@ describe('SpellDialogModalComponent', () => {
         SpellBook
        ],
      imports: [
-       Mage,
        ]
     })
     .compileComponents();

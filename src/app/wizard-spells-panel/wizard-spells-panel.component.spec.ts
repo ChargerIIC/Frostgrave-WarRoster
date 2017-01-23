@@ -26,7 +26,6 @@ describe('WizardSpellsPanelComponent', () => {
         SpellBook
        ],
      imports: [
-       Mage,
        ]
     })
     .compileComponents();
