@@ -11,6 +11,7 @@ import { WizardSummaryPanelComponent } from './wizard-summary-panel/wizard-summa
 import { WizardStatsPanelComponent } from './wizard-stats-panel/wizard-stats-panel.component';
 import { WizardSpellsPanelComponent } from './wizard-spells-panel/wizard-spells-panel.component';
 import { WizardEquipmentPanelComponent } from './wizard-equipment-panel/wizard-equipment-panel.component';
+import { SpellDialogModalComponent } from './spell-dialog-modal/spell-dialog-modal.component';
 
 describe('AppComponent', () => {
   beforeEach(() => {
@@ -20,7 +21,8 @@ describe('AppComponent', () => {
           WizardSummaryPanelComponent,
           WizardStatsPanelComponent,
           WizardSpellsPanelComponent,
-          WizardEquipmentPanelComponent
+          WizardEquipmentPanelComponent,
+          SpellDialogModalComponent
         ],
       imports: [
           BrowserModule,
