@@ -17,8 +17,5 @@ export class AppComponent {
     this.wizard = new Mage();
 
     SpellBook.loadSpellsIntoSpellbook();
-
-    this.wizard.spells[0] = SpellBook.spells[0];
-    this.wizard.spells[1] = SpellBook.spells[13];
   }
 }
