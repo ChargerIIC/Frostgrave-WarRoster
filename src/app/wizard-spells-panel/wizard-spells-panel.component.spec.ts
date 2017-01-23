@@ -27,9 +27,6 @@ describe('WizardSpellsPanelComponent', () => {
        ],
      imports: [
        Mage,
-       BrowserModule,
-       FormsModule,
-       HttpModule
        ]
     })
     .compileComponents();
