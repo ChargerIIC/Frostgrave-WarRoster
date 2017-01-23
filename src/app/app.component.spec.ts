@@ -43,10 +43,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('Frostgrave WarRoster');
   }));
 
-  it('should render title in a h1 tag', async(() => {
+  it('should render summary panel', async(() => {
     let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('app works!');
+    expect(compiled.querySelector('app-wizard-summary-panel')).toBeNull(false);
   }));
 });
