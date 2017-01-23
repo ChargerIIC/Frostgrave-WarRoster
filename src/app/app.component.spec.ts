@@ -47,6 +47,6 @@ describe('AppComponent', () => {
     let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('app-wizard-summary-panel')).toBeNull(false);
+    expect(compiled.querySelector('app-wizard-summary-panel')).toBeTruthy();
   }));
 });
