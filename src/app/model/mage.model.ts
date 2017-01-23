@@ -11,6 +11,7 @@ export class Mage {
   shoot: number;
   armor: number;
   health: number;
+  openSpellSlots: number;
 
   spells: Spell[];
 
@@ -24,6 +25,7 @@ export class Mage {
     this.shoot = 0;
     this.armor = 10;
     this.health = 14;
+    this.openSpellSlots = 8;
 
     this.spells = new Array<Spell>();
   }
