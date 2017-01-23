@@ -17,9 +17,6 @@ describe('SpellDialogModalComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         SpellDialogModalComponent,
-        Mage,
-        Spell,
-        SpellBook
        ],
      imports: [
        ]
