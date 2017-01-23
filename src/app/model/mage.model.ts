@@ -30,4 +30,9 @@ export class Mage {
     this.spells = new Array<Spell>();
   }
 
+  addSpellToCollection(spell: Spell){
+    console.log("Adding Spell: " + spell.name);
+    this.spells.push(spell);
+    this.openSpellSlots--;
+  }
 }

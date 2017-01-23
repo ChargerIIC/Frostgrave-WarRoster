@@ -27,7 +27,6 @@ export class SpellDialogModalComponent implements OnInit {
   }
 
   addSpell(spell: Spell){
-    console.log("Adding Spell: " + spell.name);
-    this.userMage.spells.push(spell);
+    this.userMage.addSpellToCollection(spell);
   }
 }
