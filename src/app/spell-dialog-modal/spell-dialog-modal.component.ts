@@ -17,8 +17,9 @@ export class SpellDialogModalComponent implements OnInit {
   ngOnInit() {
   }
 
-  getAvailableSpells(){
+  getAvailableSpells(): Array<Spell>{
     var array = SpellBook.spells;
+    return array;
   }
 
 }

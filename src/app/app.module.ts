@@ -8,9 +8,9 @@ import { WizardSummaryPanelComponent } from './wizard-summary-panel/wizard-summa
 import { WizardStatsPanelComponent } from './wizard-stats-panel/wizard-stats-panel.component';
 import { WizardSpellsPanelComponent } from './wizard-spells-panel/wizard-spells-panel.component';
 import { WizardEquipmentPanelComponent } from './wizard-equipment-panel/wizard-equipment-panel.component';
+import { SpellDialogModalComponent } from './spell-dialog-modal/spell-dialog-modal.component';
 
 import { Mage } from './model/mage.model';
-import { SpellDialogModalComponent } from './spell-dialog-modal/spell-dialog-modal.component';
 
 @NgModule({
   declarations: [
