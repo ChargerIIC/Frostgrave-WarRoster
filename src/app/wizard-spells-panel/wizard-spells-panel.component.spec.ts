@@ -31,7 +31,6 @@ describe('WizardSpellsPanelComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(WizardSpellsPanelComponent);
     component = fixture.componentInstance;
-    component.userMage = new Mage();
     fixture.detectChanges();
   });
 
