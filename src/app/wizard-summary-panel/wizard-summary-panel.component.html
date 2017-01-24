@@ -11,7 +11,11 @@
     <option *ngFor="let school of schoolsOfMagic" [ngValue]="school">{{school}}</option>
   </select>
 </div>
-<div class="col-lg-3 col-md-3 col-xs-3">
+<div class="col-lg-2 col-md-2 col-xs-2">
   <span class="label lblLevel">Level ({{userMage.level}})</span>
 </div>
+<div class="col-lg-2 col-md-2 col-xs-2">
+  <span class="label lblGold">Gold: {{userMage.gold}}</span>
+</div>
+
 </div>
