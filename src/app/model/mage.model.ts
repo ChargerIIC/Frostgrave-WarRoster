@@ -40,4 +40,13 @@ export class Mage {
     this.spells.push(spell);
     this.openSpellSlots--;
   }
+
+  removeSpellFromCollection(spell: Spell){
+    console.log("Removing Spell: " + spell.name);
+    var index = this.spells.indexOf(spell);
+    if(index > -1){
+      this.spells.splice(index,1);
+    }
+    this.openSpellSlots++;
+  }
 }

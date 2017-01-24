@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Mage } from '../model/mage.model';
+import { Spell } from '../model/spell.model';
 
 @Component({
   selector: 'app-wizard-spells-panel',
@@ -17,6 +18,10 @@ export class WizardSpellsPanelComponent implements OnInit {
       this.userMage = new Mage();
     }
 
+  }
+
+  removeSpell(spell: Spell){
+    this.userMage.removeSpellFromCollection(spell);
   }
 
 }
