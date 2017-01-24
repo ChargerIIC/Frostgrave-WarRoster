@@ -9,6 +9,7 @@ export class Mage {
   move: number;
   fight: number;
   shoot: number;
+  will: number;
   armor: number;
   health: number;
 
@@ -25,6 +26,7 @@ export class Mage {
     this.move = 6;
     this.fight = 1;
     this.shoot = 0;
+    this.will = 4;
     this.armor = 10;
     this.health = 14;
     this.openSpellSlots = 8;
