@@ -12,9 +12,11 @@ export class SpellDialogModalComponent implements OnInit {
 
   @Input() userMage : Mage;
 
-  currentSchool: string = '';
+  public currentSchool: string;
 
-  constructor() { }
+  constructor() {
+    this.currentSchool = "";
+  }
 
   ngOnInit() {
     if(this.userMage== null){

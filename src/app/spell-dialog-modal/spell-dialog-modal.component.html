@@ -7,16 +7,10 @@
     </header>
     <div class="modal-body">
       Select a spell to add to your wizard's spellbook.  Spell Slots available({{userMage.openSpellSlots}})
-      <div class="dropdown">
-        <button class="btn btn-default dropdown-toggle pull-right" type="button" id="schoolDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-          Select School
-          <span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu pull-right" aria-labelledby="schoolDropdown">
-          <li *ngFor="let school of getSchools()"><a href="#">{{school}}</a></li>
-        </ul>
-      </div>
       <p></p>
+      <select class="btn btn-default dropdown-toggle" [(ngModel)]="this.currentSchool">
+        <option *ngFor="let school of getSchools()" [ngValue]="school">{{school}}</option>
+      </select>
       <table class="table table-hover table-bordered">
         <th>Spell</th><th>Description</th><th>School</th><th>Casting Roll</th><th>Add Spell</th>
         <tr *ngFor="let spell of getAvailableSpells()"><td>{{spell.name}}</td><td>{{spell.description}}</td><td>{{spell.school}}</td><td>{{spell.castingNumber}}</td><td><button type="button" class="btn btn-primary" (click)="addSpell(spell)"><span class="glyphicon glyphicon-plus"></span></button></td></tr>
