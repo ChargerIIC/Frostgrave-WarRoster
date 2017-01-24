@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { Mage } from '../model/mage.model';
+import { SpellBook } from '../model/spellbook.model';
 
 @Component({
   selector: 'app-wizard-summary-panel',
@@ -14,20 +15,9 @@ export class WizardSummaryPanelComponent implements OnInit {
   @Input() userMage: Mage;
 
   constructor() {
-    this.schoolsOfMagic = [
-      "Chronomancer",
-      "Elementalist",
-      "Enchanter",
-      "Illusionist",
-      "Necromancer",
-      "Sigilist",
-      "Soothsayer",
-      "Summoner",
-      "Thaumaturge",
-      "Witch"
-    ];
+    this.schoolsOfMagic = SpellBook.schools;
   }
-
+  
   ngOnInit() {
     if(this.userMage== null){
       this.userMage = new Mage();

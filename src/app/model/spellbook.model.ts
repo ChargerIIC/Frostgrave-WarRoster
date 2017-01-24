@@ -3,6 +3,8 @@ import { Spell } from './spell.model';
 export class SpellBook{
   public static spells: Spell[] = new Array<Spell>();
 
+  public static schools: string[] = ['Chronomancer', 'Elementalist', 'Enchanter', 'Illusionist'];
+
   constructor(){
   }
 
