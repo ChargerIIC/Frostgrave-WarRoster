@@ -12,10 +12,14 @@ export class SpellDialogModalComponent implements OnInit {
 
   @Input() userMage : Mage;
 
-  public currentSchool: string;
+  currentSchool: string;
+  schoolFilter: Array<string>;
 
   constructor() {
-    this.currentSchool = "";
+    this.schoolFilter = SpellBook.schools;
+    this.schoolFilter.push('All');
+
+    this.currentSchool = 'All';
   }
 
   ngOnInit() {
@@ -26,32 +30,22 @@ export class SpellDialogModalComponent implements OnInit {
   }
 
   getAvailableSpells(): Array<Spell>{
-    if(this.currentSchool == '')
+    if(this.currentSchool == 'All')
     {
       return SpellBook.spells;
     }
     else
     {
-      return SpellBook.spells.filter(this.spellSchoolMatchesSelectedSchoold);
+      return SpellBook.spells.filter(x=>(x.school == this.currentSchool));
     }
   }
 
   getSchools(): Array<string>{
-    return SpellBook.schools;
+    return this.schoolFilter;
   }
 
   addSpell(spell: Spell){
     this.userMage.addSpellToCollection(spell);
   }
 
-  spellSchoolMatchesSelectedSchoold(value: Spell) : boolean {
-    if(value.school == this.currentSchool)
-    {
-      return true;
-    }
-    else
-    {
-      return false;
-    }
-  }
 }
