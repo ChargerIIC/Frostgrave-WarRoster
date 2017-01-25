@@ -15,7 +15,7 @@ export class SpellBook{
     spell.school = "Chronomancer";
     spell.castingNumber = 10;
     spell.range = "LOS";
-    SpellBook.spells[0] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Decay";
@@ -23,7 +23,7 @@ export class SpellBook{
     spell.school = "Chronomancer";
     spell.castingNumber = 12;
     spell.range = "LOS";
-    SpellBook.spells[1] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Fast Act";
@@ -31,7 +31,7 @@ export class SpellBook{
     spell.school = "Chronomancer";
     spell.castingNumber = 8;
     spell.range = "LOS";
-    SpellBook.spells[2] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Fleet Feet";
@@ -39,7 +39,7 @@ export class SpellBook{
     spell.school = "Chronomancer";
     spell.castingNumber = 10;
     spell.range = "LOS";
-    SpellBook.spells[3] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Petrify";
@@ -47,7 +47,7 @@ export class SpellBook{
     spell.school = "Chronomancer";
     spell.castingNumber = 12;
     spell.range = "LOS";
-    SpellBook.spells[4] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Slow";
@@ -55,7 +55,7 @@ export class SpellBook{
     spell.school = "Chronomancer";
     spell.castingNumber = 12;
     spell.range = "LOS";
-    SpellBook.spells[5] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Time Store";
@@ -63,7 +63,7 @@ export class SpellBook{
     spell.school = "Chronomancer";
     spell.castingNumber = 14;
     spell.range = "SELF";
-    SpellBook.spells[6] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Time Walk";
@@ -71,7 +71,7 @@ export class SpellBook{
     spell.school = "Chronomancer";
     spell.castingNumber = 18;
     spell.range = "SELF";
-    SpellBook.spells[7] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Call Storm";
@@ -79,7 +79,7 @@ export class SpellBook{
     spell.school = "Elementalist";
     spell.castingNumber = 12;
     spell.range = "AREA";
-    SpellBook.spells[8] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Destructive Sphere";
@@ -87,7 +87,7 @@ export class SpellBook{
     spell.school = "Elementalist";
     spell.castingNumber = 12;
     spell.range = "AREA";
-    SpellBook.spells[9] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Elemental Ball";
@@ -95,7 +95,7 @@ export class SpellBook{
     spell.school = "Elementalist";
     spell.castingNumber = 12;
     spell.range = "LOS";
-    SpellBook.spells[10] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Elemental Bolt";
@@ -103,7 +103,7 @@ export class SpellBook{
     spell.school = "Elementalist";
     spell.castingNumber = 12;
     spell.range = "LOS";
-    SpellBook.spells[11] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Elemental Hammer";
@@ -111,7 +111,7 @@ export class SpellBook{
     spell.school = "Elementalist";
     spell.castingNumber = 10;
     spell.range = "LOS";
-    SpellBook.spells[12] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Elemental Shield";
@@ -119,7 +119,7 @@ export class SpellBook{
     spell.school = "Elementalist";
     spell.castingNumber = 10;
     spell.range = "SELF";
-    SpellBook.spells[13] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Scatter Shot";
@@ -135,7 +135,7 @@ export class SpellBook{
     spell.school = "Elementalist";
     spell.castingNumber = 10;
     spell.range = "LOS";
-    SpellBook.spells[15] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Animate Construct";
@@ -143,7 +143,7 @@ export class SpellBook{
     spell.school = "Enchanter";
     spell.castingNumber = 8;
     spell.range = "NA";
-    SpellBook.spells[16] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Control Construct";
@@ -151,7 +151,7 @@ export class SpellBook{
     spell.school = "Enchanter";
     spell.castingNumber = 12;
     spell.range = "LOS";
-    SpellBook.spells[17] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Embed Enchantment";
@@ -159,7 +159,7 @@ export class SpellBook{
     spell.school = "Enchanter";
     spell.castingNumber = 12;
     spell.range = "NA";
-    SpellBook.spells[18] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Enchant Armour";
@@ -167,7 +167,7 @@ export class SpellBook{
     spell.school = "Enchanter";
     spell.castingNumber = 8;
     spell.range = "LOS";
-    SpellBook.spells[19] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Enchant Weapon";
@@ -175,7 +175,7 @@ export class SpellBook{
     spell.school = "Enchanter";
     spell.castingNumber = 8;
     spell.range = "LOS";
-    SpellBook.spells[20] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Grenade";
@@ -183,7 +183,7 @@ export class SpellBook{
     spell.school = "Enchanter";
     spell.castingNumber = 10;
     spell.range = "LOS";
-    SpellBook.spells[21] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Strength";
@@ -191,7 +191,7 @@ export class SpellBook{
     spell.school = "Enchanter";
     spell.castingNumber = 10;
     spell.range = "LOS";
-    SpellBook.spells[22] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Telekinesis";
@@ -199,7 +199,7 @@ export class SpellBook{
     spell.school = "Enchanter";
     spell.castingNumber = 8;
     spell.range = "LOS";
-    SpellBook.spells[23] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Beauty";
@@ -207,7 +207,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 10;
     spell.range = "SELF";
-    SpellBook.spells[24] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Fool's Gold";
@@ -215,7 +215,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 8;
     spell.range = "NA";
-    SpellBook.spells[25] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Glow";
@@ -223,7 +223,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 10;
     spell.range = "LOS";
-    SpellBook.spells[26] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Illusionary Soldier";
@@ -231,7 +231,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 12;
     spell.range = "NA";
-    SpellBook.spells[27] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Invisibility";
@@ -239,7 +239,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 12;
     spell.range = "TCH";
-    SpellBook.spells[28] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Monstrous Form";
@@ -247,7 +247,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 8;
     spell.range = "SELF";
-    SpellBook.spells[29] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Teleport";
@@ -255,7 +255,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 10;
     spell.range = "SELF";
-    SpellBook.spells[30] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Transpose";
@@ -263,7 +263,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 12;
     spell.range = "LOS";
-    SpellBook.spells[31] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Bone Dart";
@@ -271,7 +271,7 @@ export class SpellBook{
     spell.school = "Necromancer";
     spell.castingNumber = 8;
     spell.range = "LOS";
-    SpellBook.spells[32] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Bones of the Earth";
@@ -279,7 +279,7 @@ export class SpellBook{
     spell.school = "Necromancer";
     spell.castingNumber = 10;
     spell.range = "LOS";
-    SpellBook.spells[33] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Control Undead";
@@ -287,7 +287,7 @@ export class SpellBook{
     spell.school = "Necromancer";
     spell.castingNumber = 12;
     spell.range = "LOS";
-    SpellBook.spells[34] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Raise Zombie";
@@ -295,7 +295,7 @@ export class SpellBook{
     spell.school = "Necromancer";
     spell.castingNumber = 8;
     spell.range = "TCH";
-    SpellBook.spells[35] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Reveal Death";
@@ -303,7 +303,7 @@ export class SpellBook{
     spell.school = "Necromancer";
     spell.castingNumber = 12;
     spell.range = "LOS";
-    SpellBook.spells[36] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Spell Eater";
@@ -311,7 +311,7 @@ export class SpellBook{
     spell.school = "Necromancer";
     spell.castingNumber = 12;
     spell.range = "LOS";
-    SpellBook.spells[37] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Steal Health";
@@ -319,7 +319,7 @@ export class SpellBook{
     spell.school = "Necromancer";
     spell.castingNumber = 10;
     spell.range = "LOS";
-    SpellBook.spells[38] = spell;
+    SpellBook.spells.push(spell);
 
     spell = new Spell();
     spell.name = "Strike Dead";
@@ -327,6 +327,6 @@ export class SpellBook{
     spell.school = "Necromancer";
     spell.castingNumber = 18;
     spell.range = "LOS";
-    SpellBook.spells[39] = spell;
+    SpellBook.spells.push(spell);
   }
 }
