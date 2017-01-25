@@ -3,7 +3,7 @@ import { Spell } from './spell.model';
 export class SpellBook{
   public static spells: Spell[] = new Array<Spell>();
 
-  public static schools: string[] = ['Chronomancer', 'Elementalist', 'Enchanter', 'Illusionist'];
+  public static schools: string[] = ['Chronomancer', 'Elementalist', 'Enchanter', 'Illusionist', 'Necromancer'];
 
   constructor(){
   }
@@ -207,7 +207,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 10;
     spell.range = "SELF";
-    SpellBook.spells[1] = spell;
+    SpellBook.spells[24] = spell;
 
     spell = new Spell();
     spell.name = "Fool's Gold";
@@ -215,7 +215,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 8;
     spell.range = "NA";
-    SpellBook.spells[1] = spell;
+    SpellBook.spells[25] = spell;
 
     spell = new Spell();
     spell.name = "Glow";
@@ -223,7 +223,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 10;
     spell.range = "LOS";
-    SpellBook.spells[1] = spell;
+    SpellBook.spells[26] = spell;
 
     spell = new Spell();
     spell.name = "Illusionary Soldier";
@@ -231,7 +231,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 12;
     spell.range = "NA";
-    SpellBook.spells[1] = spell;
+    SpellBook.spells[27] = spell;
 
     spell = new Spell();
     spell.name = "Invisibility";
@@ -239,7 +239,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 12;
     spell.range = "TCH";
-    SpellBook.spells[1] = spell;
+    SpellBook.spells[28] = spell;
 
     spell = new Spell();
     spell.name = "Monstrous Form";
@@ -247,7 +247,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 8;
     spell.range = "SELF";
-    SpellBook.spells[1] = spell;
+    SpellBook.spells[29] = spell;
 
     spell = new Spell();
     spell.name = "Teleport";
@@ -255,7 +255,7 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 10;
     spell.range = "SELF";
-    SpellBook.spells[1] = spell;
+    SpellBook.spells[30] = spell;
 
     spell = new Spell();
     spell.name = "Transpose";
@@ -263,7 +263,70 @@ export class SpellBook{
     spell.school = "Illusionist";
     spell.castingNumber = 12;
     spell.range = "LOS";
-    SpellBook.spells[1] = spell;
+    SpellBook.spells[31] = spell;
 
+    spell = new Spell();
+    spell.name = "Bone Dart";
+    spell.description = "This spell fires a small, sharp shard of bone at a target. The spellcaster may make an immediate +5 shooting attack against any figure in line of sight. This does not count as a magic attack.";
+    spell.school = "Necromancer";
+    spell.castingNumber = 8;
+    spell.range = "LOS";
+    SpellBook.spells[32] = spell;
+
+    spell = new Spell();
+    spell.name = "Bones of the Earth";
+    spell.description = "A skeletal hand reaches out of the ground and grabs the target’s ankle. The target is held fast and may not move. Any magic form of movement will allow the target to escape the hand. Otherwise, the only way to escape the hand is to fight. The hand has Fight +0 and Health 1. If the hand is damaged, it vanishes, and the target is free. This spell may only be cast against a target that is standing on ground level. The maximum range for this spell is 18”.";
+    spell.school = "Necromancer";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells[33] = spell;
+
+    spell = new Spell();
+    spell.name = "Control Undead";
+    spell.description = "If successfully cast, the target undead creature must make an immediate Will roll versus the casting roll. If the roll fails, the spellcaster gains control of the undead creature for the rest of the game. A spellcaster may only control one undead creature at a time.";
+    spell.school = "Necromancer";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells[34] = spell;
+
+    spell = new Spell();
+    spell.name = "Raise Zombie";
+    spell.description = "This spell can be used both ‘Out of Game’ and during the game. If successful, the spellcaster adds one zombie to his warband (see Chapter 6: Bestiary). If the spell is cast before the game, the zombie can be deployed normally. If it is cast during a game, the zombie appears in base contact with the spellcaster. A warband may only have one raised zombie at any one time. If the zombie is killed during a game, Raise Zombie can be cast again to create another. A raised zombie does not count towards the warband size limit and remains with a warband until the end of the game, at which point it crumbles into dust.";
+    spell.school = "Necromancer";
+    spell.castingNumber = 8;
+    spell.range = "TCH";
+    SpellBook.spells[35] = spell;
+
+    spell = new Spell();
+    spell.name = "Reveal Death";
+    spell.description = "This spell causes the target to see a vision of his own death. The target must make an immediate Will roll versus the casting roll. If the target fails, he loses his next activation.";
+    spell.school = "Necromancer";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells[36] = spell;
+
+    spell = new Spell();
+    spell.name = "Spell Eater";
+    spell.description = "This spell cancels the effects of any one spell currently in play, and the spellcaster immediately takes 1 point of damage. It cannot unsummon a creature, but it can cancel the control of a creature.";
+    spell.school = "Necromancer";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells[37] = spell;
+
+    spell = new Spell();
+    spell.name = "Steal Health";
+    spell.description = "The target must make an immediate Will roll versus the casting roll. If failed, the target immediately loses 3 Health and the spellcaster regains 3 Health. This may not take the spellcaster above his starting health. This spell has no effect on undead, constructs or demons. A spellcaster may target a member of his own warband – if he does, however, the target will immediately (and permanently) leave the warband and will move as quickly as possible off the board.";
+    spell.school = "Necromancer";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells[38] = spell;
+
+    spell = new Spell();
+    spell.name = "Strike Dead";
+    spell.description = "This spell may target a figure within 8”. The target must make a Will roll versus the casting roll or be immediately reduced to 0 Health. All figures may empower their Will roll to resist this spell, even non-spellcasters. The spellcaster immediately loses 1 Health upon attempting this spell (even if it is cast successfully), plus any additional loss incurred by failure or empowerment.";
+    spell.school = "Necromancer";
+    spell.castingNumber = 18;
+    spell.range = "LOS";
+    SpellBook.spells[39] = spell;
   }
 }
