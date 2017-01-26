@@ -24,4 +24,12 @@ export class WizardSpellsPanelComponent implements OnInit {
     this.userMage.removeSpellFromCollection(spell);
   }
 
+  getSpellCost(spell: Spell){
+    if(this.userMage.school == spell.school){
+      return spell.castingNumber;
+    }
+    else{
+      return spell.castingNumber + 2;
+    }
+  }
 }

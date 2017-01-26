@@ -2,6 +2,6 @@
 <div class="panel-body"><button class="btn btn-primary" data-toggle="modal" data-target="#spellModal"><span class="glyphicon glyphicon-plus"></span> Add Spell</button> <span class="pull-right">Spells Available({{userMage.openSpellSlots}})</span>
   <table class="table table-hover table-bordered">
     <th>Spell</th><th>Description</th><th>School</th><th>Casting Roll</th><th>Remove Spell</th>
-    <tr *ngFor="let spell of userMage.spells"><td>{{spell.name}}</td><td>{{spell.description}}</td><td>{{spell.school}}</td><td>{{spell.castingNumber}}</td><td><button type="button" class="btn btn-primary" (click)="removeSpell(spell)"><span class="glyphicon glyphicon-minus"></span></button></td></tr>
+    <tr *ngFor="let spell of userMage.spells"><td>{{spell.name}}</td><td>{{spell.description}}</td><td>{{spell.school}}</td><td>{{getSpellCost(spell)}}</td><td><button type="button" class="btn btn-primary" (click)="removeSpell(spell)"><span class="glyphicon glyphicon-minus"></span></button></td></tr>
   </table>
 </div>
