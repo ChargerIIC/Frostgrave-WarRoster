@@ -19,5 +19,6 @@ export class AppComponent {
 
     SpellBook.loadSpellsIntoSpellbook();
     EquipmentVault.loadEquipmentIntoVault();
+    this.wizard.items.push(EquipmentVault.items[0]);
   }
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Mage } from '../model/mage.model';
+import { Equipment } from '../model/equipment.model';
 
 @Component({
   selector: 'app-wizard-equipment-panel',
@@ -13,6 +14,10 @@ export class WizardEquipmentPanelComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  removeItem(item: Equipment){
+    this.userMage.removeItemFromInventory(item);
   }
 
 }

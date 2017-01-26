@@ -1,4 +1,5 @@
 import { Spell } from './spell.model';
+import { Equipment } from './equipment.model';
 
 export class Mage {
 
@@ -17,6 +18,7 @@ export class Mage {
   gold: number;
 
   spells: Spell[];
+  items: Equipment[];
 
   constructor(){
     //Defaults
@@ -33,6 +35,7 @@ export class Mage {
     this.gold = 500;
 
     this.spells = new Array<Spell>();
+    this.items = new Array<Equipment>();
   }
 
   addSpellToCollection(spell: Spell){
@@ -49,4 +52,20 @@ export class Mage {
     }
     this.openSpellSlots++;
   }
+
+  addItemToInventory(item: Equipment){
+    console.log("Adding Item: " + item.name);
+    this.items.push(item);
+    this.gold = this.gold - item.cost;
+  }
+
+  removeItemFromInventory(item: Equipment){
+    console.log("Removing Item: " + item.name);
+    var index = this.items.indexOf(item);
+    if(index > -1){
+      this.items.splice(index,1);
+    }
+    this.gold = this.gold + item.cost;
+  }
+
 }

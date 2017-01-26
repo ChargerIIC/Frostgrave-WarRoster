@@ -1,2 +1,7 @@
 <div class="panel-heading">Equipment - Description</div>
-<div class="panel-body">None</div>
+<div class="panel-body">
+  <table class="table table-hover table-bordered">
+    <th>Item</th><th>Description</th><th>Bonus</th><th>Cost</th><th>Remove Item</th>
+    <tr *ngFor="let item of userMage.items"><td>{{item.name}}</td><td>{{item.description}}</td><td>{{item.bonusType}} : {{item.bonusNum}}</td><td>{{item.cost}}</td><td><button type="button" class="btn btn-primary" (click)="removeItem(item)"><span class="glyphicon glyphicon-minus"></span></button></td></tr>
+  </table>
+</div>
