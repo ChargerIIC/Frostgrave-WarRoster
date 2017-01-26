@@ -60,6 +60,7 @@ export class Mage {
     this.items.push(item);
     this.gold = this.gold - item.cost;
     this.openItemSlots--;
+    this.changeStatsOfMage(item, true);
   }
 
   removeItemFromInventory(item: Equipment){
@@ -69,6 +70,58 @@ export class Mage {
       this.items.splice(index,1);
       this.gold = this.gold + item.cost;
       this.openItemSlots++;
+    }
+  }
+
+  changeStatsOfMage(item: Equipment, add: boolean){
+    if(item.bonusType == "Move"){
+      if(add){
+        this.move += item.bonusNum;
+      }
+      else{
+        this.move -= item.bonusNum;
+      }
+    }
+    else if(item.bonusType == "Fight"){
+      if(add){
+        this.fight += item.bonusNum;
+      }
+      else{
+        this.fight -= item.bonusNum;
+      }
+    }
+    else if(item.bonusType == "Shoot"){
+      if(add){
+        this.shoot += item.bonusNum;
+      }
+      else{
+        this.shoot -= item.bonusNum;
+      }
+    }
+    else if(item.bonusType == "Will"){
+      if(add){
+        this.will += item.bonusNum;
+      }
+      else{
+        this.will -= item.bonusNum;
+      }
+    }
+    else if(item.bonusType == "Armor"){
+      if(add){
+        this.armor += item.bonusNum;
+      }
+      else{
+        this.armor -= item.bonusNum;
+      }
+
+    }
+    else if(item.bonusType == "Health"){
+      if(add){
+        this.health += item.bonusNum;
+      }
+      else{
+        this.health -= item.bonusNum;
+      }
     }
   }
 

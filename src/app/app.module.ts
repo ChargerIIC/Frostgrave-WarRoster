@@ -11,6 +11,7 @@ import { WizardEquipmentPanelComponent } from './wizard-equipment-panel/wizard-e
 import { SpellDialogModalComponent } from './spell-dialog-modal/spell-dialog-modal.component';
 
 import { Mage } from './model/mage.model';
+import { ItemDialogModalComponent } from './item-dialog-modal/item-dialog-modal.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { Mage } from './model/mage.model';
     WizardStatsPanelComponent,
     WizardSpellsPanelComponent,
     WizardEquipmentPanelComponent,
-    SpellDialogModalComponent
+    SpellDialogModalComponent,
+    ItemDialogModalComponent
   ],
   imports: [
     BrowserModule,
