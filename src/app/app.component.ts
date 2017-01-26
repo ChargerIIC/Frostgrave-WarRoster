@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Mage } from './model/mage.model';
 import { Spell } from './model/spell.model';
 import { SpellBook } from './model/spellbook.model';
+import { EquipmentVault } from './model/equipmentvault.model';
 
 @Component({
   selector: 'app-root',
@@ -17,5 +18,6 @@ export class AppComponent {
     this.wizard = new Mage();
 
     SpellBook.loadSpellsIntoSpellbook();
+    EquipmentVault.loadEquipmentIntoVault();
   }
 }
