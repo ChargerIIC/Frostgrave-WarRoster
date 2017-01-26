@@ -15,6 +15,7 @@ export class Mage {
   health: number;
 
   openSpellSlots: number;
+  openItemSlots: number;
   gold: number;
 
   spells: Spell[];
@@ -32,6 +33,7 @@ export class Mage {
     this.armor = 10;
     this.health = 14;
     this.openSpellSlots = 8;
+    this.openItemSlots = 4;
     this.gold = 500;
 
     this.spells = new Array<Spell>();
@@ -49,14 +51,15 @@ export class Mage {
     var index = this.spells.indexOf(spell);
     if(index > -1){
       this.spells.splice(index,1);
+      this.openSpellSlots++;
     }
-    this.openSpellSlots++;
   }
 
   addItemToInventory(item: Equipment){
     console.log("Adding Item: " + item.name);
     this.items.push(item);
     this.gold = this.gold - item.cost;
+    this.openItemSlots--;
   }
 
   removeItemFromInventory(item: Equipment){
@@ -64,8 +67,9 @@ export class Mage {
     var index = this.items.indexOf(item);
     if(index > -1){
       this.items.splice(index,1);
+      this.gold = this.gold + item.cost;
+      this.openItemSlots++;
     }
-    this.gold = this.gold + item.cost;
   }
 
 }
