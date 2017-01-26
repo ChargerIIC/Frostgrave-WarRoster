@@ -27,7 +27,7 @@ export class Mage {
     this.school = "Elementalist";
     this.level = 1;
     this.move = 6;
-    this.fight = 1;
+    this.fight = 0;
     this.shoot = 0;
     this.will = 4;
     this.armor = 10;
@@ -70,6 +70,7 @@ export class Mage {
       this.items.splice(index,1);
       this.gold = this.gold + item.cost;
       this.openItemSlots++;
+      this.changeStatsOfMage(item, false);
     }
   }
 
