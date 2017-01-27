@@ -3,7 +3,7 @@ import { Spell } from './spell.model';
 export class SpellBook{
   public static spells: Spell[] = new Array<Spell>();
 
-  public static schools: string[] = ['Chronomancer', 'Elementalist', 'Enchanter', 'Illusionist', 'Necromancer'];
+  public static schools: string[] = ['Chronomancer', 'Elementalist', 'Enchanter', 'Illusionist', 'Necromancer', 'Sigilist'];
 
   constructor(){
   }
@@ -327,6 +327,70 @@ export class SpellBook{
     spell.school = "Necromancer";
     spell.castingNumber = 18;
     spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Asorb Knowledge";
+    spell.description = "This spell can only be cast by a wizard, and allows him to absorb the knowledge from a written work without having to read it. A wizard immediately gains 50 experience points for casting this spell to represent the speed with which he can gain knowledge. This spell may only be cast after a game in which the wizard was not reduced to 0 Health.";
+    spell.school = "Sigilist";
+    spell.castingNumber = 8;
+    spell.range = "NA";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Create Grimoire";
+    spell.description = "This spell allows a spellcaster to create a grimoire containing one spell that he already knows. In order to create a grimoire, the spellcaster must first cast Create Grimoire, and then the spell he wishes to place into the grimoire (even if it is not usually an Out of Game spell). If both are successfully cast, the grimoire is created and the wizard may then sell it.";
+    spell.school = "Sigilist";
+    spell.castingNumber = 12;
+    spell.range = "NA";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Draining Word";
+    spell.description = "This spell draws a bright rune of power in the sky. The spellcaster may choose one spell for the Draining Word to affect. All rolls to attempt to cast that particular spell are at -3 for the rest of the game. A spellcaster may only have one Draining Word spell in effect at any given time.";
+    spell.school = "Sigilist";
+    spell.castingNumber = 14;
+    spell.range = "AREA";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Explosive Rune";
+    spell.description = "The spellcaster draws a bright, glowing rune of power on the ground or a wall. A marker should be placed on the table to represent the rune. If any character or creature that was not part of the spellcaster’s warband at the start of the game comes within 1” of the rune, it explodes, and every figure, friend or foe, within 2” suffers an immediate +5 shooting attack. A spellcaster may have up to three such runes in play at any time. At the end of any turn, he may choose to cancel any or all of his runes. If the spellcaster is removed from play, any runes he placed are also removed.";
+    spell.school = "Sigilist";
+    spell.castingNumber = 10;
+    spell.range = "TCH";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Furious Quill";
+    spell.description = "The target is attacked by a sharp animated quill. Although the quill does no damage, it is highly irritating and extremely distracting. While under attack, the target suffers -1 Move, -2 Fight, -4 Shoot and -2 to any casting rolls. At the start of the target’s activation each turn, he may make a Will roll versus the casting roll – if successful, the quill is caught and destroyed. Multiple castings of Furious Quill against the same target have no effect. This spell may be cast against a figure in combat with no penalty.";
+    spell.school = "Sigilist";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Power Word";
+    spell.description = "This spell draws a bright rune of power in the sky. The spellcaster may pick one spell for the Power Word to affect. All rolls to cast that particular spell are at +3 for every spellcaster for the rest of the game. Each spellcaster may have only one Power Word in effect at any given time.";
+    spell.school = "Sigilist";
+    spell.castingNumber = 14;
+    spell.range = "AREA";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Push";
+    spell.description = "The target suffers an immediate +10 attack. Instead of taking damage from this attack, the target is moved 1” directly away from the spellcaster for every point of damage he would have taken. If this pushes the target into a piece of terrain or the edge of the board, he stops immediately. Other figures do not stop (or get hit by) a pushed figure – they are assumed to step out of the way. If the target is pushed off a height, he suffers falling damage as normal.";
+    spell.school = "Sigilist";
+    spell.castingNumber = 8;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Write Scroll";
+    spell.description = "A spellcaster may attempt to cast this spell once after every game. If successful, one scroll is created. The scroll must be of a spell that the spellcaster knows.";
+    spell.school = "Sigilist";
+    spell.castingNumber = 12;
+    spell.range = "NA";
     SpellBook.spells.push(spell);
   }
 }
