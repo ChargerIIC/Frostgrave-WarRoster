@@ -3,7 +3,7 @@ import { Spell } from './spell.model';
 export class SpellBook{
   public static spells: Spell[] = new Array<Spell>();
 
-  public static schools: string[] = ['Chronomancer', 'Elementalist', 'Enchanter', 'Illusionist', 'Necromancer', 'Sigilist', 'Soothsayer', 'Summoner', 'Thaumaturge'];
+  public static schools: string[] = ['Chronomancer', 'Elementalist', 'Enchanter', 'Illusionist', 'Necromancer', 'Sigilist', 'Soothsayer', 'Summoner', 'Thaumaturge', 'Witch'];
 
   constructor(){
   }
@@ -581,6 +581,70 @@ export class SpellBook{
     spell.name = "Shield";
     spell.description = "The target receives +2 Armour for the rest of the game. Multiple Shield spells on the same target have no effect.";
     spell.school = "Thaumaturge";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Animal Companion";
+    spell.description = "The spellcaster summons an animal companion of his choice from the following options to join his warband: Bear, Wolf, Snow Leopard, Ice Toad (see Chapter 6: Bestiary). The animal takes the place of a soldier for the purposes of maximum warband size. Animal companions may not collect treasure or carry items. They may be controlled by another spellcaster using the Control Animal spell, although they will re-join their original warband after the game. Animal companions are more strong-willed than wild examples of their species – give them +2 to the Will stat found in the appropriate Bestiary entry. A spellcaster may only have one animal companion at any time.";
+    spell.school = "Witch";
+    spell.castingNumber = 8;
+    spell.range = "NA";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Brew Potion";
+    spell.description = "A spellcaster may attempt to cast this spell before the game. If successful, he gains one potion of any type (except Elixir of Life). This potion may be given to any member of his warband.";
+    spell.school = "Witch";
+    spell.castingNumber = 12;
+    spell.range = "NA";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Control Animal";
+    spell.description = "If successfully cast, the target animal must make an immediate Will roll versus the casting roll. If the roll fails, the spellcaster gains control of the animal for the rest of the game. A spellcaster can only control one animal at a time.";
+    spell.school = "Witch";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Curse";
+    spell.description = "The target must pass a Will roll versus the casting roll or suffer -1 to its Fight, Shoot, and Will stats for the rest of the game. This spell may be cast on the same target up to five times, for a maximum of -5 to each of the three stats.";
+    spell.school = "Witch";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Familiar";
+    spell.description = "A spellcaster may attempt to cast this spell before any game. If successful, he gains a familiar in the form of a small creature of his choosing. A spellcaster with a familiar gains +2 Health (write as a split stat). If the spellcaster is ever reduced to his last point of health, the familiar is destroyed. At the start of the next game, the spellcaster will revert to his normal health, unless another Familiar spell is successfully cast. This additional health may take a spellcaster over his usual maximum for the stat.";
+    spell.school = "Witch";
+    spell.castingNumber = 8;
+    spell.range = "NA";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Fog";
+    spell.description = "A line of fog, 6” long, 3” high and 1” thick settles across the battlefield within line of sight of the caster (use cotton or paper to mark the patch of fog). Figures can move through the fog with no difficulty, but no-one may draw line of sight through it. At the start of each new turn, roll a d20. On a result of 19 or 20 the fog dissipates and is removed from the table.";
+    spell.school = "Witch";
+    spell.castingNumber = 8;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Mud";
+    spell.description = "All ground within a 3” radius of a target point becomes rough ground for the rest of the game.";
+    spell.school = "Witch";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Poison Dart";
+    spell.description = "The spellcaster flings a small dart coated in a potent poison. The spellcaster makes an immediate +5 shooting attack against any figure in line of sight. If the attack beats the target’s Armour it causes no damage, but he loses one of his two standard actions per activation for the rest of the game, or until healed by either a Heal spell or a Healing Potion. The remaining action does not have to be the otherwise compulsory movement. Multiple Poison Darts against the same figure have no effect.";
+    spell.school = "Witch";
     spell.castingNumber = 10;
     spell.range = "LOS";
     SpellBook.spells.push(spell);
