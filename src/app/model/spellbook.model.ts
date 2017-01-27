@@ -3,7 +3,7 @@ import { Spell } from './spell.model';
 export class SpellBook{
   public static spells: Spell[] = new Array<Spell>();
 
-  public static schools: string[] = ['Chronomancer', 'Elementalist', 'Enchanter', 'Illusionist', 'Necromancer', 'Sigilist', 'Soothsayer'];
+  public static schools: string[] = ['Chronomancer', 'Elementalist', 'Enchanter', 'Illusionist', 'Necromancer', 'Sigilist', 'Soothsayer', 'Summoner', 'Thaumaturge'];
 
   constructor(){
   }
@@ -454,6 +454,134 @@ export class SpellBook{
     spell.description = "This spell may be cast on any terrain feature within 12” that has a flat side, such as most ruins. Place a token next to the terrain feature to represent the Wizard Eye. For the rest of the game, the spellcaster may choose to draw line of sight from the Wizard Eye instead of from his figure when casting spells. The Wizard Eye has 180-degree field of vision. A spellcaster may only maintain one Wizard Eye at a time.";
     spell.school = "Soothsayer";
     spell.castingNumber = 8;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Bind Demon";
+    spell.description = "The target demon must make an immediate Will roll versus the casting roll. If it fails, the spellcaster gains control of the demon for the rest of the game. A spellcaster may only have one bound demon at a time.";
+    spell.school = "Summoner";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Imp";
+    spell.description = "An imp immediately appears, anywhere within the spellcaster’s line of sight, but no closer than 3” to another figure. The imp follows the normal rules for creatures and will act in the next creature phase. If the same spellcaster casts this spell a second time, the first imp will immediately vanish.";
+    spell.school = "Summoner";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Leap";
+    spell.description = "The target makes an immediate 10” move in any direction, including vertically. This move is not hindered by any terrain unless that terrain is over 10” high. Target may take no other action this turn. This spell cannot be used to move a figure into combat.";
+    spell.school = "Summoner";
+    spell.castingNumber = 8;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Plague of Insects";
+    spell.description = "The target figure is attacked by a cloud of stinging or biting insects that irritate and distract. The cloud of insects has a 1” radius centred on, and moving with, the target figure. It affects all figures, including the target figure, fully or partially within this radius. While being pestered by the insects, a figure has -4 Fight and -4 Shoot. The target figure must pass a Will roll versus the original casting roll at the start of his activation in order to beat off all the insects. Other figures within the radius may simply move away to escape. A figure may only ever be affected by one Plague of Insects, whether as a target or by virtue of being within the 1” radius.";
+    spell.school = "Summoner";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Planar Tear";
+    spell.description = "The spellcaster creates a small tear in the fabric of the universe. This rift is painful to humans and creatures, but lethal to demons. The spellcaster selects a target point. All figures within 2” of that point must make a Will roll versus the casting roll or suffer 2 points of damage. Demons that fail the Will roll take damage equal to the casting roll.";
+    spell.school = "Summoner";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Plane Walk";
+    spell.description = "Although the spellcaster remains in the same physical location, he briefly moves between planes. Until his next activiation, he can ignore all terrain when moving, walking through walls and across chasms. He may not be the target of any shooting attacks or spells. The spellcaster will never be considered in combat during the turn, nor can he be attacked by any figure. However, he also may not pick up treasure, or in any way affect other characters or terrain on the board. If he is carrying treasure, he drops it. It is incredibly draining to move between planes of existence, so if a spellcaster attempts to cast this spell in a second consecutive turn, he suffers a -5 modifier. He suffers a -10 modifier if he attempts it three turns in a row and -15 on the fourth turn and beyond.";
+    spell.school = "Summoner";
+    spell.castingNumber = 14;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Possess";
+    spell.description = "This spell may only be cast on a member of the spellcaster’s own warband. The target is possessed by a demon and gains +2 Fight, +2 Armour, and -2 Will for the remainder of the battle and counts as a demon for all intents and purposes (e.g. Banish, Bind Demon). If removed from the game for any reason (such as being hit by a Banish spell), check for the character’s survival as normal. A spellcaster may only have one Possess spell active at a time.";
+    spell.school = "Summoner";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Summon Demon";
+    spell.description = "If successfully cast, a demon is immediately placed on the table within 1” of the spellcaster. It may not be placed straight into combat. The demon is treated as though it is already subject to a Bind Demon spell. A spellcaster may only have one bound demon at a time. The type of demon summoned depends on the amount by which the spellcaster succeeded on his casting roll: 1–5 Imp, 6–12 Minor Demon, 13+ Major Demon (see Chapter 6: Bestiary). If a spellcaster rolls a 1 while attempting to cast this spell, a demon is placed on the table and immediately attacks the summoner. The type of demon is determined using the same chart as above, but using the amount by which the casting roll was failed.";
+    spell.school = "Summoner";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Banish";
+    spell.description = "If successfully cast, all demons within line of sight of the spellcaster must pass an immediate Will roll versus the casting roll or be removed from the game.";
+    spell.school = "Thaumaturge";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Blinding Light";
+    spell.description = "The target must make an immediate Will roll versus the casting roll. If he fails, he may not attack, shoot, or cast Line of Sight spells. His Fight stat is reduced to +0 and Move to 1. At the start of each turn, the figure may attempt to break the spell by making another Will roll against the same target, otherwise the effects last until the end of the game.";
+    spell.school = "Thaumaturge";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Circle of Protection";
+    spell.description = "Creates a circle with a 3” diameter that no demon can enter or pass through. This spell has no effect on a possessed individual. A spellcaster may only have one active circle of protection at a time, but he does not have to remain within it.";
+    spell.school = "Thaumaturge";
+    spell.castingNumber = 12;
+    spell.range = "TCH";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Dispel";
+    spell.description = "Immediately cancels the ongoing effect of any one spell. It cannot unsummon a creature, but it can cancel the control of a creature.";
+    spell.school = "Thaumaturge";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Heal";
+    spell.description = "This spell restores 5 points of Health to the target model. This spell cannot take a model above its starting health.";
+    spell.school = "Thaumaturge";
+    spell.castingNumber = 8;
+    spell.range = "TCH";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Miraclous Cure";
+    spell.description = "This spell removes all of the effects of one type of Permanent Injury. For example, a wizard suffering from Lost Fingers regrows all his missing digits, regardless of how many times he has suffered that particular injury.";
+    spell.school = "Thaumaturge";
+    spell.castingNumber = 12;
+    spell.range = "NA";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Restore Life";
+    spell.description = "This spell can only be cast by a wizard. A wizard may cast this spell immediately after a game in which a member of his warband has died. If successful, that figure is brought back to life, and may return to action in the very next game.";
+    spell.school = "Thaumaturge";
+    spell.castingNumber = 20;
+    spell.range = "NA";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Shield";
+    spell.description = "The target receives +2 Armour for the rest of the game. Multiple Shield spells on the same target have no effect.";
+    spell.school = "Thaumaturge";
+    spell.castingNumber = 10;
     spell.range = "LOS";
     SpellBook.spells.push(spell);
 
