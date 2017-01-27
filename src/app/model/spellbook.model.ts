@@ -3,7 +3,7 @@ import { Spell } from './spell.model';
 export class SpellBook{
   public static spells: Spell[] = new Array<Spell>();
 
-  public static schools: string[] = ['Chronomancer', 'Elementalist', 'Enchanter', 'Illusionist', 'Necromancer', 'Sigilist'];
+  public static schools: string[] = ['Chronomancer', 'Elementalist', 'Enchanter', 'Illusionist', 'Necromancer', 'Sigilist', 'Soothsayer'];
 
   constructor(){
   }
@@ -392,5 +392,70 @@ export class SpellBook{
     spell.castingNumber = 12;
     spell.range = "NA";
     SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Awareness";
+    spell.description = "This spell allows the spellcaster to add +1 to his warband’s initiative rolls for the rest of the game. Multiple castings of this spell have no effect, but it may be cast again if the original spellcaster is removed from play.";
+    spell.school = "Soothsayer";
+    spell.castingNumber = 8;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Combat Awareness";
+    spell.description = "This spell gives the target a magic insight into the moves his opponent will attempt in a fight. It gives the target a +2 Fight stat for the remainder of the game. Multiple castings of this spell on the same target have no effect.";
+    spell.school = "Soothsayer";
+    spell.castingNumber = 12;
+    spell.range = "TCH";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Forget Spell";
+    spell.description = "The spellcaster picks one spell known by the target and causes him to temporarily forget how to cast it. The target may make a Will roll to attempt resist the effects of this spell – if unsuccessful, the he may not cast that spell for the remainder of the game.";
+    spell.school = "Soothsayer";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Mind Control";
+    spell.description = "This spell only affects soldiers and creatures. If the target fails a Will roll against the casting roll, he temporarily joins the spellcaster’s warband and can be activated as normal during the soldier phase of the spellcaster’s turn. After each activation, the soldier may make a Will roll versus the casting roll to shake off the spell’s effects. A spellcaster may only have one active Mind Control spell at a time.";
+    spell.school = "Soothsayer";
+    spell.castingNumber = 12;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Reveal Invisible";
+    spell.description = "This spell cancels all Invisibility spells within 24” of the caster.";
+    spell.school = "Soothsayer";
+    spell.castingNumber = 8;
+    spell.range = "AREA";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Reveal Secret";
+    spell.description = "This spell reveals the location of secret treasure, and may be cast immediately before a game. If successful, the spellcaster’s warband may place one additional treasure token within 6” of their deployment area. Only one extra treasure per warband may be placed in this way each game.";
+    spell.school = "Soothsayer";
+    spell.castingNumber = 12;
+    spell.range = "NA";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Will Power";
+    spell.description = "Target gains +3 Will for the rest of the game. Multiple Will Power spells on the same target have no effect.";
+    spell.school = "Soothsayer";
+    spell.castingNumber = 10;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
+    spell = new Spell();
+    spell.name = "Wizard Eye";
+    spell.description = "This spell may be cast on any terrain feature within 12” that has a flat side, such as most ruins. Place a token next to the terrain feature to represent the Wizard Eye. For the rest of the game, the spellcaster may choose to draw line of sight from the Wizard Eye instead of from his figure when casting spells. The Wizard Eye has 180-degree field of vision. A spellcaster may only maintain one Wizard Eye at a time.";
+    spell.school = "Soothsayer";
+    spell.castingNumber = 8;
+    spell.range = "LOS";
+    SpellBook.spells.push(spell);
+
   }
 }
