@@ -16,7 +16,7 @@ export class SpellDialogModalComponent implements OnInit {
   schoolFilter: Array<string>;
 
   constructor() {
-    this.schoolFilter = SpellBook.schools;
+    this.schoolFilter = SpellBook.schools.map(x => x.name);
     this.schoolFilter.push('All');
 
     this.currentSchool = 'All';

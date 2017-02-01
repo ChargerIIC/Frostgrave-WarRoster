@@ -15,9 +15,9 @@ export class WizardSummaryPanelComponent implements OnInit {
   @Input() userMage: Mage;
 
   constructor() {
-    this.schoolsOfMagic = SpellBook.schools;
+    this.schoolsOfMagic = SpellBook.schools.map(x => x.name);
   }
-  
+
   ngOnInit() {
     if(this.userMage== null){
       this.userMage = new Mage();

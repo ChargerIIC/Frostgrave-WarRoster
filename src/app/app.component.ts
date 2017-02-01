@@ -17,9 +17,10 @@ export class AppComponent {
   constructor(){
     this.wizard = new Mage();
 
+    SpellBook.loadSchoolsIntoSpellBook();
     SpellBook.loadSpellsIntoSpellbook();
     EquipmentVault.loadEquipmentIntoVault();
-    
+
     this.wizard.addItemToInventory(EquipmentVault.items[0]);
   }
 }

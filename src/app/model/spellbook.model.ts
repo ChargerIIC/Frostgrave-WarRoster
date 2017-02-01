@@ -1,11 +1,37 @@
 import { Spell } from './spell.model';
+import { School } from './school.model';
 
 export class SpellBook{
   public static spells: Spell[] = new Array<Spell>();
 
-  public static schools: string[] = ['Chronomancer', 'Elementalist', 'Enchanter', 'Illusionist', 'Necromancer', 'Sigilist', 'Soothsayer', 'Summoner', 'Thaumaturge', 'Witch'];
+  public static schools: School[] = new Array<School>();
 
   constructor(){
+  }
+
+  static loadSchoolsIntoSpellBook(){
+    //setup schools
+    var chronomancer = new School("Chronomancer");
+    var illusionist = new School("Illusionist");
+    var enchanter = new School("Enchanter");
+    var elementalist = new School("Elementalist");
+    var necromancer = new School("Necromancer");
+    var sigilist = new School("Sigilist");
+    var soothsayer = new School("Soothsayer");
+    var summoner = new School("Summoner");
+    var thaumaturge = new School("Thaumaturge");
+    var witch = new School("Witch");
+
+    this.schools.push(chronomancer);
+    this.schools.push(illusionist);
+    this.schools.push(enchanter)
+    this.schools.push(elementalist);
+    this.schools.push(necromancer);
+    this.schools.push(sigilist);
+    this.schools.push(soothsayer);
+    this.schools.push(summoner);
+    this.schools.push(thaumaturge);
+    this.schools.push(witch);
   }
 
   static loadSpellsIntoSpellbook(){
