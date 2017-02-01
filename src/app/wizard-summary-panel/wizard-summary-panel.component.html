@@ -8,7 +8,7 @@
 </div>
 <div class="col-lg-3 col-md-3 col-xs-3">
   <select [(ngModel)]="userMage.school" class="btn btn-default dropdown-toggle">
-    <option *ngFor="let school of schoolsOfMagic" [ngValue]="school">{{school}}</option>
+    <option *ngFor="let school of schoolsOfMagic" [ngValue]="school.name">{{school.name}}</option>
   </select>
 </div>
 <div class="col-lg-2 col-md-2 col-xs-2">

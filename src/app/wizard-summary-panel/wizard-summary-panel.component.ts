@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { Mage } from '../model/mage.model';
 import { SpellBook } from '../model/spellbook.model';
+import { School } from '../model/school.model';
 
 @Component({
   selector: 'app-wizard-summary-panel',
@@ -10,12 +11,12 @@ import { SpellBook } from '../model/spellbook.model';
 })
 export class WizardSummaryPanelComponent implements OnInit {
 
-  schoolsOfMagic: string[];
+  schoolsOfMagic: School[];
 
   @Input() userMage: Mage;
 
   constructor() {
-    this.schoolsOfMagic = SpellBook.schools.map(x => x.name);
+    this.schoolsOfMagic = SpellBook.schools;
   }
 
   ngOnInit() {

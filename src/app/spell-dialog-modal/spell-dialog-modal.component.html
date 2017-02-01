@@ -9,7 +9,7 @@
       Select a spell to add to your wizard's spellbook.  Spell Slots available({{userMage.openSpellSlots}})
       <p></p>
       <select class="btn btn-default dropdown-toggle" [(ngModel)]="this.currentSchool">
-        <option *ngFor="let school of getSchools()" [ngValue]="school">{{school}}</option>
+        <option *ngFor="let school of this.schoolFilter" [ngValue]="school.name">{{school.name}}</option>
       </select>
       <table class="table table-hover table-bordered">
         <th>Spell</th><th>Description</th><th>School</th><th>Casting Roll</th><th>Add Spell</th>

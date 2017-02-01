@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Mage } from '../model/mage.model';
 import { SpellBook } from '../model/spellbook.model';
 import { Spell } from '../model/spell.model';
+import { School } from '../model/school.model';
 
 @Component({
   selector: 'app-spell-dialog-modal',
@@ -13,11 +14,11 @@ export class SpellDialogModalComponent implements OnInit {
   @Input() userMage : Mage;
 
   currentSchool: string;
-  schoolFilter: Array<string>;
+  schoolFilter: Array<School>;
 
   constructor() {
-    this.schoolFilter = SpellBook.schools.map(x => x.name);
-    this.schoolFilter.push('All');
+    this.schoolFilter = SpellBook.schools;
+    this.schoolFilter.push(new School('All'));
 
     this.currentSchool = 'All';
   }
@@ -38,10 +39,6 @@ export class SpellDialogModalComponent implements OnInit {
     {
       return SpellBook.spells.filter(x=>(x.school == this.currentSchool));
     }
-  }
-
-  getSchools(): Array<string>{
-    return this.schoolFilter;
   }
 
   addSpell(spell: Spell){
