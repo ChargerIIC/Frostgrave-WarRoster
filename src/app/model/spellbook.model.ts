@@ -53,17 +53,85 @@ export class SpellBook{
     elementalist.nuetral.push(necromancer);
     elementalist.opposing.push(illusionist);
 
-    enchanter.aligned.push(summoner);
-    enchanter.aligned.push(enchanter);
-    enchanter.aligned.push(chronomancer);
-    enchanter.nuetral.push(thaumaturge);
-    enchanter.nuetral.push(soothsayer);
-    enchanter.nuetral.push(sigilist);
-    enchanter.nuetral.push(witch);
+    enchanter.aligned.push(witch);
+    enchanter.aligned.push(sigilist);
+    enchanter.aligned.push(elementalist);
     enchanter.nuetral.push(necromancer);
-    enchanter.opposing.push(illusionist);
+    enchanter.nuetral.push(illusionist);
+    enchanter.nuetral.push(summoner);
+    enchanter.nuetral.push(soothsayer);
+    enchanter.nuetral.push(thaumaturge);
+    enchanter.opposing.push(chronomancer);
 
+    illusionist.aligned.push(soothsayer);
+    illusionist.aligned.push(sigilist);
+    illusionist.aligned.push(thaumaturge);
+    illusionist.nuetral.push(necromancer);
+    illusionist.nuetral.push(witch);
+    illusionist.nuetral.push(chronomancer);
+    illusionist.nuetral.push(summoner);
+    illusionist.nuetral.push(enchanter);
+    illusionist.opposing.push(elementalist);
 
+    necromancer.aligned.push(witch);
+    necromancer.aligned.push(chronomancer);
+    necromancer.aligned.push(summoner);
+    necromancer.nuetral.push(elementalist);
+    necromancer.nuetral.push(sigilist);
+    necromancer.nuetral.push(illusionist);
+    necromancer.nuetral.push(enchanter);
+    necromancer.nuetral.push(soothsayer);
+    necromancer.opposing.push(thaumaturge);
+
+    sigilist.aligned.push(thaumaturge);
+    sigilist.aligned.push(illusionist);
+    sigilist.aligned.push(enchanter);
+    sigilist.nuetral.push(necromancer);
+    sigilist.nuetral.push(elementalist);
+    sigilist.nuetral.push(witch);
+    sigilist.nuetral.push(chronomancer);
+    sigilist.nuetral.push(soothsayer);
+    sigilist.opposing.push(summoner);
+
+    soothsayer.aligned.push(thaumaturge);
+    soothsayer.aligned.push(chronomancer);
+    soothsayer.aligned.push(illusionist);
+    soothsayer.nuetral.push(enchanter);
+    soothsayer.nuetral.push(summoner);
+    soothsayer.nuetral.push(necromancer);
+    soothsayer.nuetral.push(elementalist);
+    soothsayer.nuetral.push(sigilist);
+    soothsayer.opposing.push(witch);
+
+    summoner.aligned.push(necromancer);
+    summoner.aligned.push(witch);
+    summoner.aligned.push(elementalist);
+    summoner.nuetral.push(soothsayer);
+    summoner.nuetral.push(enchanter);
+    summoner.nuetral.push(illusionist);
+    summoner.nuetral.push(chronomancer);
+    summoner.nuetral.push(thaumaturge);
+    summoner.opposing.push(sigilist);
+
+    thaumaturge.aligned.push(soothsayer);
+    thaumaturge.aligned.push(sigilist);
+    thaumaturge.aligned.push(illusionist);
+    thaumaturge.nuetral.push(elementalist);
+    thaumaturge.nuetral.push(witch);
+    thaumaturge.nuetral.push(chronomancer);
+    thaumaturge.nuetral.push(summoner);
+    thaumaturge.nuetral.push(enchanter);
+    thaumaturge.opposing.push(necromancer);
+
+    witch.aligned.push(enchanter);
+    witch.aligned.push(necromancer);
+    witch.aligned.push(summoner);
+    witch.nuetral.push(thaumaturge);
+    witch.nuetral.push(illusionist);
+    witch.nuetral.push(elementalist);
+    witch.nuetral.push(sigilist);
+    witch.nuetral.push(chronomancer);
+    witch.opposing.push(soothsayer);
   }
 
   static loadSpellsIntoSpellbook(){
