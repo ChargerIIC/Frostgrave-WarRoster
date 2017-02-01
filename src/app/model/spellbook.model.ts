@@ -22,16 +22,48 @@ export class SpellBook{
     var thaumaturge = new School("Thaumaturge");
     var witch = new School("Witch");
 
-    this.schools.push(chronomancer);
-    this.schools.push(illusionist);
-    this.schools.push(enchanter)
-    this.schools.push(elementalist);
-    this.schools.push(necromancer);
-    this.schools.push(sigilist);
-    this.schools.push(soothsayer);
-    this.schools.push(summoner);
-    this.schools.push(thaumaturge);
-    this.schools.push(witch);
+    SpellBook.schools.push(chronomancer);
+    SpellBook.schools.push(illusionist);
+    SpellBook.schools.push(enchanter)
+    SpellBook.schools.push(elementalist);
+    SpellBook.schools.push(necromancer);
+    SpellBook.schools.push(sigilist);
+    SpellBook.schools.push(soothsayer);
+    SpellBook.schools.push(summoner);
+    SpellBook.schools.push(thaumaturge);
+    SpellBook.schools.push(witch);
+
+    chronomancer.aligned.push(elementalist);
+    chronomancer.aligned.push(necromancer);
+    chronomancer.aligned.push(soothsayer);
+    chronomancer.nuetral.push(illusionist);
+    chronomancer.nuetral.push(summoner);
+    chronomancer.nuetral.push(sigilist);
+    chronomancer.nuetral.push(witch);
+    chronomancer.nuetral.push(thaumaturge);
+    chronomancer.opposing.push(enchanter);
+
+    elementalist.aligned.push(summoner);
+    elementalist.aligned.push(enchanter);
+    elementalist.aligned.push(chronomancer);
+    elementalist.nuetral.push(thaumaturge);
+    elementalist.nuetral.push(soothsayer);
+    elementalist.nuetral.push(sigilist);
+    elementalist.nuetral.push(witch);
+    elementalist.nuetral.push(necromancer);
+    elementalist.opposing.push(illusionist);
+
+    enchanter.aligned.push(summoner);
+    enchanter.aligned.push(enchanter);
+    enchanter.aligned.push(chronomancer);
+    enchanter.nuetral.push(thaumaturge);
+    enchanter.nuetral.push(soothsayer);
+    enchanter.nuetral.push(sigilist);
+    enchanter.nuetral.push(witch);
+    enchanter.nuetral.push(necromancer);
+    enchanter.opposing.push(illusionist);
+
+
   }
 
   static loadSpellsIntoSpellbook(){
