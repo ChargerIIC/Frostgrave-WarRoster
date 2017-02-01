@@ -1,10 +1,13 @@
+import { SlotDictionary } from '../interfaces/dictionary.model';
+import { SpellBook } from './spellbook.model';
 import { Spell } from './spell.model';
+import { School } from './school.model';
 import { Equipment } from './equipment.model';
 
 export class Mage {
 
   name: string;
-  school: string;
+  school: School;
   level: number;
 
   move: number;
@@ -14,7 +17,8 @@ export class Mage {
   armor: number;
   health: number;
 
-  openSpellSlots: number;
+  spellSlotsAvailable: SlotDictionary;
+
   openItemSlots: number;
   gold: number;
 
@@ -24,15 +28,15 @@ export class Mage {
   constructor(){
     //Defaults
     this.name = "Name";
-    this.school = "Elementalist";
-    this.level = 1;
+    this.school = SpellBook.schools["Elementalist"];
+    this.level = 0;
     this.move = 6;
     this.fight = 0;
     this.shoot = 0;
     this.will = 4;
     this.armor = 10;
     this.health = 14;
-    this.openSpellSlots = 8;
+    this.spellSlotsAvailable = { "Any":0 , "Elementalist":3, "Summoner":1, "Enchanter":1, "Chronomancer":1, "Neutral":2};
     this.openItemSlots = 4;
     this.gold = 500;
 
@@ -43,15 +47,15 @@ export class Mage {
   addSpellToCollection(spell: Spell){
     console.log("Adding Spell: " + spell.name);
     this.spells.push(spell);
-    this.openSpellSlots--;
-  }
+    this.removeSpellSlot(spell);
+    }
 
   removeSpellFromCollection(spell: Spell){
     console.log("Removing Spell: " + spell.name);
     var index = this.spells.indexOf(spell);
     if(index > -1){
       this.spells.splice(index,1);
-      this.openSpellSlots++;
+      //removeSpellSlot(spell);
     }
   }
 
@@ -126,4 +130,16 @@ export class Mage {
     }
   }
 
+  removeSpellSlot(spell: Spell): boolean {
+    if(this.spellSlotsAvailable[spell.school] > 0){
+      this.spellSlotsAvailable[spell.school]--;
+      return true;
+    }
+    else if(this.spellSlotsAvailable['Nuetral'] > 0 && this.school.nuetral[spell.school]){
+      this.spellSlotsAvailable['Nuetral']--;
+      return true;
+    }
+
+    return false;
+  }
 }
