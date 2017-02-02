@@ -14,12 +14,13 @@ export class SpellDialogModalComponent implements OnInit {
   @Input() userMage : Mage;
 
   currentSchool: string;
-  schoolFilter: Array<School>;
+  schoolFilter: Array<string>;
+  neutralFilter: Array<string>;
 
   constructor() {
-    this.schoolFilter = SpellBook.schools;
-    this.schoolFilter.push(new School('All'));
-
+    this.schoolFilter = SpellBook.schools.map(x=>x.name);
+    //Special Filters
+    this.schoolFilter.push('All');
     this.currentSchool = 'All';
   }
 
@@ -28,12 +29,18 @@ export class SpellDialogModalComponent implements OnInit {
       this.userMage = new Mage();
     }
 
+    this.schoolFilter.push('Neutral');
+    this.neutralFilter = this.userMage.school.nuetral.map(x=>x.name);
   }
 
   getAvailableSpells(): Array<Spell>{
     if(this.currentSchool == 'All')
     {
       return SpellBook.spells;
+    }
+    else if(this.currentSchool == 'Neutral')
+    {
+      return SpellBook.spells.filter(x=>(this.neutralFilter.indexOf(x.school) > -1))
     }
     else
     {

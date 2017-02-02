@@ -28,7 +28,7 @@ export class Mage {
   constructor(){
     //Defaults
     this.name = "Name";
-    this.school = SpellBook.schools["Elementalist"];
+    this.school = SpellBook.schools[0];
     this.level = 0;
     this.move = 6;
     this.fight = 0;

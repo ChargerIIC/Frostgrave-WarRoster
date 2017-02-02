@@ -15,10 +15,11 @@ export class AppComponent {
   title = 'Frostgrave WarRoster';
 
   constructor(){
-    this.wizard = new Mage();
-
     SpellBook.loadSchoolsIntoSpellBook();
     SpellBook.loadSpellsIntoSpellbook();
+
+    this.wizard = new Mage();
+
     EquipmentVault.loadEquipmentIntoVault();
 
     this.wizard.addItemToInventory(EquipmentVault.items[0]);
