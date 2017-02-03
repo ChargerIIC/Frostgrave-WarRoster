@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common'
 import { Mage } from '../model/mage.model';
 import { SpellBook } from '../model/spellbook.model';
@@ -14,6 +14,7 @@ export class WizardSummaryPanelComponent implements OnInit {
   schoolsOfMagic: School[];
 
   @Input() userMage: Mage;
+  @Output() userMageSchoolUpdated: EventEmitter<School> = new EventEmitter();
 
   constructor() {
     this.schoolsOfMagic = SpellBook.schools;
@@ -23,6 +24,12 @@ export class WizardSummaryPanelComponent implements OnInit {
     if(this.userMage== null){
       this.userMage = new Mage();
     }
+  }
+
+  onSchoolChange(newValue: School)
+  {
+    this.userMage.school = newValue;
+    this.userMageSchoolUpdated.emit(newValue);
   }
 
 }

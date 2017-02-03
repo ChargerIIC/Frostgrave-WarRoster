@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Mage } from './model/mage.model';
+import { School } from './model/school.model';
 import { Spell } from './model/spell.model';
 import { SpellBook } from './model/spellbook.model';
 import { EquipmentVault } from './model/equipmentvault.model';
@@ -23,5 +24,9 @@ export class AppComponent {
     EquipmentVault.loadEquipmentIntoVault();
 
     this.wizard.addItemToInventory(EquipmentVault.items[0]);
+  }
+
+  notifyChangeOfSchool(newSchool: School){
+    console.log(newSchool);
   }
 }

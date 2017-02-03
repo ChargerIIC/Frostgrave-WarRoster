@@ -7,7 +7,7 @@
   </div>
 </div>
 <div class="col-lg-3 col-md-3 col-xs-3">
-  <select [(ngModel)]="userMage.school" class="btn btn-default dropdown-toggle">
+  <select [ngModel]="userMage.school" (ngModelChange)="onSchoolChange($event)" class="btn btn-default dropdown-toggle">
     <option *ngFor="let school of schoolsOfMagic" [ngValue]="school">{{school.name}}</option>
   </select>
 </div>
