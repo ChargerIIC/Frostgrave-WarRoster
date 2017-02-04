@@ -44,6 +44,20 @@ export class Mage {
     this.items = new Array<Equipment>();
   }
 
+  //Resets any school related data, including level
+  resetMageSchool(){
+    this.level = 0;
+    this.move = 6;
+    this.fight = 0;
+    this.shoot = 0;
+    this.will = 4;
+    this.armor = 10;
+    this.health = 14;
+    for(var kvp in this.spellSlotsAvailable){
+      this.spellSlotsAvailable[kvp] = 0;
+    }
+  }
+
   addSpellToCollection(spell: Spell){
     console.log("Adding Spell: " + spell.name);
     this.spells.push(spell);

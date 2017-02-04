@@ -29,6 +29,7 @@ export class WizardSummaryPanelComponent implements OnInit {
   onSchoolChange(newValue: School)
   {
     this.userMage.school = newValue;
+    this.userMage.resetMageSchool();
     this.userMageSchoolUpdated.emit(newValue);
   }
 
