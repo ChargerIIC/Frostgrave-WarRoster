@@ -30,7 +30,7 @@ export class SpellDialogModalComponent implements OnInit {
     }
 
     this.schoolFilter.push('Neutral');
-    this.neutralFilter = this.userMage.school.nuetral.map(x=>x.name);
+    this.neutralFilter = this.userMage.school.neutral.map(x=>x.name);
   }
 
   getAvailableSpells(): Array<Spell>{

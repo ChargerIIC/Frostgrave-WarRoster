@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Mage } from '../model/mage.model';
 import { Spell } from '../model/spell.model';
+import { SpellBook } from '../model/spellbook.model';
 
 @Component({
   selector: 'app-wizard-spells-panel',
@@ -30,11 +31,21 @@ export class WizardSpellsPanelComponent implements OnInit {
   }
 
   getSpellCost(spell: Spell){
-    if(this.userMage.school.name == spell.school){
+    var relationship = SpellBook.getAlignment(spell.school, this.userMage.school);
+
+    if(relationship == 'Same'){
       return spell.castingNumber;
     }
-    else{
+    else if(relationship == 'Aligned'){
       return spell.castingNumber + 2;
     }
+    else if(relationship == 'Neutral'){
+      return spell.castingNumber + 4;
+    }
+    else if(relationship == 'Opposed'){
+      return spell.castingNumber + 6;
+    }
+
+    return 99;
   }
 }

@@ -149,7 +149,7 @@ export class Mage {
       this.spellSlotsAvailable[spell.school]--;
       return true;
     }
-    else if(this.spellSlotsAvailable['Nuetral'] > 0 && this.school.nuetral[spell.school]){
+    else if(this.spellSlotsAvailable['Nuetral'] > 0 && this.school.neutral[spell.school]){
       this.spellSlotsAvailable['Nuetral']--;
       return true;
     }
