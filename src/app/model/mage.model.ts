@@ -31,7 +31,7 @@ export class Mage {
     this.school = SpellBook.schools[0];
     this.level = 0;
     this.move = 6;
-    this.fight = 0;
+    this.fight = 2;
     this.shoot = 0;
     this.will = 4;
     this.armor = 10;
