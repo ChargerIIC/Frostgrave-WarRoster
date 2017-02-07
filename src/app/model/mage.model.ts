@@ -36,7 +36,7 @@ export class Mage {
     this.will = 4;
     this.armor = 10;
     this.health = 14;
-    this.spellSlotsAvailable = { "Any":0 , "Elementalist":3, "Summoner":1, "Enchanter":1, "Chronomancer":1, "Neutral":2};
+    this.initializeSpellSlots(this.school);
     this.openItemSlots = 4;
     this.gold = 500;
 
@@ -53,8 +53,43 @@ export class Mage {
     this.will = 4;
     this.armor = 10;
     this.health = 14;
+    this.spells = new Array<Spell>();
     for(var kvp in this.spellSlotsAvailable){
       this.spellSlotsAvailable[kvp] = 0;
+    }
+    this.initializeSpellSlots(this.school);
+  }
+
+  initializeSpellSlots(school: School){
+    if(school.name == 'Chronomancer'){
+      this.spellSlotsAvailable = { "Any":0 , "Chronomancer":3, "Necromancer":1, "Soothsayer":1, "Illusionist":1, "Neutral":2};
+    }
+    else if(school.name == 'Illusionist'){
+      this.spellSlotsAvailable = { "Any":0 , "Illusionist":3, "Chronomancer":1, "Summoner":1, "Elementalist":1, "Neutral":2};
+    }
+    else if(school.name == 'Enchanter'){
+      this.spellSlotsAvailable = { "Any":0 , "Enchanter":3, "Witch":1, "Sigilist":1, "Elementalist":1, "Neutral":2};
+    }
+    else if(school.name == 'Elementalist'){
+      this.spellSlotsAvailable = { "Any":0 , "Elementalist":3, "Summoner":1, "Enchanter":1, "Chronomancer":1, "Neutral":2};
+    }
+    else if(school.name == 'Necromancer'){
+      this.spellSlotsAvailable = { "Any":0 , "Necromancer":3, "Witch":1, "Chronomancer":1, "Summoner":1, "Neutral":2};
+    }
+    else if(school.name == 'Sigilist'){
+      this.spellSlotsAvailable = { "Any":0 , "Sigilist":3, "Thaumaturge":1, "Illusionist":1, "Enchanter":1, "Neutral":2};
+    }
+    else if(school.name == 'Soothsayer'){
+      this.spellSlotsAvailable = { "Any":0 , "Soothsayer":3, "Thaumaturge":1, "Chronomancer":1, "Illusionist":1, "Neutral":2};
+    }
+    else if(school.name == 'Summoner'){
+      this.spellSlotsAvailable = { "Any":0 , "Summoner":3, "Necromancer":1, "Witch":1, "Elementalist":1, "Neutral":2};
+    }
+    else if(school.name == 'Thaumaturge'){
+      this.spellSlotsAvailable = { "Any":0 , "Thaumaturge":3, "Soothsayer":1, "Sigilist":1, "Illusionist":1, "Neutral":2};
+    }
+    else if(school.name == 'Witch'){
+      this.spellSlotsAvailable = { "Any":0 , "Witch":3, "Enchanter":1, "Necromancer":1, "Summoner":1, "Neutral":2};
     }
   }
 
