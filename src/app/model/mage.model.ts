@@ -145,15 +145,15 @@ export class Mage {
   }
 
   removeSpellSlot(spell: Spell): boolean {
-    if(this.spellSlotsAvailable[spell.school] > 0){
-      this.spellSlotsAvailable[spell.school]--;
+    if(this.spellSlotsAvailable[spell.school.name] > 0){
+      this.spellSlotsAvailable[spell.school.name]--;
       return true;
     }
-    else if(this.spellSlotsAvailable['Nuetral'] > 0 && this.school.neutral[spell.school]){
-      this.spellSlotsAvailable['Nuetral']--;
+    else if(this.spellSlotsAvailable['Neutral'] > 0 && this.school.neutral[spell.school.name]){
+      this.spellSlotsAvailable['Neutral']--;
       return true;
     }
-
+    console.log('unable to remove spell slot: ' + spell.name);
     return false;
   }
 }

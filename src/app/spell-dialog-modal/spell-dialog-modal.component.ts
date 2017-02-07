@@ -15,7 +15,7 @@ export class SpellDialogModalComponent implements OnInit {
 
   currentSchool: string;
   schoolFilter: Array<string>;
-  neutralFilter: Array<string>;
+  neutralFilter: Array<School>;
 
   constructor() {
     this.schoolFilter = SpellBook.schools.map(x=>x.name);
@@ -30,7 +30,7 @@ export class SpellDialogModalComponent implements OnInit {
     }
 
     this.schoolFilter.push('Neutral');
-    this.neutralFilter = this.userMage.school.neutral.map(x=>x.name);
+    this.neutralFilter = this.userMage.school.neutral;
   }
 
   getAvailableSpells(): Array<Spell>{
@@ -44,7 +44,7 @@ export class SpellDialogModalComponent implements OnInit {
     }
     else
     {
-      return SpellBook.spells.filter(x=>(x.school == this.currentSchool));
+      return SpellBook.spells.filter(x=>(x.school.name == this.currentSchool));
     }
   }
 

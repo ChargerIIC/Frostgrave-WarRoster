@@ -13,7 +13,7 @@
       </select>
       <table class="table table-hover table-bordered">
         <th>Spell</th><th>Description</th><th>School</th><th>Casting Roll</th><th>Add Spell</th>
-        <tr *ngFor="let spell of getAvailableSpells()"><td>{{spell.name}}</td><td>{{spell.description}}</td><td>{{spell.school}}</td><td>{{spell.castingNumber}}</td><td><button type="button" class="btn btn-primary" (click)="addSpell(spell)"><span class="glyphicon glyphicon-plus"></span></button></td></tr>
+        <tr *ngFor="let spell of getAvailableSpells()"><td>{{spell.name}}</td><td>{{spell.description}}</td><td>{{spell.school.name}}</td><td>{{spell.castingNumber}}</td><td><button type="button" class="btn btn-primary" (click)="addSpell(spell)"><span class="glyphicon glyphicon-plus"></span></button></td></tr>
       </table>
     </div>
   </div>

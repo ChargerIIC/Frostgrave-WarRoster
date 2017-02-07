@@ -782,13 +782,13 @@ export class SpellBook{
       return 'Same';
     }
 
-    if(firstSchool.aligned.indexOf(secondSchool) != null){
+    if(firstSchool.aligned.indexOf(secondSchool) >= 0){
       return 'Aligned';
     }
-    else if(firstSchool.neutral.indexOf(secondSchool) != null){
+    else if(firstSchool.neutral.indexOf(secondSchool) >= 0){
       return 'Neutral';
     }
-    else if(firstSchool.opposing.indexOf(secondSchool) != null){
+    else if(firstSchool.opposing.indexOf(secondSchool) >= 0){
       return 'Opposing';
     }
 
