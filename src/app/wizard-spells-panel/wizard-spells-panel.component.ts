@@ -42,7 +42,7 @@ export class WizardSpellsPanelComponent implements OnInit {
     else if(relationship == 'Neutral'){
       return spell.castingNumber + 4;
     }
-    else if(relationship == 'Opposed'){
+    else if(relationship == 'Opposing'){
       return spell.castingNumber + 6;
     }
 
