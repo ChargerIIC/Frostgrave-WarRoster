@@ -1,10 +1,11 @@
+import { Figure } from './figure.model';
 import { SlotDictionary } from '../interfaces/dictionary.model';
 import { SpellBook } from './spellbook.model';
 import { Spell } from './spell.model';
 import { School } from './school.model';
 import { Equipment } from './equipment.model';
 
-export class Mage {
+export class Mage extends Figure {
 
   name: string;
   school: School;
@@ -26,6 +27,7 @@ export class Mage {
   items: Equipment[];
 
   constructor(){
+    super();
     //Defaults
     this.name = "Name";
     this.school = SpellBook.schools[0];
