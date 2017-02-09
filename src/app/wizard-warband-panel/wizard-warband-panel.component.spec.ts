@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { ApprenticeSummaryPanelComponent } from './apprentice-summary-panel.component';
+import { WizardWarbandPanelComponent } from './wizard-warband-panel.component';
 
-describe('ApprenticeSummaryPanelComponent', () => {
-  let component: ApprenticeSummaryPanelComponent;
-  let fixture: ComponentFixture<ApprenticeSummaryPanelComponent>;
+describe('WizardWarbandPanelComponent', () => {
+  let component: WizardWarbandPanelComponent;
+  let fixture: ComponentFixture<WizardWarbandPanelComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ApprenticeSummaryPanelComponent ]
+      declarations: [ WizardWarbandPanelComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ApprenticeSummaryPanelComponent);
+    fixture = TestBed.createComponent(WizardWarbandPanelComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

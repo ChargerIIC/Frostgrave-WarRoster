@@ -9,10 +9,10 @@ import { WizardStatsPanelComponent } from './wizard-stats-panel/wizard-stats-pan
 import { WizardSpellsPanelComponent } from './wizard-spells-panel/wizard-spells-panel.component';
 import { WizardEquipmentPanelComponent } from './wizard-equipment-panel/wizard-equipment-panel.component';
 import { SpellDialogModalComponent } from './spell-dialog-modal/spell-dialog-modal.component';
+import { WizardWarbandPanelComponent } from './wizard-warband-panel/wizard-warband-panel.component';
+import { ItemDialogModalComponent } from './item-dialog-modal/item-dialog-modal.component';
 
 import { Mage } from './model/mage.model';
-import { ItemDialogModalComponent } from './item-dialog-modal/item-dialog-modal.component';
-import { ApprenticeSummaryPanelComponent } from './apprentice-summary-panel/apprentice-summary-panel.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { ApprenticeSummaryPanelComponent } from './apprentice-summary-panel/appr
     WizardEquipmentPanelComponent,
     SpellDialogModalComponent,
     ItemDialogModalComponent,
-    ApprenticeSummaryPanelComponent
+    WizardWarbandPanelComponent
   ],
   imports: [
     BrowserModule,

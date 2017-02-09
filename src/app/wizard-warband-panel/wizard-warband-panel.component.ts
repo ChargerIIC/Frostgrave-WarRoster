@@ -3,11 +3,11 @@ import { Mage } from '../model/mage.model';
 import { Apprentice } from '../model/apprentice.model';
 
 @Component({
-  selector: 'app-apprentice-summary-panel',
-  templateUrl: './apprentice-summary-panel.component.html',
-  styleUrls: ['./apprentice-summary-panel.component.css']
+  selector: 'app-wizard-warband-panel',
+  templateUrl: './wizard-warband-panel.component.html',
+  styleUrls: ['./wizard-warband-panel.component.css']
 })
-export class ApprenticeSummaryPanelComponent implements OnInit {
+export class WizardWarbandPanelComponent implements OnInit {
 
   @Input() userMage: Mage;
 
