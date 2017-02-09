@@ -18,7 +18,17 @@ export class ApprenticeSummaryPanelComponent implements OnInit {
 
   addApprentice(){
     console.log('Adding Apprentice');
+    if(this.userMage.gold <200){
+      console.log("not enough funds for purchase");
+      return;
+    }
+    this.userMage.gold -= 200;
     this.userMage.apprentice = new Apprentice(this.userMage);
+  }
+
+  removeApprentice(){
+    this.userMage.gold += 200;
+    this.userMage.apprentice = null;
   }
 
   apprenticePresent(){
