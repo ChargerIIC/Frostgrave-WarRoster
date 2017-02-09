@@ -4,6 +4,7 @@ import { SpellBook } from './spellbook.model';
 import { Spell } from './spell.model';
 import { School } from './school.model';
 import { Equipment } from './equipment.model';
+import { Apprentice } from './apprentice.model';
 
 export class Mage extends Figure {
 
@@ -25,6 +26,7 @@ export class Mage extends Figure {
 
   spells: Spell[];
   items: Equipment[];
+  apprentice: Apprentice;
 
   constructor(){
     super();
@@ -44,6 +46,7 @@ export class Mage extends Figure {
 
     this.spells = new Array<Spell>();
     this.items = new Array<Equipment>();
+    this.apprentice = null;
   }
 
   //Resets any school related data, including level

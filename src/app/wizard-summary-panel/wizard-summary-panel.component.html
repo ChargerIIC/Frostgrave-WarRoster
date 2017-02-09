@@ -1,21 +1,21 @@
 <div class="panel-heading">
   <div class="row">
     <div class="col-lg-5 col-md-5 col-xs-5">
-  <div class="input-group">
-    <span class="input-group-addon" id="lblName">Name:</span>
-    <input type="text" class="form-control" aria-describedby="lblName" [(ngModel)]="userMage.name">
+      <div class="input-group">
+        <span class="input-group-addon" id="lblName">Name:</span>
+        <input type="text" class="form-control" aria-describedby="lblName" [(ngModel)]="userMage.name">
+      </div>
+    </div>
+  <div class="col-lg-3 col-md-3 col-xs-3">
+    <select [ngModel]="userMage.school" (ngModelChange)="onSchoolChange($event)" class="btn btn-default dropdown-toggle">
+      <option *ngFor="let school of schoolsOfMagic" [ngValue]="school">{{school.name}}</option>
+    </select>
   </div>
-</div>
-<div class="col-lg-3 col-md-3 col-xs-3">
-  <select [ngModel]="userMage.school" (ngModelChange)="onSchoolChange($event)" class="btn btn-default dropdown-toggle">
-    <option *ngFor="let school of schoolsOfMagic" [ngValue]="school">{{school.name}}</option>
-  </select>
-</div>
-<div class="col-lg-2 col-md-2 col-xs-2">
-  <span class="label lblLevel">Level ({{userMage.level}})</span>
-</div>
-<div class="col-lg-2 col-md-2 col-xs-2">
-  <span class="label lblGold">Gold: {{userMage.gold}}</span>
-</div>
-
+  <div class="col-lg-2 col-md-2 col-xs-2">
+    <span class="label lblLevel">Level ({{userMage.level}})</span>
+  </div>
+  <div class="col-lg-2 col-md-2 col-xs-2">
+    <span class="label lblGold">Gold: {{userMage.gold}}</span>
+  </div>
+  </div>
 </div>

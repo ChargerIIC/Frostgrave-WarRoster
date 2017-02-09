@@ -12,6 +12,7 @@ import { SpellDialogModalComponent } from './spell-dialog-modal/spell-dialog-mod
 
 import { Mage } from './model/mage.model';
 import { ItemDialogModalComponent } from './item-dialog-modal/item-dialog-modal.component';
+import { ApprenticeSummaryPanelComponent } from './apprentice-summary-panel/apprentice-summary-panel.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ItemDialogModalComponent } from './item-dialog-modal/item-dialog-modal.
     WizardSpellsPanelComponent,
     WizardEquipmentPanelComponent,
     SpellDialogModalComponent,
-    ItemDialogModalComponent
+    ItemDialogModalComponent,
+    ApprenticeSummaryPanelComponent
   ],
   imports: [
     BrowserModule,
