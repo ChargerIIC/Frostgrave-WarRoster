@@ -52,4 +52,8 @@ export class SpellDialogModalComponent implements OnInit {
     this.userMage.addSpellToCollection(spell);
   }
 
+  getSpellSlotsForUI(){
+    return Object.keys(this.userMage.spellSlotsAvailable)
+      .map(key => ({key: key, value: this.userMage.spellSlotsAvailable[key]}));
+  }
 }

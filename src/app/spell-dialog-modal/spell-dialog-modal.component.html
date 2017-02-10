@@ -6,7 +6,9 @@
       </div>
     </header>
     <div class="modal-body">
-      Select a spell to add to your wizard's spellbook.  Spell Slots available({{userMage.openSpellSlots}})
+      Select a spell to add to your wizard's spellbook.
+      <p></p><strong> Spell Slots available:
+        <span *ngFor="let kvp of getSpellSlotsForUI()">  {{kvp.key}}({{kvp.value}})</span></strong>
       <p></p>
       <select class="btn btn-default dropdown-toggle" [(ngModel)]="this.currentSchool">
         <option *ngFor="let school of this.schoolFilter" [ngValue]="school">{{school}}</option>
