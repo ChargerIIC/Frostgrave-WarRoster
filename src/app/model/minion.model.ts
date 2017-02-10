@@ -6,7 +6,11 @@ export class Minion extends Figure {
   weapon: Equipment;
   heldItem: Equipment;
 
-  constructor(){
+  cost: number;
+  notes: string;
+
+  constructor(name: string){
     super();
+    this.name = name;
   }
 }
