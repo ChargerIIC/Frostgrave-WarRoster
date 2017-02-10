@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Mage } from '../model/mage.model';
 import { Apprentice } from '../model/apprentice.model';
+import { Minion } from '../model/minion.model';
 
 @Component({
   selector: 'app-wizard-warband-panel',
@@ -29,6 +30,10 @@ export class WizardWarbandPanelComponent implements OnInit {
   removeApprentice(){
     this.userMage.gold += 200;
     this.userMage.apprentice = null;
+  }
+
+  addMinion(minion : Minion){
+
   }
 
   apprenticePresent(){

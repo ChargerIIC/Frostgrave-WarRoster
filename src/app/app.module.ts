@@ -13,6 +13,7 @@ import { WizardWarbandPanelComponent } from './wizard-warband-panel/wizard-warba
 import { ItemDialogModalComponent } from './item-dialog-modal/item-dialog-modal.component';
 
 import { Mage } from './model/mage.model';
+import { WarbandDialogModalComponent } from './warband-dialog-modal/warband-dialog-modal.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { Mage } from './model/mage.model';
     WizardEquipmentPanelComponent,
     SpellDialogModalComponent,
     ItemDialogModalComponent,
-    WizardWarbandPanelComponent
+    WizardWarbandPanelComponent,
+    WarbandDialogModalComponent
   ],
   imports: [
     BrowserModule,

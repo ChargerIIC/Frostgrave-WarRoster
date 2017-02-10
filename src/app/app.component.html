@@ -3,6 +3,7 @@
   <div class="row"><app-wizard-stats-panel [userMage]="this.wizard" class="col-lg-3 col-md-3 col-xs-12 panel panel-info"></app-wizard-stats-panel><app-wizard-spells-panel [userMage]="this.wizard" class="col-lg-9 col-md-9 col-xs-12 panel panel-info"></app-wizard-spells-panel></div>
   <div class="row"><app-wizard-warband-panel [userMage]="this.wizard" class="panel panel-info"></app-wizard-warband-panel></div>
   <div class="row"><app-wizard-equipment-panel [userMage]="this.wizard" class="panel panel-info"></app-wizard-equipment-panel></div>
-  <div class="modal fade" id="spellModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" ><app-spell-dialog-modal [userMage]="this.wizard"></app-spell-dialog-modal></div>
-  <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><app-item-dialog-modal [userMage]="this.wizard"></app-item-dialog-modal></div>
+  <div class="modal fade" id="spellModal" tabindex="-1" role="dialog" aria-labelledby="spells" ><app-spell-dialog-modal [userMage]="this.wizard"></app-spell-dialog-modal></div>
+  <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="items"><app-item-dialog-modal [userMage]="this.wizard"></app-item-dialog-modal></div>
+  <div class="modal fade" id="minionModal" tabindex="-1" role="dialog" aria-labelledby="minions" ><app-warband-dialog-modal [userMage]="this.wizard"></app-warband-dialog-modal></div>
 </div>

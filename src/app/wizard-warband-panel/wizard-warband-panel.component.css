@@ -1,4 +1,8 @@
-td{
+th,tr{
   text-align: center;
   vertical-align: middle;
+}
+
+button{
+  margin-right: 0.5em;
 }
