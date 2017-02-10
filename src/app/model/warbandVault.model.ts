@@ -1,9 +1,9 @@
 import { Minion } from './minion.model';
 
 ///This is a repo class for the various minions that can be hired for a warband.
-export class EquipmentVault {
+export class WarbandVault {
 
-  public static items = new Array<Minion>();
+  public static templates = new Array<Minion>();
 
 
   constructor(){
@@ -20,5 +20,8 @@ export class EquipmentVault {
     minion.health = 8
     minion.cost = 10;
     minion.notes = "Animal, Cannot carry items"
+    this.templates.push(minion);
+
+    
     }
 }
