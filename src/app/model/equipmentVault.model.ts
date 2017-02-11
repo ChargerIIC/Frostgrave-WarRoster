@@ -37,4 +37,12 @@ export class EquipmentVault{
     item.cost = 0;
     EquipmentVault.items.push(item);
   }
+
+  static getItemByName(name: string):Equipment{
+    var items = EquipmentVault.items.filter(x => x.name == name);
+    if(items.length > 0){
+      return items[0];
+    }
+    return null;
+  }
 }
