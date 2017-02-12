@@ -34,5 +34,17 @@ export class WarbandVault {
     minion.notes = ""
     minion.heldItem = EquipmentVault.getItemByName('Hand Weapon');
     this.templates.push(minion);
+
+    minion = new Minion('Thief');
+    minion.move = 7;
+    minion.fight = 1;
+    minion.shoot = 0;
+    minion.armor = 10;
+    minion.will = 0;
+    minion.health = 10;
+    minion.cost = 20;
+    minion.notes = ""
+    minion.heldItem = EquipmentVault.getItemByName('Dagger');
+    this.templates.push(minion);
     }
 }
