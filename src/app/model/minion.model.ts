@@ -17,13 +17,20 @@ export class Minion extends Figure {
   }
 
   getNotes(): string {
-    var result = this.notes;
+    var result = " ";
+    if(this.notes != null && this.notes != ""){
+      result += this.notes + ", ";
+    }
     if(this.heldItem != null){
-      result += " " + this.heldItem;
+      result += this.heldItem.name + ", ";
     }
-    for(var itm in this.otherItems){
-      result += " " + itm;
+    if(this.otherItems.length > 0){
+      for(let itm of this.otherItems){
+        if(itm != null){
+          result +=  itm.name + ", ";
+        }
+      }
     }
-    return result;
+    return result.slice(0, -2);
   }
 }
