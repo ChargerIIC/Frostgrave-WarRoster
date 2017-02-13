@@ -73,6 +73,87 @@ export class EquipmentVault{
     item.cost = 50;
     EquipmentVault.items.push(item);
 
+    item = new Equipment();
+    item.id = "P08";
+    item.name = "Strength Potion";
+    item.bonusType = "Fight";
+    item.bonusNum = 0;
+    item.description = "+2 Fight for the rest of the game";
+    item.cost = 50;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.id = "P09";
+    item.name = "Toughness Potion";
+    item.bonusType = "Fight";
+    item.bonusNum = 0;
+    item.description = "+1 Armor for the rest of the game";
+    item.cost = 50;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.id = "P10";
+    item.name = "Elixer of Speed";
+    item.bonusType = "Fight";
+    item.bonusNum = 0;
+    item.description = "+1 Move for the rest of the game";
+    item.cost = 50;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.id = "P11";
+    item.name = "Invisibility Potion";
+    item.bonusType = "Fight";
+    item.bonusNum = 0;
+    item.description = "Same as Invisibility spell, no casting roll required";
+    item.cost = 100;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.id = "P12";
+    item.name = "Explosive Cocktail";
+    item.bonusType = "Fight";
+    item.bonusNum = 0;
+    item.description = "Same as Grenade spell, no casting roll required";
+    item.cost = 100;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.id = "P13";
+    item.name = "Invulnerability Potion";
+    item.bonusType = "Fight";
+    item.bonusNum = 0;
+    item.description = "Drinker is immune to damage until next turn";
+    item.cost = 100;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.id = "P14";
+    item.name = "Teleportation Potion";
+    item.bonusType = "Fight";
+    item.bonusNum = 0;
+    item.description = "Same as Teleport spell, no casting roll required";
+    item.cost = 100;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.id = "P15";
+    item.name = "Demon in a Bottle";
+    item.bonusType = "Fight";
+    item.bonusNum = 0;
+    item.description = "Summons a minor demon that binds itslef to the user's warband for a turn";
+    item.cost = 200;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.id = "P16";
+    item.name = "Elixer of Life";
+    item.bonusType = "Fight";
+    item.bonusNum = 0;
+    item.description = "Same as Restore Life spell, no casting roll required";
+    item.cost = 200;
+    EquipmentVault.items.push(item);
+
   }
 
   static getItemByName(name: string):Equipment{
