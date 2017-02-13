@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 import { Mage } from '../model/mage.model';
-import { EquipmentVault } from '../model/equipmentvault.model';
+import { EquipmentVault } from '../model/equipmentVault.model';
 import { Equipment } from '../model/equipment.model';
 
 @Component({
