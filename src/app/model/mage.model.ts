@@ -5,6 +5,7 @@ import { Spell } from './spell.model';
 import { School } from './school.model';
 import { Equipment } from './equipment.model';
 import { Apprentice } from './apprentice.model';
+import { Minion } from './minion.model';
 
 export class Mage extends Figure {
 
@@ -27,6 +28,7 @@ export class Mage extends Figure {
   spells: Spell[];
   items: Equipment[];
   apprentice: Apprentice;
+  warbandMembers: Minion[];
 
   constructor(){
     super();
@@ -46,6 +48,7 @@ export class Mage extends Figure {
 
     this.spells = new Array<Spell>();
     this.items = new Array<Equipment>();
+    this.warbandMembers = new Array<Minion>();
     this.apprentice = null;
   }
 
