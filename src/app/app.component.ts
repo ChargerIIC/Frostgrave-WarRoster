@@ -3,7 +3,8 @@ import { Mage } from './model/mage.model';
 import { School } from './model/school.model';
 import { Spell } from './model/spell.model';
 import { SpellBook } from './model/spellbook.model';
-import { EquipmentVault } from './model/equipmentvault.model';
+import { EquipmentVault } from './model/equipmentVault.model';
+import { WarbandVault } from './model/warbandVault.model';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ export class AppComponent {
     this.wizard = new Mage();
 
     EquipmentVault.loadEquipmentIntoVault();
+    WarbandVault.loadMinionTemplatesIntoVault();
 
     this.wizard.addItemToInventory(EquipmentVault.items[0]);
   }

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Mage } from '../model/mage.model';
+import { Minion } from '../model/minion.model';
+import { WarbandVault } from '../model/warbandVault.model';
 
 @Component({
   selector: 'app-warband-dialog-modal',
@@ -15,4 +17,7 @@ export class WarbandDialogModalComponent implements OnInit {
   ngOnInit() {
   }
 
+  getAvailableTemplates(): Minion[]{
+    return WarbandVault.templates;
+  }
 }
