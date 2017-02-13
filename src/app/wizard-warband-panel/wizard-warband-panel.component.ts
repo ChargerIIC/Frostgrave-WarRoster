@@ -40,4 +40,10 @@ export class WizardWarbandPanelComponent implements OnInit {
     return (this.userMage.apprentice != null);
   }
 
+  removeMinion(minion: Minion){
+    var index = this.userMage.warbandMembers.indexOf(minion, 0);
+    if (index > -1) {
+       this.userMage.warbandMembers.splice(index, 1);
+    }
+  }
 }
