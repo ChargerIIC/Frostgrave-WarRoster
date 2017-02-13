@@ -20,4 +20,11 @@ export class WarbandDialogModalComponent implements OnInit {
   getAvailableTemplates(): Minion[]{
     return WarbandVault.templates;
   }
+
+  addWarbandMember(minion){
+    if(this.userMage.gold >= minion.cost){
+      this.userMage.gold -= minion.cost;
+      this.userMage.warbandMembers.push(minion);
+    }
+  }
 }

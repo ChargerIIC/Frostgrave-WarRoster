@@ -4,8 +4,8 @@
   <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#minionModal"><span class="glyphicon glyphicon-plus"></span> Add Minion</button>
 
   <table class="table table-hover table-bordered" >
-    <th>Name</th><th>Move</th><th>Fight</th><th>Shoot</th><th>Armor</th><th>Will</th><th>Health</th><th>Remove</th>
-    <tr *ngIf="apprenticePresent()"><td>{{userMage.apprentice.name}}</td><td>{{userMage.apprentice.move}}</td><td>{{userMage.apprentice.fight}}</td><td>{{userMage.apprentice.shoot}}</td><td>{{userMage.apprentice.armor}}</td><td>{{userMage.apprentice.will}}</td><td>{{userMage.apprentice.health}}</td><td><button type="button" class="btn btn-primary" (click)="removeApprentice()"><span class="glyphicon glyphicon-minus"></span></button></td></tr>
-    <tr *ngFor="let spell of userMage.warband" ></tr>
+    <th>Name</th><th>Move</th><th>Fight</th><th>Shoot</th><th>Armor</th><th>Will</th><th>Health</th><th>Notes</th><th>Remove</th>
+    <tr *ngIf="apprenticePresent()"><td>{{userMage.apprentice.name}}</td><td>{{userMage.apprentice.move}}</td><td>{{userMage.apprentice.fight}}</td><td>{{userMage.apprentice.shoot}}</td><td>{{userMage.apprentice.armor}}</td><td>{{userMage.apprentice.will}}</td><td>{{userMage.apprentice.health}}</td><td></td><td><button type="button" class="btn btn-primary" (click)="removeApprentice()"><span class="glyphicon glyphicon-minus"></span></button></td></tr>
+    <tr *ngFor="let minion of userMage.warbandMembers" ><td>{{minion.name}}</td><td>{{minion.move}}</td><td>{{minion.fight}}</td><td>{{minion.shoot}}</td><td>{{minion.armor}}</td><td>{{minion.will}}</td><td>{{minion.health}}</td><td>{{minion.getNotes()}}</td><td></td></tr>
   </table>
 </div>

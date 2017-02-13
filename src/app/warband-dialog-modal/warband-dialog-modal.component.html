@@ -9,7 +9,7 @@
       Select a minion to add to your wizard's warband.
       <table class="table table-hover table-bordered">
         <th>Name</th><th>Move</th><th>Fight</th><th>Shoot</th><th>Armor</th><th>Will</th><th>Health</th><th>Cost</th><th>Notes</th><th>Recruit</th>
-        <tr *ngFor="let minion of getAvailableTemplates()"><td>{{minion.name}}</td><td>{{minion.move}}</td><td>{{minion.fight}}</td><td>{{minion.shoot}}</td><td>{{minion.armor}}</td><td>{{minion.will}}</td><td>{{minion.health}}</td><td>{{minion.cost}}</td><td>{{minion.getNotes()}}</td><td><button type="button" class="btn btn-primary" (click)="addSpell(spell)"><span class="glyphicon glyphicon-plus"></span></button></td></tr>
+        <tr *ngFor="let minion of getAvailableTemplates()"><td>{{minion.name}}</td><td>{{minion.move}}</td><td>{{minion.fight}}</td><td>{{minion.shoot}}</td><td>{{minion.armor}}</td><td>{{minion.will}}</td><td>{{minion.health}}</td><td>{{minion.cost}}</td><td>{{minion.getNotes()}}</td><td><button type="button" class="btn btn-primary" (click)="addWarbandMember(minion)"><span class="glyphicon glyphicon-plus"></span></button></td></tr>
       </table>
     </div>
   </div>
