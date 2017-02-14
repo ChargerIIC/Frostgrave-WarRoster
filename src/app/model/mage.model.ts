@@ -6,6 +6,7 @@ import { School } from './school.model';
 import { Equipment } from './equipment.model';
 import { Apprentice } from './apprentice.model';
 import { Minion } from './minion.model';
+import { HomeBase } from './homebase.model';
 
 export class Mage extends Figure {
 
@@ -29,6 +30,7 @@ export class Mage extends Figure {
   items: Equipment[];
   apprentice: Apprentice;
   warbandMembers: Minion[];
+  base: HomeBase;
 
   constructor(){
     super();
@@ -50,6 +52,12 @@ export class Mage extends Figure {
     this.items = new Array<Equipment>();
     this.warbandMembers = new Array<Minion>();
     this.apprentice = null;
+
+    var base = new HomeBase();
+    base.name = 'None';
+    base.description = 'Select a location for your home base.';
+    this.base = base;;
+
   }
 
   //Resets any school related data, including level
