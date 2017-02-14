@@ -19,11 +19,12 @@ export class WizardWarbandPanelComponent implements OnInit {
 
   addApprentice(){
     console.log('Adding Apprentice');
-    if(this.userMage.gold <200){
+    var cost = this.getApprenticeCost();
+    if(this.userMage.gold < cost){
       console.log("not enough funds for purchase");
       return;
     }
-    this.userMage.gold -= 200;
+    this.userMage.gold -= cost;
     this.userMage.apprentice = new Apprentice(this.userMage);
   }
 
@@ -46,4 +47,11 @@ export class WizardWarbandPanelComponent implements OnInit {
        this.userMage.warbandMembers.splice(index, 1);
     }
   }
+
+  getApprenticeCost(): number{
+    var levelMod = this.userMage.level - 10;
+    levelMod = levelMod * 10;
+    return 300 + levelMod;
+  }
+
 }
