@@ -21,12 +21,12 @@ export class AppComponent {
   constructor(){
     SpellBook.loadSchoolsIntoSpellBook();
     SpellBook.loadSpellsIntoSpellbook();
+    HomeBaseVault.loadhomeBasesIntoVault();
 
     this.wizard = new Mage();
 
     EquipmentVault.loadEquipmentIntoVault();
     WarbandVault.loadMinionTemplatesIntoVault();
-    HomeBaseVault.loadhomeBasesIntoVault();
     this.wizard.addItemToInventory(EquipmentVault.items[0]);
   }
 

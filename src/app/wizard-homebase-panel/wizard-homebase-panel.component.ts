@@ -23,7 +23,7 @@ export class WizardHomebasePanelComponent implements OnInit {
   }
 
   onHomebaseChange(newValue){
-
+    this.userMage.base = newValue;
   }
 
 }

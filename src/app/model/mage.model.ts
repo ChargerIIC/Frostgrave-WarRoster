@@ -1,5 +1,6 @@
 import { Figure } from './figure.model';
 import { SlotDictionary } from '../interfaces/dictionary.model';
+import { HomeBaseVault } from './homebaseVault.model';
 import { SpellBook } from './spellbook.model';
 import { Spell } from './spell.model';
 import { School } from './school.model';
@@ -53,10 +54,7 @@ export class Mage extends Figure {
     this.warbandMembers = new Array<Minion>();
     this.apprentice = null;
 
-    var base = new HomeBase();
-    base.name = 'None';
-    base.description = 'Select a location for your home base.';
-    this.base = base;;
+    this.base = HomeBaseVault.baseOptions[0];
 
   }
 
