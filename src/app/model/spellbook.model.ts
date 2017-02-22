@@ -688,7 +688,7 @@ export class SpellBook{
     SpellBook.spells.push(spell);
 
     spell = new Spell();
-    spell.name = "Miraclous Cure";
+    spell.name = "Miraculous Cure";
     spell.description = "This spell removes all of the effects of one type of Permanent Injury. For example, a wizard suffering from Lost Fingers regrows all his missing digits, regardless of how many times he has suffered that particular injury.";
     spell.school = SpellBook.schools[8];
     spell.castingNumber = 12;
@@ -795,4 +795,13 @@ export class SpellBook{
     console.log('Error. No relation between ' + firstSchool + ' and ' + secondSchool);
     return 'None'; //This is an error condition
   }
+
+  static getSpellByName(name: string):Spell{
+    var items = SpellBook.spells.filter(x => x.name == name);
+    if(items.length > 0){
+      return items[0];
+    }
+    return null;
+  }
+
 }
