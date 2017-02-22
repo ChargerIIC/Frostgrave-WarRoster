@@ -804,4 +804,13 @@ export class SpellBook{
     return null;
   }
 
+  static getSchoolByName(name: string):School{
+    var items = SpellBook.schools.filter(x => x.name == name);
+    if(items.length > 0){
+      return items[0];
+    }
+    return null;
+
+  }
+
 }
