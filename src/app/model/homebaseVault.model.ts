@@ -1,6 +1,8 @@
 import { HomeBase } from './homebase.model';
 import { SpellBook } from './spellbook.model';
+import { WarbandVault } from './warbandVault.model';
 import { Mage } from './mage.model';
+import { Minion } from './minion.model';
 
 export class HomeBaseVault{
 
@@ -71,21 +73,51 @@ export class HomeBaseVault{
     base = new HomeBase();
     base.name = 'Crypt';
     base.description = 'While creepy, it does contain plenty of necromancy supplies. +2 to Raise Zombie spells';
+    base.applyEffect = function(userMage:Mage){
+      var spell = SpellBook.getSpellByName('Raise Zombie');
+      var index = userMage.spells.indexOf(spell);
+      if(index > 0)
+      {
+        userMage.spells[index].castingNumber -=2;
+      }
+    };
+    base.removeEffect = function(userMage:Mage){
+      var spell = SpellBook.getSpellByName('Raise Zombie');
+      var index = userMage.spells.indexOf(spell);
+      if(index > 0)
+      {
+        userMage.spells[index].castingNumber +=2;
+      }
+    };
     this.baseOptions.push(base);
 
     base = new HomeBase();
     base.name = 'Treasury';
     base.description = 'This treasury has several sealed vaults that have not been opened yet. At the end of each game, the warband may attempt to open one of the vaults. Roll 1d20. On a result of 2-18 you may add that many gold pieces to your inventory. On a 19 add 100 gold pieces. On a 20 a treasure is found and should be treated the same as a treasure found in game. On a 1 than a single warband member of the players choice is injured and cannot particpate in the next game.';
+    base.applyEffect = function(userMage:Mage){};
+    base.removeEffect = function(userMage:Mage){};
     this.baseOptions.push(base);
 
     base = new HomeBase();
     base.name = 'Brewery';
     base.description = 'The promise of well aged alcohol left in the brewery cheapens your recuritment costs. New warband members cost 5 gold pieces less and an extra 10 gold pieces is earned after each game.';
+    base.applyEffect = function(userMage:Mage){
+      for (var minion of WarbandVault.templates){
+        minion.cost -= 2;
+      }
+    };
+    base.removeEffect = function(userMage:Mage){
+      for (var minion of WarbandVault.templates){
+        minion.cost += 2;
+      }
+    };
     this.baseOptions.push(base);
 
     base = new HomeBase();
     base.name = 'Library';
-    base.description = 'A few useful tomes have surivied in this old library. Reading them gives the wizard an extra 20 experience points after each game.';
+    base.description = 'A few useful tomes have survived in this old library. Reading them gives the wizard an extra 20 experience points after each game.';
+    base.applyEffect = function(userMage:Mage){ console.log('TODO: Decide if this should be implemented'); };
+    base.removeEffect = function(userMage:Mage){};
     this.baseOptions.push(base);
 
   }
