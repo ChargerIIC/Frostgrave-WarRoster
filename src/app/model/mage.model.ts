@@ -198,7 +198,7 @@ export class Mage extends Figure {
       this.spellSlotsAvailable[spell.school.name]--;
       return true;
     }
-    else if(this.spellSlotsAvailable['Neutral'] > 0 && this.school.neutral[spell.school.name]){
+    else if(this.spellSlotsAvailable['Neutral'] > 0 && this.school.neutral.indexOf(spell.school) > 0){
       this.spellSlotsAvailable['Neutral']--;
       return true;
     }
