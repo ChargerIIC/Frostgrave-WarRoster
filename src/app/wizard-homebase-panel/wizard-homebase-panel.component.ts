@@ -22,8 +22,10 @@ export class WizardHomebasePanelComponent implements OnInit {
   ngOnInit() {
   }
 
-  onHomebaseChange(newValue){
-    this.userMage.base = newValue;
+  onHomebaseChange(newBase : HomeBase){
+    this.userMage.base.removeEffect(this.userMage);
+    this.userMage.base = newBase;
+    newBase.applyEffect(this.userMage);
   }
 
 }

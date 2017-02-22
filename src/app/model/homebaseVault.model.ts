@@ -1,4 +1,6 @@
 import { HomeBase } from './homebase.model';
+import { SpellBook } from './spellbook.model';
+import { Mage } from './mage.model';
 
 export class HomeBaseVault{
 
@@ -15,16 +17,55 @@ export class HomeBaseVault{
     var base = new HomeBase();
     base.name = 'None';
     base.description = 'Select a location for your home base.';
+    base.applyEffect = function(userMage:Mage){};
+    base.removeEffect = function(userMage:Mage){};
     this.baseOptions.push(base);
 
     base = new HomeBase();
     base.name = 'Inn';
     base.description = 'This old inn provides additional space for members of your warband. Warband maximum increases to 11';
+    base.applyEffect = function(userMage:Mage){
+      console.log("TODO: Add warband limit");
+    };
+    base.removeEffect = function(userMage:Mage){
+      console.log("TODO: Reduce warband limit");
+    };
     this.baseOptions.push(base);
 
     base = new HomeBase();
     base.name = 'Temple';
     base.description = 'Once a place of worship, these ruins project an aura of calm. +1 bonus to casting rolls for Miraculous Cure and Restore Life spells';
+    base.applyEffect = function(userMage:Mage){
+      var spell = SpellBook.getSpellByName('Miraculous Cure');
+      var index = userMage.spells.indexOf(spell);
+      if(index > 0)
+      {
+        userMage.spells[index].castingNumber -=2;
+      }
+
+      spell = SpellBook.getSpellByName('Restore Life');
+      index = userMage.spells.indexOf(spell);
+      if(index > 0)
+      {
+        userMage.spells[index].castingNumber -=2;
+      }
+    };
+    base.removeEffect = function(userMage:Mage){
+      var spell = SpellBook.getSpellByName('Miraculous Cure');
+      var index = userMage.spells.indexOf(spell);
+      if(index > 0)
+      {
+        userMage.spells[index].castingNumber +=2;
+      }
+
+      spell = SpellBook.getSpellByName('Restore Life');
+      index = userMage.spells.indexOf(spell);
+      if(index > 0)
+      {
+        userMage.spells[index].castingNumber +=2;
+      }
+    };
+
     this.baseOptions.push(base);
 
     base = new HomeBase();
