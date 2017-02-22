@@ -11,7 +11,6 @@ export class EquipmentVault{
 
   static loadEquipmentIntoVault(){
     var item = new Equipment();
-    item.id = "W01";
     item.name = "Staff";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -20,7 +19,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "W02";
     item.name = "Hand Weapon";
     item.bonusType = "Fight";
     item.bonusNum = 1;
@@ -29,7 +27,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "W03";
     item.name = "Dagger";
     item.bonusType = "Fight";
     item.bonusNum = 1;
@@ -38,7 +35,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "W04";
     item.name = "Bow";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -47,7 +43,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "W05";
     item.name = "Crossbow";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -56,7 +51,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "W06";
     item.name = "Two-Handed Weapon";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -65,7 +59,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "P07";
     item.name = "Healing Potion";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -74,7 +67,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "P08";
     item.name = "Strength Potion";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -83,7 +75,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "P09";
     item.name = "Toughness Potion";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -92,7 +83,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "P10";
     item.name = "Elixer of Speed";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -101,7 +91,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "P11";
     item.name = "Invisibility Potion";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -110,7 +99,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "P12";
     item.name = "Explosive Cocktail";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -119,7 +107,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "P13";
     item.name = "Invulnerability Potion";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -128,7 +115,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "P14";
     item.name = "Teleportation Potion";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -137,7 +123,6 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "P15";
     item.name = "Demon in a Bottle";
     item.bonusType = "Fight";
     item.bonusNum = 0;
@@ -146,12 +131,115 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.id = "P16";
     item.name = "Elixer of Life";
     item.bonusType = "Fight";
     item.bonusNum = 0;
     item.description = "Same as Restore Life spell, no casting roll required";
     item.cost = 200;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Hand Weapon";
+    item.bonusType = "Fight";
+    item.bonusNum = 1;
+    item.description = "A fighting weapon held in a single hand.";
+    item.cost = 300;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Hand Weapon";
+    item.bonusType = "Fight";
+    item.bonusNum = 2;
+    item.description = "A fighting weapon held in a single hand.";
+    item.cost = 500;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Hand Weapon";
+    item.bonusType = "Damage";
+    item.bonusNum = 2;
+    item.description = "A fighting weapon held in a single hand.";
+    item.cost = 300;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Two-Handed Weapon";
+    item.bonusType = "Fight";
+    item.bonusNum = 1;
+    item.description = "Two handed blade or axe";
+    item.cost = 300;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Two-Handed Weapon";
+    item.bonusType = "Damage";
+    item.bonusNum = 1;
+    item.description = "Two handed blade or axe";
+    item.cost = 200;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Two-Handed Weapon";
+    item.bonusType = "Damage";
+    item.bonusNum = 2;
+    item.description = "Two handed blade or axe";
+    item.cost = 400;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Bow";
+    item.bonusType = "Shoot";
+    item.bonusNum = 1;
+    item.description = "24 inch range.";
+    item.cost = 300;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Bow";
+    item.bonusType = "Damage";
+    item.bonusNum = 2;
+    item.description = "24 inch range.";
+    item.cost = 300;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Crossbow";
+    item.bonusType = "Shoot";
+    item.bonusNum = 1;
+    item.description = "24 inch range. +2 damage. Requires an action to reload.";
+    item.cost = 0;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Crossbow";
+    item.bonusType = "Damage";
+    item.bonusNum = 4;
+    item.description = "24 inch range. Requires an action to reload.";
+    item.cost = 0;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Dagger";
+    item.bonusType = "Fight";
+    item.bonusNum = 1;
+    item.description = "A fighting weapon held in an alterante hand. -1 damage modifier. Stacks with Hand Weapon";
+    item.cost = 300;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Dagger";
+    item.bonusType = "Damage";
+    item.bonusNum = 0;
+    item.description = "A fighting weapon held in an alterante hand. no negative damage modifier. Stacks with Hand Weapon";
+    item.cost = 200;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Dagger";
+    item.bonusType = "Damage";
+    item.bonusNum = 1;
+    item.description = "A default fighting weapon held in an alterante hand. -1 damage modifier. Stacks with Hand Weapon";
+    item.cost = 300;
     EquipmentVault.items.push(item);
 
   }
