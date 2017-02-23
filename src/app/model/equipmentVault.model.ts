@@ -242,6 +242,62 @@ export class EquipmentVault{
     item.cost = 300;
     EquipmentVault.items.push(item);
 
+    item = new Equipment();
+    item.name = "Magic Leather Armor";
+    item.bonusType = "Armor";
+    item.bonusNum = 1;
+    item.description = "Leather fighting armor.";
+    item.cost = 300;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Mail Armor";
+    item.bonusType = "Armor";
+    item.bonusNum = 1;
+    item.description = "Chainmail fighting armor.";
+    item.cost = 400;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Ring of Protection";
+    item.bonusType = "Armor";
+    item.bonusNum = 1;
+    item.description = "A simple ring that extends protection when used.";
+    item.cost = 400;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Cloak of Protection";
+    item.bonusType = "Armor";
+    item.bonusNum = 1;
+    item.description = "A magic cloak that extends protection when struck at.";
+    item.cost = 400;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Staff";
+    item.bonusType = "Fight";
+    item.bonusNum = 1;
+    item.description = "A magic fighting weapon for a wizard. Reduces enemy attacks by 1 damage.";
+    item.cost = 200;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Staff";
+    item.bonusType = "Damage";
+    item.bonusNum = 2;
+    item.description = "A magic fighting weapon for a wizard. Reduces enemy attacks by 1 damage.";
+    item.cost = 200;
+    EquipmentVault.items.push(item);
+
+    item = new Equipment();
+    item.name = "Magic Shield";
+    item.bonusType = "Armor";
+    item.bonusNum = 1;
+    item.description = "A magic shield reinforced by magic enchantment.";
+    item.cost = 400;
+    EquipmentVault.items.push(item);
+
   }
 
   static getItemByName(name: string):Equipment{
