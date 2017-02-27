@@ -14,7 +14,6 @@ export class WizardSummaryPanelComponent implements OnInit {
   schoolsOfMagic: School[];
 
   @Input() userMage: Mage;
-  @Output() userMageSchoolUpdated: EventEmitter<School> = new EventEmitter();
 
   constructor() {
     this.schoolsOfMagic = SpellBook.schools;
@@ -29,8 +28,10 @@ export class WizardSummaryPanelComponent implements OnInit {
   onSchoolChange(newValue: School)
   {
     this.userMage.school = newValue;
-    this.userMage.resetMageSchool();
-    this.userMageSchoolUpdated.emit(newValue);
+    this.userMage.resetMage(true);
   }
 
+  resetMage(mage: Mage){
+    this.userMage.resetMage(false);
+  }
 }

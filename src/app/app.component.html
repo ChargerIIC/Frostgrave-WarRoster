@@ -1,6 +1,7 @@
 <div class="container">
-  <div class="row"><app-wizard-summary-panel [userMage]="this.wizard" class="panel panel-primary" (userMageSchoolUpdated)="notifyChangeOfSchool($event)"></app-wizard-summary-panel></div>
-  <div class="row"><app-wizard-stats-panel [userMage]="this.wizard" class="col-lg-3 col-md-3 col-xs-12 panel panel-info"></app-wizard-stats-panel><app-wizard-spells-panel [userMage]="this.wizard" class="col-lg-9 col-md-9 col-xs-12 panel panel-info"></app-wizard-spells-panel></div>
+  <div class="row"><app-wizard-summary-panel [userMage]="this.wizard" class="panel panel-primary"></app-wizard-summary-panel></div>
+  <div class="row"><app-wizard-stats-panel [userMage]="this.wizard" class="col-lg-3 col-md-3 col-xs-12 panel panel-info"></app-wizard-stats-panel>
+    <app-wizard-spells-panel [userMage]="this.wizard" class="col-lg-9 col-md-9 col-xs-12 panel panel-info"></app-wizard-spells-panel></div>
   <div class="row"><app-wizard-warband-panel [userMage]="this.wizard" class="panel panel-info"></app-wizard-warband-panel></div>
   <div class="row"><app-wizard-equipment-panel [userMage]="this.wizard" class="panel panel-info"></app-wizard-equipment-panel></div>
   <div class="row"><app-wizard-homebase-panel [userMage]="this.wizard" class="panel panel-info"></app-wizard-homebase-panel></div>

@@ -36,30 +36,14 @@ export class Mage extends Figure {
   constructor(){
     super();
     //Defaults
-    this.name = "Name";
+    this.name = "Enter Name";
     this.school = SpellBook.schools[0];
-    this.level = 0;
-    this.move = 6;
-    this.fight = 2;
-    this.shoot = 0;
-    this.will = 4;
-    this.armor = 10;
-    this.health = 14;
-    this.initializeSpellSlots(this.school);
+    this.resetMage(true);
     this.openItemSlots = 4;
-    this.gold = 500;
-
-    this.spells = new Array<Spell>();
-    this.items = new Array<Equipment>();
-    this.warbandMembers = new Array<Minion>();
-    this.apprentice = null;
-
-    this.base = HomeBaseVault.baseOptions[0];
-
   }
 
   //Resets any school related data, including level
-  resetMageSchool(){
+  resetMage(fullReset: boolean){
     this.level = 0;
     this.move = 6;
     this.fight = 0;
@@ -72,6 +56,14 @@ export class Mage extends Figure {
       this.spellSlotsAvailable[kvp] = 0;
     }
     this.initializeSpellSlots(this.school);
+
+    if(fullReset){
+      this.gold = 500;
+      this.items = new Array<Equipment>();
+      this.warbandMembers = new Array<Minion>();
+      this.apprentice = null;
+      this.base = HomeBaseVault.baseOptions[0];
+    }
   }
 
   initializeSpellSlots(school: School){

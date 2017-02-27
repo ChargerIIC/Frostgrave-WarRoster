@@ -30,7 +30,4 @@ export class AppComponent {
     this.wizard.addItemToInventory(EquipmentVault.items[0]);
   }
 
-  notifyChangeOfSchool(newSchool: School){
-    console.log(newSchool);
-  }
 }
