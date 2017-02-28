@@ -12,10 +12,18 @@
     </select>
   </div>
   <div class="col-lg-2 col-md-2 col-xs-2">
-    <span class="label lblLevel">Level ({{userMage.level}})</span>
+    <button class="btn btn-primary pull-right"><span class="glyphicon glyphicon-plus"></span> Level Up</button>
   </div>
   <div class="col-lg-2 col-md-2 col-xs-2">
-    <span class="label lblGold">Gold: {{userMage.gold}}</span>
+    <button class="btn btn-primary pull-right" (click)="resetMage(this.userMage)"><span class="glyphicon glyphicon-plus"></span> Reset Mage</button>
   </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 col-md-10 col-xs-10">
+      <span class="label lblLevel pull-right">Level ({{userMage.level}})</span>
+    </div>
+    <div class="col-lg-2 col-md-2 col-xs-2">
+      <span class="label lblGold pull-right">Gold: {{userMage.gold}}</span>
+    </div>
   </div>
 </div>
