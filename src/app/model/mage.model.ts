@@ -14,6 +14,7 @@ export class Mage extends Figure {
   name: string;
   school: School;
   level: number;
+  levelUpPoints: number;
 
   move: number;
   fight: number;
@@ -45,6 +46,7 @@ export class Mage extends Figure {
   //Resets any school related data, including level
   resetMage(fullReset: boolean){
     this.level = 0;
+    this.levelUpPoints = 0;
     this.move = 6;
     this.fight = 0;
     this.shoot = 0;

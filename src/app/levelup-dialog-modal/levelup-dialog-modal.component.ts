@@ -15,4 +15,11 @@ export class LevelupDialogModalComponent implements OnInit {
   ngOnInit() {
   }
 
+  addLevel(){
+    this.userMage.levelUpPoints++;
+  }
+
+  showOptions(){
+    return this.userMage.levelUpPoints > 0;
+  }
 }

@@ -1,13 +1,27 @@
-<div class="dialog modal-dialog" role="document">
+<div class="dialog modal-dialog panel panel-info" role="document">
   <div class="modal-content">
-    <header class="content modal-header">
+    <header class="content modal-header panel-heading">
       <div class="title">
         Increase Wizard Level<span class="exit-button close" data-dismiss="modal" aria-label="Close">x</span>
       </div>
     </header>
     <div class="modal-body">
-      Current Level {{userMage.level}}
-      <p></p>
+      <div class="row">
+        <strong class="pull pull-left">Current Level {{userMage.level}} - Available Level Improvements: {{userMage.levelUpPoints}}</strong>
+        <!-- <p></p> -->
+        <button type="button" class="btn btn-primary pull pull-right" (click)="addLevel()"><span class="glyphicon glyphicon-plus">Add Another Level</span></button>
+        <p></p>
+      </div>
+      <div class="row">
+        <div *ngIf="showOptions()" class="panel panel-info">
+          <div class="panel-heading">Improve Stat</div>
+          <div class="panel-body"></div>
+          <div class="panel-heading">Improve Spell Casting</div>
+          <div class="panel-body"></div>
+          <div class="panel-heading">Add Spell Slot</div>
+          <div class="panel-body"></div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
