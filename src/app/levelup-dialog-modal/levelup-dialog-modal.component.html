@@ -14,12 +14,23 @@
       </div>
       <div class="row">
         <div *ngIf="showOptions()" class="panel panel-info">
-          <div class="panel-heading">Improve Stat</div>
-          <div class="panel-body"></div>
-          <div class="panel-heading">Improve Spell Casting</div>
-          <div class="panel-body"></div>
+          <div class="panel-heading">Improve Stats</div>
+          <div class="panel-body">
+            <button class="btn btn-primary" (click)="addFight()">Add Fight</button>
+            <button class="btn btn-primary" (click)="addShoot()"> Add Shoot</button>
+            <button class="btn btn-primary" (click)="addWill()">Add Will</button>
+            <button class="btn btn-primary" (click)="addHealth()">Add Health</button>
+          </div>
+          <div *ngIf="spellsPresent()" class="panel-heading">Improve Spell Casting</div>
+          <div *ngIf="spellsPresent()" class="panel-body">
+            <table class="table table-hover table-bordered">
+              <th>Spell</th><th>Description</th><th>School</th><th>Casting Roll</th><th>Improve</th>
+              <tr *ngFor="let spell of userMage.spells"><td>{{spell.name}}</td><td>{{spell.description}}</td><td>{{spell.school.name}}</td><td>{{spell.castingNumber}}</td><td> <button type="button" class="btn btn-primary" (click)="improveSpell(spell)"><span>Improve</span></button></td></tr>
+            </table>
+          </div>
           <div class="panel-heading">Add Spell Slot</div>
           <div class="panel-body"></div>
+          <button type="button" class="btn btn-primary" (click)="addSpellSlot()">Add Spell Slot</button>
         </div>
       </div>
     </div>
