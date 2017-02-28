@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Mage } from '../model/mage.model';
 
 @Component({
   selector: 'app-levelup-dialog-modal',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./levelup-dialog-modal.component.css']
 })
 export class LevelupDialogModalComponent implements OnInit {
+
+  @Input() userMage : Mage;
 
   constructor() { }
 
