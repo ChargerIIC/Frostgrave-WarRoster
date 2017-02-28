@@ -1,7 +1,7 @@
 <div class="panel-heading">Homebase </div>
 <div class="panel-body">
   <div class="pull pull-right">
-    <select [ngModel]="userMage.home" (ngModelChange)="onHomebaseChange($event)" class="btn btn-default dropdown-toggle">
+    <select [ngModel]="userMage.base" (ngModelChange)="onHomebaseChange($event)" class="btn btn-default dropdown-toggle">
       <option *ngFor="let base of homebaseOptions" [ngValue]="base">{{base.name}}</option>
     </select>
   </div>
