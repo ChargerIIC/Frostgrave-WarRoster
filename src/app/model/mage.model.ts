@@ -112,7 +112,7 @@ export class Mage extends Figure {
     var index = this.spells.indexOf(spell);
     if(index > -1){
       this.spells.splice(index,1);
-      //removeSpellSlot(spell);
+    this.removeSpellSlot(spell);
     }
   }
 
@@ -188,7 +188,7 @@ export class Mage extends Figure {
   }
 
   removeSpellSlot(spell: Spell): boolean {
-    if(this.spellSlotsAvailable[spell.school.name] > 0){
+    if(this.spellSlotsAvailable[spell.school.name] > -1){
       this.spellSlotsAvailable[spell.school.name]--;
       return true;
     }
