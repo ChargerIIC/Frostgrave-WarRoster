@@ -17,6 +17,7 @@ import { WarbandDialogModalComponent } from './warband-dialog-modal/warband-dial
 import { LevelupDialogModalComponent } from './levelup-dialog-modal/levelup-dialog-modal.component';
 
 import { Mage } from './model/mage.model';
+import { GameresultsDialogModalComponent } from './gameresults-dialog-modal/gameresults-dialog-modal.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { Mage } from './model/mage.model';
     WizardWarbandPanelComponent,
     WarbandDialogModalComponent,
     WizardHomebasePanelComponent,
-    LevelupDialogModalComponent
+    LevelupDialogModalComponent,
+    GameresultsDialogModalComponent
   ],
   imports: [
     BrowserModule,
