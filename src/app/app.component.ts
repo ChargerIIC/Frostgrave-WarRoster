@@ -5,7 +5,7 @@ import { Spell } from './model/spell.model';
 import { SpellBook } from './model/spellbook.model';
 import { EquipmentVault } from './model/equipmentVault.model';
 import { WarbandVault } from './model/warbandVault.model';
-import {HomeBaseVault } from './model/homebaseVault.model';
+import { HomeBaseVault } from './model/homebaseVault.model';
 
 
 @Component({

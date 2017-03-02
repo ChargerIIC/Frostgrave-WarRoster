@@ -15,9 +15,9 @@ import { SpellDialogModalComponent } from './spell-dialog-modal/spell-dialog-mod
 import { ItemDialogModalComponent } from './item-dialog-modal/item-dialog-modal.component';
 import { WarbandDialogModalComponent } from './warband-dialog-modal/warband-dialog-modal.component';
 import { LevelupDialogModalComponent } from './levelup-dialog-modal/levelup-dialog-modal.component';
+import { GameresultsDialogModalComponent } from './gameresults-dialog-modal/gameresults-dialog-modal.component';
 
 import { Mage } from './model/mage.model';
-import { GameresultsDialogModalComponent } from './gameresults-dialog-modal/gameresults-dialog-modal.component';
 
 @NgModule({
   declarations: [
