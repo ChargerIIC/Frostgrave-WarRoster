@@ -8,9 +8,6 @@
     <div class="modal-body">
       Select an iteml to add to your wizard's inventory.  Item Slots available ({{userMage.openItemSlots}})
       <p></p>
-      <!-- <select class="btn btn-default dropdown-toggle" [(ngModel)]="this.currentSchool">
-        <option *ngFor="let school of getSchools()" [ngValue]="school">{{school}}</option>
-      </select> -->
       <table class="table table-hover table-bordered">
         <th>Item</th><th>Description</th><th>  Bonus  </th><th>Cost</th><th>Add Item</th>
         <tr *ngFor="let item of getAvailableItems()"><td>{{item.name}}</td><td>{{item.description}}</td><td>{{item.bonusType}} : {{item.bonusNum}}</td><td>{{item.cost}}</td><td><button type="button" class="btn btn-primary" (click)="addItem(item)"><span class="glyphicon glyphicon-plus"></span></button></td></tr>
