@@ -10,9 +10,14 @@ export class GameresultsDialogModalComponent implements OnInit {
 
   @Input() userMage: Mage;
 
+  experience: number;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  applyResults(){
+    this.userMage.experience += this.experience;
+  }
 }
