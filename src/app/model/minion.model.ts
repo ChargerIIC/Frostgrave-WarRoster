@@ -34,12 +34,6 @@ export class Minion extends Figure {
       }
     }
 
-    result = result.slice(0, -2);
-
-    if(this.status!= '')
-    {
-      result+= ' '+this.status;
-    }
-    return result;
+    return result.slice(0, -2);
   }
 }
