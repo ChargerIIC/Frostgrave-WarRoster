@@ -31,7 +31,7 @@ export class GameresultsDialogModalComponent implements OnInit {
   addCasaulty(){
     var index = this.userMage.warbandMembers.indexOf(this.selectedWarbandMember);
     var minion = this.userMage.warbandMembers[index];
-    minion.notes += ' WOUNDED';
+    minion.status = 'WOUNDED';
   }
 
 }

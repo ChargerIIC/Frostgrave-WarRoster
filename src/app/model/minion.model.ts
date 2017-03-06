@@ -9,11 +9,13 @@ export class Minion extends Figure {
 
   cost: number;
   notes: string;
+  status: string;
 
   constructor(name: string){
     super();
     this.name = name;
-    this.otherItems = new Array<Equipment>()
+    this.otherItems = new Array<Equipment>();
+    this.status = '';
   }
 
   getNotes(): string {
@@ -31,6 +33,13 @@ export class Minion extends Figure {
         }
       }
     }
-    return result.slice(0, -2);
+
+    result = result.slice(0, -2);
+
+    if(this.status!= '')
+    {
+      result+= ' '+this.status;
+    }
+    return result;
   }
 }
