@@ -15,6 +15,22 @@
         </div>
       </div>
       <div class="row">
+        <div class="col-lg-8 col-md-8 col-xs-8">
+          Wizard was a Casaulty:
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4">
+          <button class="btn btn-primary" aria-label="Add" (click)="addWizardCasaulty()">Add Casaulty</button>
+        </div>
+      </div>
+      <div class="row" *ngIf="apprenticePresent()">
+        <div class="col-lg-8 col-md-8 col-xs-8">
+          Apprentice was a Casaulty:
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-4">
+          <button class="btn btn-primary" aria-label="Add" (click)="addApprenticeCasaulty()">Add Casaulty</button>
+        </div>
+      </div>
+      <div class="row">
         <div class="col-lg-4 col-md-4 col-xs-4">
           Add Casualties
         </div>

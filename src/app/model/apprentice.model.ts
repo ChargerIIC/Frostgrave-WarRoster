@@ -3,6 +3,8 @@ import { Mage } from './mage.model';
 
 export class Apprentice extends Figure {
 
+  status: string;
+
   constructor(wizard: Mage){
     super();
 
@@ -13,7 +15,7 @@ export class Apprentice extends Figure {
     this.will = wizard.will - 2;
     this.armor = 10;
     this.health = wizard.health - 4;
-
+    this.status = '';
   }
 
 }

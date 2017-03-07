@@ -12,6 +12,7 @@ import { HomeBase } from './homebase.model';
 export class Mage extends Figure {
 
   name: string;
+  status: string;
   school: School;
   level: number;
   experience: number;
@@ -62,6 +63,7 @@ export class Mage extends Figure {
     this.initializeSpellSlots(this.school);
 
     if(fullReset){
+      this.status = '';
       this.gold = 500;
       this.items = new Array<Equipment>();
       this.warbandMembers = new Array<Minion>();
