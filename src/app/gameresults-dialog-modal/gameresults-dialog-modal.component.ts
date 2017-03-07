@@ -181,7 +181,6 @@ export class GameresultsDialogModalComponent implements OnInit {
       this.actionLog = this.userMage.name + ' was badly wounded.'
     }
     else if(roll <=8){
-      //Badly Wounded
       this.userMage.items = new Array<Equipment>();
       this.actionLog = this.userMage.name + ' had a close call and lost thier items.'
     }
