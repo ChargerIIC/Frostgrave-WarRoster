@@ -105,8 +105,10 @@ export class Mage extends Figure {
 
   addSpellToCollection(spell: Spell){
     console.log("Adding Spell: " + spell.name);
+    if(this.removeSpellSlot(spell)){
     this.spells.push(spell);
-    this.removeSpellSlot(spell);
+    }
+    //this.removeSpellSlot(spell);
     }
 
   removeSpellFromCollection(spell: Spell){
@@ -190,7 +192,7 @@ export class Mage extends Figure {
   }
 
   removeSpellSlot(spell: Spell): boolean {
-    if(this.spellSlotsAvailable[spell.school.name] > -1){
+    if(this.spellSlotsAvailable[spell.school.name] > 0){
       this.spellSlotsAvailable[spell.school.name]--;
       return true;
     }
