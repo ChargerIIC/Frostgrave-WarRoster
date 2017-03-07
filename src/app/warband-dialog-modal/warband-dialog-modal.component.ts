@@ -22,9 +22,14 @@ export class WarbandDialogModalComponent implements OnInit {
   }
 
   addWarbandMember(minion){
-    if(this.userMage.gold >= minion.cost){
-      this.userMage.gold -= minion.cost;
-      this.userMage.warbandMembers.push(minion);
+    var recruit = minion.copy();
+    if(this.userMage.gold >= recruit.cost){
+      this.userMage.gold -= recruit.cost;
+      var sameMinions = this.userMage.warbandMembers.filter(x => x.name.startsWith(recruit.name));
+      if(sameMinions.length > 0){
+        recruit.name += ' ' + (sameMinions.length + 1);
+      }
+      this.userMage.warbandMembers.push(recruit);
     }
   }
 }

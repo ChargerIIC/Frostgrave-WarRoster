@@ -18,6 +18,23 @@ export class Minion extends Figure {
     this.status = '';
   }
 
+  copy(): Minion{
+    var copy = new Minion(this.name);
+    copy.weapon = this.weapon;
+    copy.heldItem = this.heldItem;
+    copy.otherItems = this.otherItems;
+    copy.cost = this.cost;
+    copy.notes = this.notes;
+    copy.status = this.status;
+    copy.move = this.move;
+    copy.fight = this.fight;
+    copy.shoot = this.shoot;
+    copy.will = this.will;
+    copy.armor = this.armor;
+    copy.health = this.health;
+    return copy;
+  }
+
   getNotes(): string {
     var result = " ";
     if(this.notes != null && this.notes != ""){
