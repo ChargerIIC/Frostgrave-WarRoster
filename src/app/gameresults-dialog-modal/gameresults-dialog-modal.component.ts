@@ -19,6 +19,7 @@ export class GameresultsDialogModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.selectedWarbandMember = this.userMage.warbandMembers[0];
   }
 
   applyResults(){
@@ -31,7 +32,6 @@ export class GameresultsDialogModalComponent implements OnInit {
 
   addCasaulty(){
     var index = this.userMage.warbandMembers.indexOf(this.selectedWarbandMember);
-    var minion = this.userMage.warbandMembers[index];
 
     //roll 1d20
     //TODO: Might need to create the classic Dice Roller Utility
@@ -39,14 +39,14 @@ export class GameresultsDialogModalComponent implements OnInit {
     this.actionLog = "Rolling for casualty results: " + roll + '. ';
     if(roll <= 4){
       this.userMage.warbandMembers.splice(index, 1); //Died
-      this.actionLog = minion.name += ' was killed by thier wounds.';
+      this.actionLog = this.selectedWarbandMember.name + ' was killed by thier wounds.';
     }
     else if(roll <=8){
-      minion.status = 'WOUNDED';
-      this.actionLog = minion.name += ' was wounded.'
+      this.selectedWarbandMember.status = 'WOUNDED';
+      this.actionLog = this.selectedWarbandMember.name + ' was wounded.'
     }
     else{
-      this.actionLog = minion.name += ' survived thier injury.';
+      this.actionLog = this.selectedWarbandMember.name + ' survived thier injury.';
     }
 
     
