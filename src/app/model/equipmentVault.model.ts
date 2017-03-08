@@ -595,14 +595,20 @@ export class EquipmentVault{
           results.push(goldPouch);
         break;
         case 6:
-          var magicEquip = EquipmentVault.getMagicEquipmentFromTreasure();
-          results.push(magicEquip);
         break;
         case 7:
         break;
         case 8:
+          var magicEquip = EquipmentVault.getMagicEquipmentFromTreasure();
+          results.push(magicEquip);
+          goldPouch.bonusNum = 20;
+          results.push(goldPouch);
         break;
         case 9:
+          var magicEquip = EquipmentVault.getMagicEquipmentFromTreasure();
+          results.push(magicEquip);
+          goldPouch.bonusNum = 40;
+          results.push(goldPouch);
         break;
         case 10:
         break;
