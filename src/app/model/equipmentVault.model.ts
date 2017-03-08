@@ -139,7 +139,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Hand Weapon";
+    item.name = "Magic Hand Weapon (Fight+1)";
     item.bonusType = "Fight";
     item.bonusNum = 1;
     item.description = "A fighting weapon held in a single hand.";
@@ -147,7 +147,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Hand Weapon";
+    item.name = "Magic Hand Weapon (Fight+2)";
     item.bonusType = "Fight";
     item.bonusNum = 2;
     item.description = "A fighting weapon held in a single hand.";
@@ -155,7 +155,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Hand Weapon";
+    item.name = "Magic Hand Weapon (Damage+2)";
     item.bonusType = "Damage";
     item.bonusNum = 2;
     item.description = "A fighting weapon held in a single hand.";
@@ -163,7 +163,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Two-Handed Weapon";
+    item.name = "Magic Two-Handed Weapon (Fight+1)";
     item.bonusType = "Fight";
     item.bonusNum = 1;
     item.description = "Two handed blade or axe";
@@ -171,7 +171,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Two-Handed Weapon";
+    item.name = "Magic Two-Handed Weapon (Damage+1)";
     item.bonusType = "Damage";
     item.bonusNum = 1;
     item.description = "Two handed blade or axe";
@@ -179,7 +179,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Two-Handed Weapon";
+    item.name = "Magic Two-Handed Weapon (Damage+2)";
     item.bonusType = "Damage";
     item.bonusNum = 2;
     item.description = "Two handed blade or axe";
@@ -187,7 +187,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Bow";
+    item.name = "Magic Bow (Shoot+1)";
     item.bonusType = "Shoot";
     item.bonusNum = 1;
     item.description = "24 inch range.";
@@ -195,7 +195,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Bow";
+    item.name = "Magic Bow (Damage+2)";
     item.bonusType = "Damage";
     item.bonusNum = 2;
     item.description = "24 inch range.";
@@ -203,7 +203,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Crossbow";
+    item.name = "Magic Crossbow (Shoot+1)";
     item.bonusType = "Shoot";
     item.bonusNum = 1;
     item.description = "24 inch range. +2 damage. Requires an action to reload.";
@@ -211,7 +211,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Crossbow";
+    item.name = "Magic Crossbow (Damage+2)";
     item.bonusType = "Damage";
     item.bonusNum = 4;
     item.description = "24 inch range. Requires an action to reload.";
@@ -219,7 +219,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Dagger";
+    item.name = "Magic Dagger (Fight+1)";
     item.bonusType = "Fight";
     item.bonusNum = 1;
     item.description = "A fighting weapon held in an alternate hand. -1 damage modifier. Stacks with Hand Weapon";
@@ -227,7 +227,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Dagger";
+    item.name = "Magic Dagger (Damage+1)";
     item.bonusType = "Damage";
     item.bonusNum = 0;
     item.description = "A fighting weapon held in an alternate hand. no negative damage modifier. Stacks with Hand Weapon";
@@ -235,7 +235,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Dagger";
+    item.name = "Magic Dagger (Damage+2)";
     item.bonusType = "Damage";
     item.bonusNum = 1;
     item.description = "A default fighting weapon held in an alternate hand. -1 damage modifier. Stacks with Hand Weapon";
@@ -243,7 +243,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Leather Armor";
+    item.name = "Magic Leather Armor (Armor+1)";
     item.bonusType = "Armor";
     item.bonusNum = 1;
     item.description = "Leather fighting armor.";
@@ -251,7 +251,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Mail Armor";
+    item.name = "Magic Mail Armor (Armor+1)";
     item.bonusType = "Armor";
     item.bonusNum = 1;
     item.description = "Chainmail fighting armor.";
@@ -259,7 +259,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Ring of Protection";
+    item.name = "Ring of Protection (Armor+1)";
     item.bonusType = "Armor";
     item.bonusNum = 1;
     item.description = "A simple ring that extends protection when used.";
@@ -267,7 +267,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Cloak of Protection";
+    item.name = "Cloak of Protection (Armor+1)";
     item.bonusType = "Armor";
     item.bonusNum = 1;
     item.description = "A magic cloak that extends protection when struck at.";
@@ -275,7 +275,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Staff";
+    item.name = "Magic Staff (Fight+1)";
     item.bonusType = "Fight";
     item.bonusNum = 1;
     item.description = "A magic fighting weapon for a wizard. Reduces enemy attacks by 1 damage.";
@@ -283,7 +283,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Staff";
+    item.name = "Magic Staff (Damage+2)";
     item.bonusType = "Damage";
     item.bonusNum = 2;
     item.description = "A magic fighting weapon for a wizard. Reduces enemy attacks by 1 damage.";
@@ -291,7 +291,7 @@ export class EquipmentVault{
     EquipmentVault.items.push(item);
 
     item = new Equipment();
-    item.name = "Magic Shield";
+    item.name = "Magic Shield (Armor+1)";
     item.bonusType = "Armor";
     item.bonusNum = 1;
     item.description = "A magic shield reinforced by magic enchantment.";
@@ -507,6 +507,54 @@ export class EquipmentVault{
     }
   }
 
+  static getMagicEquipmentFromTreasure(): Equipment{
+      //roll 1d20
+      var roll = Math.floor(Math.random() * 20) + 1;
+
+      switch (roll) {
+        case 1:
+        return EquipmentVault.getItemByName('Magic Hand Weapon (Fight+1)');
+        case 2:
+        return EquipmentVault.getItemByName('Magic Hand Weapon (Fight+2)');
+        case 3:
+        return EquipmentVault.getItemByName('Magic Hand Weapon (Damage+2)');
+        case 4:
+        return EquipmentVault.getItemByName('Magic Two-Handed Weapon (Fight+1)');
+        case 5:
+        return EquipmentVault.getItemByName('Magic Two-Handed Weapon (Damage+1)');
+        case 6:
+        return EquipmentVault.getItemByName('Magic Two-Handed Weapon (Damage+2)');
+        case 7:
+        return EquipmentVault.getItemByName('Magic Bow (Shoot+1)');
+        case 8:
+        return EquipmentVault.getItemByName('Magic Bow (Damage+2)');
+        case 9:
+        return EquipmentVault.getItemByName('Magic Crossbow (Shoot+1)');
+        case 10:
+        return EquipmentVault.getItemByName('Magic Crossbow (Damage+2)');
+        case 11:
+        return EquipmentVault.getItemByName('Magic Dagger (Fight+1)');
+        case 12:
+        return EquipmentVault.getItemByName('Magic Dagger (Damage+1)');
+        case 13:
+        return EquipmentVault.getItemByName('Magic Dagger (Damage+2)');
+        case 14:
+        return EquipmentVault.getItemByName('Magic Leather Armor (Armor+1)');
+        case 15:
+        return EquipmentVault.getItemByName('Magic Mail Armor (Armor+1)');
+        case 16:
+        return EquipmentVault.getItemByName('Ring of Protection');
+        case 17:
+        return EquipmentVault.getItemByName('Cloak of Protection');
+        case 18:
+        return EquipmentVault.getItemByName('Magic Staff (Fight+1)');
+        case 19:
+        return EquipmentVault.getItemByName('Magic Staff (Damage+2)');
+        case 20:
+        return EquipmentVault.getItemByName('Magic Shield (Armor+1)');
+      }
+  }
+
   static getItemsFromTreasure() : Array<Equipment>{
       //roll 1d20
       var roll = Math.floor(Math.random() * 20) + 1;
@@ -547,6 +595,8 @@ export class EquipmentVault{
           results.push(goldPouch);
         break;
         case 6:
+          var magicEquip = EquipmentVault.getMagicEquipmentFromTreasure();
+          results.push(magicEquip);
         break;
         case 7:
         break;
