@@ -222,7 +222,7 @@ export class EquipmentVault{
     item.name = "Magic Dagger";
     item.bonusType = "Fight";
     item.bonusNum = 1;
-    item.description = "A fighting weapon held in an alterante hand. -1 damage modifier. Stacks with Hand Weapon";
+    item.description = "A fighting weapon held in an alternate hand. -1 damage modifier. Stacks with Hand Weapon";
     item.cost = 300;
     EquipmentVault.items.push(item);
 
@@ -230,7 +230,7 @@ export class EquipmentVault{
     item.name = "Magic Dagger";
     item.bonusType = "Damage";
     item.bonusNum = 0;
-    item.description = "A fighting weapon held in an alterante hand. no negative damage modifier. Stacks with Hand Weapon";
+    item.description = "A fighting weapon held in an alternate hand. no negative damage modifier. Stacks with Hand Weapon";
     item.cost = 200;
     EquipmentVault.items.push(item);
 
@@ -238,7 +238,7 @@ export class EquipmentVault{
     item.name = "Magic Dagger";
     item.bonusType = "Damage";
     item.bonusNum = 1;
-    item.description = "A default fighting weapon held in an alterante hand. -1 damage modifier. Stacks with Hand Weapon";
+    item.description = "A default fighting weapon held in an alternate hand. -1 damage modifier. Stacks with Hand Weapon";
     item.cost = 300;
     EquipmentVault.items.push(item);
 
@@ -458,6 +458,11 @@ export class EquipmentVault{
     item.cost = 300;
     EquipmentVault.items.push(item);
 
+    item = new Equipment();
+    item.name = 'Gold';
+    item.bonusType = 'Gold';
+    item.bonusNum = 0;
+    EquipmentVault.items.push(item);
   }
 
   static getItemByName(name: string):Equipment{
@@ -466,5 +471,113 @@ export class EquipmentVault{
       return items[0];
     }
     return null;
+  }
+
+  static getPotionFromTreasure(): Equipment{
+    var roll = Math.floor(Math.random() * 20) + 1;
+    if(roll <= 4){
+      return EquipmentVault.getItemByName('Healing Potion');
+    }
+    else if(roll <= 6){
+      return EquipmentVault.getItemByName('Strength Potion');
+    }
+    else if(roll <= 8){
+      return EquipmentVault.getItemByName('Toughness Potion');
+    }
+    else if(roll <= 10){
+      return EquipmentVault.getItemByName('Elixer of Speed');
+    }
+    else if(roll <= 12){
+      return EquipmentVault.getItemByName('Invisibility Potion');
+    }
+    else if(roll <= 14){
+      return EquipmentVault.getItemByName('Explosive Cocktail');
+    }
+    else if(roll <= 16){
+      return EquipmentVault.getItemByName('Invulnerability Potion'); 
+    }
+    else if(roll <= 18){
+      return EquipmentVault.getItemByName('Teleportation Potion');
+    }
+    else if(roll == 19){
+      return EquipmentVault.getItemByName('Demon in a Bottle');
+    }
+    else if(roll == 20){
+      return EquipmentVault.getItemByName('Elixer of Life');
+    }
+  }
+
+  static getItemsFromTreasure() : Array<Equipment>{
+      //roll 1d20
+      var roll = Math.floor(Math.random() * 20) + 1;
+      var goldPouch = EquipmentVault.getItemByName('Gold');
+      var results = new Array<Equipment>();
+      switch (roll) {
+        case 1:
+          var roll2 = (Math.floor(Math.random() * 20) + 1);
+          goldPouch.bonusNum = roll2 * 10;
+          results.push(goldPouch);
+        break;
+        case 2:
+          var roll2 = (Math.floor(Math.random() * 20) + 1);
+          goldPouch.bonusNum = roll2 * 20;
+          results.push(goldPouch);
+        break;
+        case 3:
+          var roll2 = (Math.floor(Math.random() * 20) + 1);
+          goldPouch.bonusNum = roll2 * 25;
+          results.push(goldPouch);
+        break;
+        case 4:
+          var potion = EquipmentVault.getPotionFromTreasure();
+          results.push(potion);
+          potion = EquipmentVault.getPotionFromTreasure();
+          results.push(potion);
+          potion = EquipmentVault.getPotionFromTreasure();
+          results.push(potion);
+          goldPouch.bonusNum = 30;
+          results.push(goldPouch);
+        break;
+        case 5:
+          var potion = EquipmentVault.getPotionFromTreasure();
+          results.push(potion);
+          potion = EquipmentVault.getPotionFromTreasure();
+          results.push(potion);
+          goldPouch.bonusNum = 50;
+          results.push(goldPouch);
+        break;
+        case 6:
+        break;
+        case 7:
+        break;
+        case 8:
+        break;
+        case 9:
+        break;
+        case 10:
+        break;
+        case 11:
+        break;
+        case 12:
+        break;
+        case 13:
+        break;
+        case 14:
+        break;
+        case 15:
+        break;
+        case 16:
+        break;
+        case 17:
+        break;
+        case 18:
+        break;
+        case 19:
+        break;
+        case 20:
+        break;
+
+      }
+      return results;
   }
 }
