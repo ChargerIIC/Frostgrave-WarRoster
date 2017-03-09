@@ -796,6 +796,257 @@ export class SpellBook{
     return 'None'; //This is an error condition
   }
 
+  static getRandomSpell(): Spell{
+    //This is a two dice roll process. We are going to roll both dice and then reference via the if statement
+      var rollRow = Math.floor(Math.random() * 20) + 1;
+      var rollColumn = Math.floor(Math.random() * 4) + 1;
+
+      switch (rollRow) {
+        case 1:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Reveal Death');
+            case 2:
+              return SpellBook.getSpellByName('Bones of the Earth');
+            case 3:
+              return SpellBook.getSpellByName('Strike Dead');
+            case 4:
+              return SpellBook.getSpellByName('Control Undead');
+          }
+        break;
+        case 2:
+        switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Curse');
+            case 2:
+              return SpellBook.getSpellByName('Poison Dart');
+            case 3:
+              return SpellBook.getSpellByName('Animal Companion');
+            case 4:
+              return SpellBook.getSpellByName('Familiar');
+          }
+        break;
+        case 3:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Fleet Feet');
+            case 2:
+              return SpellBook.getSpellByName('Slow');
+            case 3:
+              return SpellBook.getSpellByName('Crumble');
+            case 4:
+              return SpellBook.getSpellByName('Fast Act');
+          }
+        break;
+        case 4:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Leap');
+            case 2:
+              return SpellBook.getSpellByName('Imp');
+            case 3:
+              return SpellBook.getSpellByName('Plane Walk');
+            case 4:
+              return SpellBook.getSpellByName('Bind Demon');
+          }
+        break;
+        case 5:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Wall');
+            case 2:
+              return SpellBook.getSpellByName('Call Storm');
+            case 3:
+              return SpellBook.getSpellByName('Scatter Shot');
+            case 4:
+              return SpellBook.getSpellByName('Destructive Sphere');
+          }
+        break;
+        case 6:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Push');
+            case 2:
+              return SpellBook.getSpellByName('Draining Word');
+            case 3:
+              return SpellBook.getSpellByName('Explosive Rune');
+            case 4:
+              return SpellBook.getSpellByName('Write Scroll');
+          }
+        break;
+        case 7:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Teleport');
+            case 2:
+              return SpellBook.getSpellByName('Invisibility');
+            case 3:
+              return SpellBook.getSpellByName('Beauty');
+            case 4:
+              return SpellBook.getSpellByName('Transpose');
+          }
+        break;
+        case 8:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Strength');
+            case 2:
+              return SpellBook.getSpellByName('Telekinesis');
+            case 3:
+              return SpellBook.getSpellByName('Enchant Armor');
+            case 4:
+              return SpellBook.getSpellByName('Control Construct');
+          }
+        break;
+        case 9:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Awareness');
+            case 2:
+              return SpellBook.getSpellByName('Reveal Invisible');
+            case 3:
+              return SpellBook.getSpellByName('Will Power');
+            case 4:
+              return SpellBook.getSpellByName('Mind Control');
+          }
+        break;
+        case 10:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Shield');
+            case 2:
+              return SpellBook.getSpellByName('Banish');
+            case 3:
+              return SpellBook.getSpellByName('Blinding Light');
+            case 4:
+              return SpellBook.getSpellByName('Miraculous Cure');
+          }
+        break;
+        case 11:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Bone Dart');
+            case 2:
+              return SpellBook.getSpellByName('Spell Eater');
+            case 3:
+              return SpellBook.getSpellByName('Steal Health');
+            case 4:
+              return SpellBook.getSpellByName('Raise Zombie');
+          }
+        break;
+        case 12:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Mud');
+            case 2:
+              return SpellBook.getSpellByName('Fog');
+            case 3:
+              return SpellBook.getSpellByName('Control Animal');
+            case 4:
+              return SpellBook.getSpellByName('Brew Potion');
+          }
+        break;
+        case 13:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Decay');
+            case 2:
+              return SpellBook.getSpellByName('Time Store');
+            case 3:
+              return SpellBook.getSpellByName('Petrify');
+            case 4:
+              return SpellBook.getSpellByName('Time Walk');
+          }
+        break;
+        case 14:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Plague of Insects');
+            case 2:
+              return SpellBook.getSpellByName('Planar Tear');
+            case 3:
+              return SpellBook.getSpellByName('Possess');
+            case 4:
+              return SpellBook.getSpellByName('Summon Demon');
+          }
+        break;
+        case 15:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Elemental Bolt');
+            case 2:
+              return SpellBook.getSpellByName('Elemental Ball');
+            case 3:
+              return SpellBook.getSpellByName('Elemental Hammer');
+            case 4:
+              return SpellBook.getSpellByName('Elemental Shield');
+          }
+        break;
+        case 16:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Furious Quill');
+            case 2:
+              return SpellBook.getSpellByName('Asorb Knowledge');
+            case 3:
+              return SpellBook.getSpellByName('Power Word');
+            case 4:
+              return SpellBook.getSpellByName('Create Grimoire');
+          }
+        break;
+        case 17:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Monstrous Form');
+            case 2:
+              return SpellBook.getSpellByName('Fools Gold');
+            case 3:
+              return SpellBook.getSpellByName('Glow');
+            case 4:
+              return SpellBook.getSpellByName('Illusionary Soldier');
+          }
+        break;
+        case 18:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Enchant Weapon');
+            case 2:
+              return SpellBook.getSpellByName('Grenade');
+            case 3:
+              return SpellBook.getSpellByName('Embed Enchantment');
+            case 4:
+              return SpellBook.getSpellByName('Animate Construct');
+          }
+        break;
+        case 19:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Combat Awareness');
+            case 2:
+              return SpellBook.getSpellByName('Wizard Eye');
+            case 3:
+              return SpellBook.getSpellByName('Forget Spell');
+            case 4:
+              return SpellBook.getSpellByName('Reveal Secret');
+          }
+        break;
+        case 20:
+          switch(rollColumn){
+            case 1:
+              return SpellBook.getSpellByName('Circle of Protection');
+            case 2:
+              return SpellBook.getSpellByName('Heal');
+            case 3:
+              return SpellBook.getSpellByName('Dispel');
+            case 4:
+              return SpellBook.getSpellByName('Restore Life');
+          }
+        break;
+
+      }
+      return null;
+  }
+
   static getSpellByName(name: string):Spell{
     var items = SpellBook.spells.filter(x => x.name == name);
     if(items.length > 0){
