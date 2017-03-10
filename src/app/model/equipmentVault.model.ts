@@ -604,10 +604,11 @@ export class EquipmentVault{
 
   }
 
-  static getRandomSpellItem(type: string): Equipment{
+  static getRandomSpellItem(spellType: string): Equipment{
     var spellItem = new Equipment();
-    spellItem.name = '('+type+') - ' + spellItem.name;
-    spellItem.description = '('+type+') - ' + spellItem.description;
+    var spell = SpellBook.getRandomSpell();
+    spellItem.name = '('+spellType+') - ' + spell.name;
+    spellItem.description = '('+spellType+') - ' + spell.description;
     return spellItem;
   }
 

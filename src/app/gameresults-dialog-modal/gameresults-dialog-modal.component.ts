@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { EquipmentVault } from '../model/equipmentVault.model';
 import { Mage } from '../model/mage.model';
 import { Minion } from '../model/minion.model';
 import { Equipment } from '../model/equipment.model';
@@ -13,11 +14,17 @@ export class GameresultsDialogModalComponent implements OnInit {
 
   @Input() userMage: Mage;
 
-  experience: number;
+  experience: number = 0;
   selectedWarbandMember: Minion;
   actionLog: string;
+  treasureFound: number = 0;
 
-  constructor() { }
+  treasureToCommit: Equipment[];
+  goldToCommit: number = 0;
+
+  constructor() {
+    this.treasureToCommit = new Array<Equipment>();
+   }
 
   ngOnInit() {
     this.selectedWarbandMember = this.userMage.warbandMembers[0];
@@ -25,6 +32,10 @@ export class GameresultsDialogModalComponent implements OnInit {
 
   applyResults(){
     this.userMage.experience += this.experience;
+    this.userMage.gold += this.goldToCommit;
+    for(let equipment of this.treasureToCommit){
+      this.userMage.addItemToInventory(equipment);
+    }
   }
 
   onCasualtySelected(newValue){
@@ -187,5 +198,20 @@ export class GameresultsDialogModalComponent implements OnInit {
     else{
       this.actionLog = this.userMage.name + ' survived thier injury.';
     }  
+  }
+
+  addTreasure(){
+    this.treasureFound++;
+    var newEquipment = EquipmentVault.getItemsFromTreasure();
+    for(let item of newEquipment){
+      if(item.name == 'Gold'){
+        this.goldToCommit += item.bonusNum;
+        this.actionLog = 'Gold gained: ' + item.bonusNum;
+      }
+      else{
+        this.treasureToCommit.push(item);
+        this.actionLog = 'Treasure gained: ' + item.name;
+      }
+    }
   }
 }
