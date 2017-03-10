@@ -3,6 +3,7 @@ import { EquipmentVault } from '../model/equipmentVault.model';
 import { Mage } from '../model/mage.model';
 import { Minion } from '../model/minion.model';
 import { Equipment } from '../model/equipment.model';
+import { CasaultyDto } from '../model/casaultydto.model';
 
 @Component({
   selector: 'app-gameresults-dialog-modal',
@@ -17,26 +18,55 @@ export class GameresultsDialogModalComponent implements OnInit {
   experience: number = 0;
   selectedWarbandMember: Minion;
   actionLog: string[];
-  treasureFound: number = 0;
 
   treasureToCommit: Equipment[];
+  treasureFound: number = 0;
   goldToCommit: number = 0;
 
+  minionCasaultyList: CasaultyDto[];
+  apprenticeKilled: boolean = false;
+  apprenticeFunctionToCommit: Function;
+
   constructor() {
-    this.treasureToCommit = new Array<Equipment>();
-    this.actionLog = new Array<string>();
+    this.resetWindow();
    }
 
   ngOnInit() {
+    this.resetWindow();
     this.selectedWarbandMember = this.userMage.warbandMembers[0];
   }
 
   applyResults(){
     this.userMage.experience += this.experience;
     this.userMage.gold += this.goldToCommit;
+    for(let dto of this.minionCasaultyList){
+      var index = this.userMage.warbandMembers.indexOf(dto.warbandMember);
+      if(dto.killed){
+        this.userMage.warbandMembers.splice(index,1);
+      }
+      else{
+        this.userMage.warbandMembers[index].notes += ' (WOUNDED)';
+      }
+    }
+    if(this.apprenticeKilled){
+      this.userMage.apprentice = null;
+    }
+    else if(this.apprenticeFunctionToCommit){
+      this.apprenticeFunctionToCommit();
+    }
     for(let equipment of this.treasureToCommit){
       this.userMage.addItemToInventory(equipment);
     }
+
+  }
+
+  resetWindow(){
+    this.actionLog = null;
+    this.apprenticeKilled = false;
+    this.apprenticeFunctionToCommit = null;
+    this.treasureToCommit = new Array<Equipment>();
+    this.actionLog = new Array<string>();
+    this.minionCasaultyList = new Array<CasaultyDto>();
   }
 
   onCasualtySelected(newValue){
@@ -51,11 +81,17 @@ export class GameresultsDialogModalComponent implements OnInit {
     var roll = Math.floor(Math.random() * 20) + 1;
     this.actionLog.push("Rolling for casualty results: " + roll + '. ');
     if(roll <= 4){
-      this.userMage.warbandMembers.splice(index, 1); //Died
+      var dto = new CasaultyDto();
+      dto.warbandMember = this.selectedWarbandMember;
+      dto.killed = true;
+      this.minionCasaultyList.push(dto)
       this.actionLog.push(this.selectedWarbandMember.name + ' was killed by thier wounds.');
     }
     else if(roll <=8){
-      this.selectedWarbandMember.status = 'WOUNDED';
+      var dto = new CasaultyDto();
+      dto.warbandMember = this.selectedWarbandMember;
+      dto.killed = false;
+      this.minionCasaultyList.push(dto)
       this.actionLog.push(this.selectedWarbandMember.name + ' was wounded.');
     }
     else{
@@ -75,57 +111,79 @@ export class GameresultsDialogModalComponent implements OnInit {
     if(roll <= 2){
       //died
       this.actionLog.push(apprentice.name + ' was killed by thier wounds.');
-      this.userMage.apprentice = null;
+      this.apprenticeKilled = true;
     }
     else if(roll <=4){
       //Permanent Injury
       //roll 1d20
       var roll = Math.floor(Math.random() * 20) + 1;
       if(roll <= 2){
-        this.userMage.apprentice.move -= 0.5;
-        this.userMage.apprentice.status = "Lost Toe";
+        this.apprenticeFunctionToCommit = ()=>{
+          this.userMage.apprentice.move -= 0.5;
+          this.userMage.apprentice.status = "Lost Toe";
+        };
       }
       else if(roll<=5){
-        this.userMage.apprentice.move -= 1;
-        this.userMage.apprentice.status = "Smashed Leg";
+        this.apprenticeFunctionToCommit = ()=>{
+          this.userMage.apprentice.move -= 1;
+          this.userMage.apprentice.status = "Smashed Leg";
+        }
       }
       else if(roll<=10){
-        this.userMage.apprentice.fight -= 1;
-        this.userMage.apprentice.status = "Crushed Arm";
+        this.apprenticeFunctionToCommit = ()=>{
+          this.userMage.apprentice.fight -= 1;
+          this.userMage.apprentice.status = "Crushed Arm";
+        }
       }
       else if(roll<=12){
-        this.userMage.apprentice.shoot -= 1;
-        this.userMage.apprentice.status = "Lost Fingers";
+        this.apprenticeFunctionToCommit = ()=>{
+          this.userMage.apprentice.shoot -= 1;
+          this.userMage.apprentice.status = "Lost Fingers";
+        }
       }
       else if(roll<=14){
-        this.userMage.apprentice.health -= 1;
-        this.userMage.apprentice.status = "Never Quite as Strong";
+        this.apprenticeFunctionToCommit = ()=>{
+          this.userMage.apprentice.health -= 1;
+          this.userMage.apprentice.status = "Never Quite as Strong";
+        }
       }
       else if(roll<=16){
-        this.userMage.apprentice.will -= 1;
-        this.userMage.apprentice.status = "Psychological Scars";
+        this.apprenticeFunctionToCommit = ()=>{
+          this.userMage.apprentice.will -= 1;
+          this.userMage.apprentice.status = "Psychological Scars";
+        }
       }
       else if(roll<=18){
-        this.userMage.apprentice.health -= 3;
-        this.userMage.apprentice.status = "Niggling Injury";
+        this.apprenticeFunctionToCommit = ()=>{
+          this.userMage.apprentice.health -= 3;
+          this.userMage.apprentice.status = "Niggling Injury";
+        }
       }
       else if(roll==19){
-        this.userMage.apprentice.status = "Smashed Jaw";
+        this.apprenticeFunctionToCommit = ()=>{
+          this.userMage.apprentice.status = "Smashed Jaw";
+        }
       }
       else if(roll==20){
-        this.userMage.shoot -= 2;
-        this.userMage.apprentice.status = "Lost Eye";
+        this.apprenticeFunctionToCommit = ()=>{
+          this.userMage.shoot -= 2;
+          this.userMage.apprentice.status = "Lost Eye";
+        }
       }
-      this.actionLog.push(apprentice.name + ' was permanently injured. ' + apprentice.status);
+      this.actionLog.push(apprentice.name + ' was permanently injured. ');
     }
     else if(roll <=6){
       //Badly Wounded
-      apprentice.status = 'WOUNDED';
+      this.apprenticeFunctionToCommit = ()=>{
+        apprentice.status = 'WOUNDED';
+      }
       this.actionLog.push(apprentice.name + ' was badly wounded.');
     }
     else if(roll <=8){
       //Badly Wounded
+      this.apprenticeFunctionToCommit = ()=>{
       //TODO: purge held items
+      }
       this.actionLog.push(apprentice.name + ' had a close call and lost thier items.');
     }
     else{
