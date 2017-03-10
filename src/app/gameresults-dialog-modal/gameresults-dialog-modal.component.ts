@@ -16,7 +16,7 @@ export class GameresultsDialogModalComponent implements OnInit {
 
   experience: number = 0;
   selectedWarbandMember: Minion;
-  actionLog: string;
+  actionLog: string[];
   treasureFound: number = 0;
 
   treasureToCommit: Equipment[];
@@ -24,6 +24,7 @@ export class GameresultsDialogModalComponent implements OnInit {
 
   constructor() {
     this.treasureToCommit = new Array<Equipment>();
+    this.actionLog = new Array<string>();
    }
 
   ngOnInit() {
@@ -48,17 +49,17 @@ export class GameresultsDialogModalComponent implements OnInit {
     //roll 1d20
     //TODO: Might need to create the classic Dice Roller Utility
     var roll = Math.floor(Math.random() * 20) + 1;
-    this.actionLog = "Rolling for casualty results: " + roll + '. ';
+    this.actionLog.push("Rolling for casualty results: " + roll + '. ');
     if(roll <= 4){
       this.userMage.warbandMembers.splice(index, 1); //Died
-      this.actionLog = this.selectedWarbandMember.name + ' was killed by thier wounds.';
+      this.actionLog.push(this.selectedWarbandMember.name + ' was killed by thier wounds.');
     }
     else if(roll <=8){
       this.selectedWarbandMember.status = 'WOUNDED';
-      this.actionLog = this.selectedWarbandMember.name + ' was wounded.'
+      this.actionLog.push(this.selectedWarbandMember.name + ' was wounded.');
     }
     else{
-      this.actionLog = this.selectedWarbandMember.name + ' survived thier injury.';
+      this.actionLog.push(this.selectedWarbandMember.name + ' survived thier injury.');
     }    
   }
 
@@ -70,10 +71,10 @@ export class GameresultsDialogModalComponent implements OnInit {
     var apprentice = this.userMage.apprentice;
     //roll 1d20
     var roll = Math.floor(Math.random() * 20) + 1;
-    this.actionLog = "Rolling for apprentice casualty results: " + roll + '. ';
+    this.actionLog.push("Rolling for apprentice casualty results: " + roll + '. ');
     if(roll <= 2){
       //died
-      this.actionLog = apprentice.name + ' was killed by thier wounds.';
+      this.actionLog.push(apprentice.name + ' was killed by thier wounds.');
       this.userMage.apprentice = null;
     }
     else if(roll <=4){
@@ -115,20 +116,20 @@ export class GameresultsDialogModalComponent implements OnInit {
         this.userMage.shoot -= 2;
         this.userMage.apprentice.status = "Lost Eye";
       }
-      this.actionLog = apprentice.name + ' was permanently injured. ' + apprentice.status;
+      this.actionLog.push(apprentice.name + ' was permanently injured. ' + apprentice.status);
     }
     else if(roll <=6){
       //Badly Wounded
       apprentice.status = 'WOUNDED';
-      this.actionLog = apprentice.name + ' was badly wounded.'
+      this.actionLog.push(apprentice.name + ' was badly wounded.');
     }
     else if(roll <=8){
       //Badly Wounded
       //TODO: purge held items
-      this.actionLog = apprentice.name + ' had a close call and lost thier items.'
+      this.actionLog.push(apprentice.name + ' had a close call and lost thier items.');
     }
     else{
-      this.actionLog = apprentice.name + ' survived thier injury.';
+      this.actionLog.push(apprentice.name + ' survived thier injury.');
     }  
   }
 
@@ -136,10 +137,10 @@ export class GameresultsDialogModalComponent implements OnInit {
     var apprentice = this.userMage.apprentice;
     //roll 1d20
     var roll = Math.floor(Math.random() * 20) + 1;
-    this.actionLog = "Rolling for wizard casualty results: " + roll + '.';
+    this.actionLog.push("Rolling for wizard casualty results: " + roll + '.');
     if(roll <= 2){
       //died
-      this.actionLog = this.userMage.name + ' was killed by thier wounds.';
+      this.actionLog.push(this.userMage.name + ' was killed by thier wounds.');
       //this.userMage.apprentice = null;
     }
     else if(roll <=4){
@@ -184,19 +185,19 @@ export class GameresultsDialogModalComponent implements OnInit {
         this.userMage.shoot -= 2;
         this.userMage.status = "(Lost Eye)";
       }
-      this.actionLog = this.userMage.name + ' was permanently injured. ' + this.userMage.status;
+      this.actionLog.push(this.userMage.name + ' was permanently injured. ' + this.userMage.status);
     }
     else if(roll <=6){
       //Badly Wounded
       this.userMage.status = 'WOUNDED';
-      this.actionLog = this.userMage.name + ' was badly wounded.'
+      this.actionLog.push(this.userMage.name + ' was badly wounded.');
     }
     else if(roll <=8){
       this.userMage.items = new Array<Equipment>();
-      this.actionLog = this.userMage.name + ' had a close call and lost thier items.'
+      this.actionLog.push(this.userMage.name + ' had a close call and lost thier items.');
     }
     else{
-      this.actionLog = this.userMage.name + ' survived thier injury.';
+      this.actionLog.push(this.userMage.name + ' survived thier injury.');
     }  
   }
 
@@ -206,11 +207,11 @@ export class GameresultsDialogModalComponent implements OnInit {
     for(let item of newEquipment){
       if(item.name == 'Gold'){
         this.goldToCommit += item.bonusNum;
-        this.actionLog = 'Gold gained: ' + item.bonusNum;
+        this.actionLog.push('Gold gained: ' + item.bonusNum);
       }
       else{
         this.treasureToCommit.push(item);
-        this.actionLog = 'Treasure gained: ' + item.name;
+        this.actionLog.push('Treasure gained: ' + item.name);
       }
     }
   }
