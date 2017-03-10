@@ -1,4 +1,5 @@
 import { Equipment } from './equipment.model';
+import { SpellBook } from './spellbook.model';
 
 export class EquipmentVault{
 
@@ -555,6 +556,61 @@ export class EquipmentVault{
       }
   }
 
+  static getMagicItemsFromTreasure(): Equipment{
+      //roll 1d20
+      var roll = Math.floor(Math.random() * 20) + 1;
+      switch (roll) {
+        case 1:
+        return EquipmentVault.getItemByName('Staff of Power (1)');
+        case 2:
+        return EquipmentVault.getItemByName('Staff of Power (2)');
+        case 3:
+        return EquipmentVault.getItemByName('Staff of Power (3)');
+        case 4:
+        return EquipmentVault.getItemByName('Ring of Power (1)');
+        case 5:
+        return EquipmentVault.getItemByName('Orb of Power(8)');
+        case 6:
+        return EquipmentVault.getItemByName('Staff of Casting');
+        case 7:
+        return EquipmentVault.getItemByName('Boots of Speed');
+        case 8:
+        return EquipmentVault.getItemByName('Ring of Slow Fail');
+        case 9:
+        return EquipmentVault.getItemByName('Ring of Will');
+        case 10:
+        return EquipmentVault.getItemByName('Ring of Teleportation');
+        case 11:
+        return EquipmentVault.getItemByName('Gloves of Strength');
+        case 12:
+        return EquipmentVault.getItemByName('Robes of Arrow Turning');
+        case 13:
+        return EquipmentVault.getItemByName('Amulet of Resistance');
+        case 14:
+        return EquipmentVault.getItemByName('Candle of Summoning');
+        case 15:
+        return EquipmentVault.getItemByName('Gloves of Casting');
+        case 16:
+        return EquipmentVault.getItemByName('Belt of Animal Repellence');
+        case 17:
+        return EquipmentVault.getItemByName('Horn of Destruction');
+        case 18:
+        return EquipmentVault.getItemByName('Fate Stone');
+        case 19:
+        return EquipmentVault.getItemByName('Drinking Horn of Healing');
+        case 20:
+        return EquipmentVault.getItemByName('Banner of Courage');
+      }
+
+  }
+
+  static getRandomSpellItem(type: string): Equipment{
+    var spellItem = new Equipment();
+    spellItem.name = '('+type+') - ' + spellItem.name;
+    spellItem.description = '('+type+') - ' + spellItem.description;
+    return spellItem;
+  }
+
   static getItemsFromTreasure() : Array<Equipment>{
       //roll 1d20
       var roll = Math.floor(Math.random() * 20) + 1;
@@ -595,8 +651,27 @@ export class EquipmentVault{
           results.push(goldPouch);
         break;
         case 6:
+          var spell = SpellBook.getRandomSpell();
+          var scroll = EquipmentVault.getRandomSpellItem('Scroll');
+          results.push(scroll);
+          spell = SpellBook.getRandomSpell();
+          scroll = EquipmentVault.getRandomSpellItem('Scroll');
+          results.push(scroll);
+          spell = SpellBook.getRandomSpell();
+          scroll = EquipmentVault.getRandomSpellItem('Scroll');
+          results.push(scroll);
+          goldPouch.bonusNum = 30;
+          results.push(goldPouch);
         break;
         case 7:
+          var spell = SpellBook.getRandomSpell();
+          var scroll = EquipmentVault.getRandomSpellItem('Scroll');
+          results.push(scroll);
+          spell = SpellBook.getRandomSpell();
+          scroll = EquipmentVault.getRandomSpellItem('Scroll');
+          results.push(scroll);
+          goldPouch.bonusNum = 50;
+          results.push(goldPouch);
         break;
         case 8:
           var magicEquip = EquipmentVault.getMagicEquipmentFromTreasure();
@@ -611,26 +686,70 @@ export class EquipmentVault{
           results.push(goldPouch);
         break;
         case 10:
+          var item = EquipmentVault.getMagicItemsFromTreasure();
+          results.push(item);
+          goldPouch.bonusNum = 20;
+          results.push(goldPouch);
         break;
         case 11:
+          var item = EquipmentVault.getMagicItemsFromTreasure();
+          results.push(item);
+          goldPouch.bonusNum = 40;
+          results.push(goldPouch);
         break;
         case 12:
+          var item = EquipmentVault.getMagicItemsFromTreasure();
+          results.push(item);
+          goldPouch.bonusNum = 60;
+          results.push(goldPouch);
         break;
         case 13:
+          var grimoire = EquipmentVault.getRandomSpellItem('Grimoire');
+          results.push(grimoire);
+          goldPouch.bonusNum = 20;
+          results.push(goldPouch);
         break;
         case 14:
+          var grimoire = EquipmentVault.getRandomSpellItem('Grimoire');
+          results.push(grimoire);
+          goldPouch.bonusNum = 40;
+          results.push(goldPouch);
         break;
         case 15:
+          var grimoire = EquipmentVault.getRandomSpellItem('Grimoire');
+          results.push(grimoire);
+          goldPouch.bonusNum = 60;
+          results.push(goldPouch);
         break;
         case 16:
+          var grimoire = EquipmentVault.getRandomSpellItem('Grimoire');
+          results.push(grimoire);
+          goldPouch.bonusNum = 80;
+          results.push(goldPouch);
         break;
         case 17:
+          var grimoire = EquipmentVault.getRandomSpellItem('Grimoire');
+          results.push(grimoire);
+          goldPouch.bonusNum = 100;
+          results.push(goldPouch);
         break;
         case 18:
-        break;
+          var grimoire = EquipmentVault.getRandomSpellItem('Grimoire');
+          results.push(grimoire);
+          goldPouch.bonusNum = 120;
+          results.push(goldPouch);
+          break;
         case 19:
+          var grimoire = EquipmentVault.getRandomSpellItem('Grimoire');
+          results.push(grimoire);
+          goldPouch.bonusNum = 150;
+          results.push(goldPouch);
         break;
         case 20:
+          var grimoire = EquipmentVault.getRandomSpellItem('Grimoire');
+          results.push(grimoire);
+          goldPouch.bonusNum = 200;
+          results.push(goldPouch);
         break;
 
       }
