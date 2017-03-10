@@ -27,6 +27,9 @@ export class GameresultsDialogModalComponent implements OnInit {
   apprenticeKilled: boolean = false;
   apprenticeFunctionToCommit: Function;
 
+  wizardKilled: boolean = false;
+  wizardFunctionToCommit: Function;
+
   constructor() {
     this.resetWindow();
    }
@@ -54,6 +57,11 @@ export class GameresultsDialogModalComponent implements OnInit {
     else if(this.apprenticeFunctionToCommit){
       this.apprenticeFunctionToCommit();
     }
+
+    if(this.wizardFunctionToCommit){
+      this.wizardFunctionToCommit();
+    }
+    
     for(let equipment of this.treasureToCommit){
       this.userMage.addItemToInventory(equipment);
     }
@@ -199,59 +207,81 @@ export class GameresultsDialogModalComponent implements OnInit {
     if(roll <= 2){
       //died
       this.actionLog.push(this.userMage.name + ' was killed by thier wounds.');
-      //this.userMage.apprentice = null;
+      this.wizardKilled = true;
     }
     else if(roll <=4){
       //Permanent Injury
       //roll 1d20
       var roll = Math.floor(Math.random() * 20) + 1;
       if(roll <= 2){
-        this.userMage.move -= 0.5;
-        this.userMage.status = "(Lost Toe)";
+        this.wizardFunctionToCommit = ()=>{
+          this.userMage.move -= 0.5;
+          this.userMage.status = "(Lost Toe)";
+        };
       }
       else if(roll<=5){
-        this.userMage.move -= 1;
-        this.userMage.status = "(Smashed Leg)";
+        this.wizardFunctionToCommit = ()=>{
+          this.userMage.move -= 1;
+          this.userMage.status = "(Smashed Leg)";
+        }
       }
       else if(roll<=10){
-        this.userMage.fight -= 1;
-        this.userMage.status = "(Crushed Arm)";
+        this.wizardFunctionToCommit = ()=>{
+          this.userMage.fight -= 1;
+          this.userMage.status = "(Crushed Arm)";
+        }
       }
       else if(roll<=12){
-        this.userMage.shoot -= 1;
-        this.userMage.status = "(Lost Fingers)";
+        this.wizardFunctionToCommit = ()=>{
+          this.userMage.shoot -= 1;
+          this.userMage.status = "(Lost Fingers)";
+        }
       }
       else if(roll<=14){
-        this.userMage.health -= 1;
-        this.userMage.status = "(Never Quite as Strong)";
+        this.wizardFunctionToCommit = ()=>{
+          this.userMage.health -= 1;
+          this.userMage.status = "(Never Quite as Strong)";
+        }
       }
       else if(roll<=16){
-        this.userMage.will -= 1;
-        this.userMage.status = "(Psychological Scars)";
+        this.wizardFunctionToCommit = ()=>{
+          this.userMage.will -= 1;
+          this.userMage.status = "(Psychological Scars)";
+        }
       }
       else if(roll<=18){
-        this.userMage.health -= 3;
-        this.userMage.status = "(Niggling Injury)";
+        this.wizardFunctionToCommit = ()=>{
+          this.userMage.health -= 3;
+          this.userMage.status = "(Niggling Injury)";
+        }
       }
       else if(roll==19){
-        for (var spell of this.userMage.spells){
-          spell.castingNumber += 2;
+        this.wizardFunctionToCommit = ()=>{
+          for (var spell of this.userMage.spells){
+            spell.castingNumber += 2;
+          }
+          this.userMage.status = "(Smashed Jaw)";
         }
-        this.userMage.status = "(Smashed Jaw)";
       }
       else if(roll==20){
-        this.userMage.shoot -= 2;
-        this.userMage.status = "(Lost Eye)";
+        this.wizardFunctionToCommit = ()=>{
+          this.userMage.shoot -= 2;
+          this.userMage.status = "(Lost Eye)";
+        }
       }
-      this.actionLog.push(this.userMage.name + ' was permanently injured. ' + this.userMage.status);
+      this.actionLog.push(this.userMage.name + ' was permanently injured. ');
     }
     else if(roll <=6){
-      //Badly Wounded
-      this.userMage.status = 'WOUNDED';
+      this.wizardFunctionToCommit = ()=>{
+        //Badly Wounded
+        this.userMage.status = 'WOUNDED';
+      }
       this.actionLog.push(this.userMage.name + ' was badly wounded.');
     }
     else if(roll <=8){
-      this.userMage.items = new Array<Equipment>();
+      this.wizardFunctionToCommit = ()=>{
+        this.userMage.items = new Array<Equipment>();
+      }
       this.actionLog.push(this.userMage.name + ' had a close call and lost thier items.');
     }
     else{
