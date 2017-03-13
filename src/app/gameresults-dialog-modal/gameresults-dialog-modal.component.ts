@@ -61,11 +61,11 @@ export class GameresultsDialogModalComponent implements OnInit {
     if(this.wizardFunctionToCommit){
       this.wizardFunctionToCommit();
     }
-    
+
     for(let equipment of this.treasureToCommit){
       this.userMage.addItemToInventory(equipment);
     }
-
+    this.resetWindow();
   }
 
   resetWindow(){

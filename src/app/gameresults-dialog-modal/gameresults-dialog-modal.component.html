@@ -58,6 +58,7 @@
         <span class="results" *ngFor="let action of actionLog">{{action}}<br></span>
       </div>
       <div class="row">
+        <button class="btn btn-primary" data-dismiss="modal" aria-label="Apply" (click)="resetWindow()">Cancel</button>
         <button class="btn btn-primary pull-right" data-dismiss="modal" aria-label="Apply" (click)="applyResults()">Apply</button>
       </div>
     </div>
