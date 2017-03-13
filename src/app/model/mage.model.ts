@@ -108,10 +108,9 @@ export class Mage extends Figure {
   addSpellToCollection(spell: Spell){
     console.log("Adding Spell: " + spell.name);
     if(this.removeSpellSlot(spell)){
-    this.spells.push(spell);
+      this.spells.push(spell);
     }
-    //this.removeSpellSlot(spell);
-    }
+  }
 
   removeSpellFromCollection(spell: Spell){
     console.log("Removing Spell: " + spell.name);
@@ -198,7 +197,7 @@ export class Mage extends Figure {
       this.spellSlotsAvailable[spell.school.name]--;
       return true;
     }
-    else if(this.spellSlotsAvailable['Neutral'] > 0 && this.school.neutral.indexOf(spell.school) > 0){
+    else if(this.spellSlotsAvailable['Neutral'] > 0 && this.school.neutral.indexOf(spell.school) > -1){
       this.spellSlotsAvailable['Neutral']--;
       return true;
     }
