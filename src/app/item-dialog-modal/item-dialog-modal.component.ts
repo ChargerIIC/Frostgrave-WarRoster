@@ -13,6 +13,7 @@ import { Equipment } from '../model/equipment.model';
 export class ItemDialogModalComponent implements OnInit {
 
   @Input() userMage : Mage;
+  @Input() addApprentice : boolean;
 
   constructor() { }
 
@@ -24,6 +25,13 @@ export class ItemDialogModalComponent implements OnInit {
   }
 
   addItem(item: Equipment){
-    this.userMage.addItemToInventory(item);
+    if(this.addApprentice)
+    {
+      this.userMage.apprentice.addItemToInventory(item);
+    }
+    else
+    {
+      this.userMage.addItemToInventory(item);
+    }
   }
 }

@@ -2,6 +2,7 @@
 <div class="panel-body" >
   <button class="btn btn-primary pull-right" *ngIf="!apprenticePresent()" (click)="addApprentice()"><span class="glyphicon glyphicon-plus"></span> Add Apprentice({{getApprenticeCost()}})</button>
   <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#minionModal"><span class="glyphicon glyphicon-plus"></span> Add Minion</button>
+  <button class="btn btn-primary pull-right" data-toggle="modal" data-target="#appItemModal" *ngIf="apprenticePresent()" (click)="addEquipmentToApprentice()"><span class="glyphicon glyphicon-plus"></span> Add Equipment to Apprentice</button>
 
   <table class="table table-hover table-bordered" >
     <th>Name</th><th>Move</th><th>Fight</th><th>Shoot</th><th>Armor</th><th>Will</th><th>Health</th><th>Notes</th><th>Remove</th>

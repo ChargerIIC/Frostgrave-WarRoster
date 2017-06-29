@@ -8,7 +8,8 @@
   <div class="row"><app-wizard-equipment-panel [userMage]="this.wizard" class="panel panel-info"></app-wizard-equipment-panel></div>
   <div class="row"><app-wizard-homebase-panel [userMage]="this.wizard" class="panel panel-info"></app-wizard-homebase-panel></div>
   <div class="modal fade" id="spellModal" tabindex="-1" role="dialog" aria-labelledby="spells" ><app-spell-dialog-modal [userMage]="this.wizard"></app-spell-dialog-modal></div>
-  <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="items"><app-item-dialog-modal [userMage]="this.wizard"></app-item-dialog-modal></div>
+  <div class="modal fade" id="itemModal" tabindex="-1" role="dialog" aria-labelledby="items"><app-item-dialog-modal [userMage]="this.wizard" [addApprentice]="false"></app-item-dialog-modal></div>
+  <div class="modal fade" id="appItemModal" tabindex="-1" role="dialog" aria-labelledby="items"><app-item-dialog-modal [userMage]="this.wizard" [addApprentice]="true"></app-item-dialog-modal></div>
   <div class="modal fade" id="minionModal" tabindex="-1" role="dialog" aria-labelledby="minions" ><app-warband-dialog-modal [userMage]="this.wizard"></app-warband-dialog-modal></div>
   <div class="modal fade" id="levelUpModal" tabindex="-1" role="dialog" aria-labelledby="levelup" ><app-levelup-dialog-modal [userMage]="this.wizard"></app-levelup-dialog-modal></div>
   <div class="modal fade" id="gameResultsModal" tabindex="-1" role="dialog" aria-labelledby="gameResults" ><app-gameresults-dialog-modal [userMage]="this.wizard"></app-gameresults-dialog-modal></div>
