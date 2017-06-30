@@ -33,7 +33,19 @@ export class Apprentice extends Figure {
     this.status += ` ${item.name} `;
   }
 
-    changeStatsOfModel(item: Equipment, add: boolean){
+  removeItemFromInventory(item: Equipment)
+  {
+    console.log("Removing Item: " + item.name);
+    var index = this.items.indexOf(item);
+    if(index > -1){
+      this.items.splice(index,1);
+      this.openItemSlots++;
+      this.changeStatsOfModel(item, false);
+    }
+    this.status.replace(` ${item.name} `, '');
+  }
+
+  changeStatsOfModel(item: Equipment, add: boolean){
     if(item.bonusType == "Move"){
       if(add){
         this.move += item.bonusNum;

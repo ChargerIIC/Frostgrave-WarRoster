@@ -190,7 +190,9 @@ export class GameresultsDialogModalComponent implements OnInit {
     else if(roll <=8){
       //Badly Wounded
       this.apprenticeFunctionToCommit = ()=>{
-      //TODO: purge held items
+        for(let item of apprentice.items){
+          apprentice.removeItemFromInventory(item);
+        }
       }
       this.actionLog.push(apprentice.name + ' had a close call and lost thier items.');
     }
