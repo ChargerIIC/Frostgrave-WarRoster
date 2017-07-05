@@ -18,10 +18,9 @@ export class WizardWarbandPanelComponent implements OnInit {
   }
 
   addApprentice(){
-    console.log('Adding Apprentice');
     var cost = this.getApprenticeCost();
     if(this.userMage.gold < cost){
-      console.log("not enough funds for purchase");
+      console.log("not enough funds for purchase"); //TODO: create modal or  dialog for user to see
       return;
     }
     this.userMage.gold -= cost;
